@@ -416,3 +416,32 @@ Checked in these paths:
   
 app/assets/javascripts/application.js:13
 app/views/layouts/application.html.erb:9:in `_app_views_layouts_application_html_erb___3390634447216993475_70230845714300'
+Started GET "/" for ::1 at 2021-10-31 19:22:46 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'jquery' with type 'application/javascript'
+Checked in these paths: 
+  /Users/maddai/Desktop/endurance/endurance_project/app/assets/config
+  /Users/maddai/Desktop/endurance/endurance_project/app/assets/images
+  /Users/maddai/Desktop/endurance/endurance_project/app/assets/javascripts
+  /Users/maddai/Desktop/endurance/endurance_project/app/assets/stylesheets
+  /Users/maddai/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /Users/maddai/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actioncable-5.2.6/lib/assets/compiled
+  /Users/maddai/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activestorage-5.2.6/app/assets/javascripts
+  /Users/maddai/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionview-5.2.6/lib/assets/compiled
+  /Users/maddai/Desktop/endurance/endurance_project/node_modules):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all' %>
+     9:     <%= javascript_include_tag 'application' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/assets/javascripts/application.js:13
+app/views/layouts/application.html.erb:9:in `_app_views_layouts_application_html_erb___3390634447216993475_70230611872180'
