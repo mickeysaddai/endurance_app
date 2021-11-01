@@ -33,7 +33,7 @@ class SessionForm extends React.Component {
 
         return (
             <form onSubmit={(e) => this.handleSubmit(e)}>
-                <h3>Please {this.props.formType} or {navLink} </h3>
+                <h3>Please {this.props.formType} or {navLink} to get started with Endurance </h3>
                 {this.renderErrors()}
 
                 <label>Username:
@@ -52,6 +52,7 @@ class SessionForm extends React.Component {
                     />
 
                 </label>
+                <input type="submit" value={this.props.formtype} />
 
 
             </form>
