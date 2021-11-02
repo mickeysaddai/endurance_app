@@ -7,4 +7,5 @@ const entitiesReducer = combineReducers({
     activities: ActivitiesReducer
 })
 
-export default entitiesReducer
+export default entitiesReducer;
+

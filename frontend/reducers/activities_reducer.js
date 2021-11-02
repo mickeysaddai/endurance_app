@@ -17,7 +17,7 @@ const ActivitiesReducer = (oldState = {}, action) => {
             return nextState;
         
         default:
-            oldState;
+            return oldState;
     }
 
 }
