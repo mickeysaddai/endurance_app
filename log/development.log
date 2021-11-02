@@ -2371,3 +2371,532 @@ Migrating to CreateActivities (20211102021502)
   ↳ bin/rails:9
   [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(49853342591279430)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to AddColumn (20211102031625)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(49853342591279430)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(49853342591279430)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to AddColumn (20211102031625)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (4.2ms)[0m  [1m[35mALTER TABLE "activities" ADD "distance" integer[0m
+  ↳ db/migrate/20211102031625_add_column.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20211102031625"]]
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(49853342591279430)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/" for ::1 at 2021-11-01 23:29:32 -0400
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/maddai/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (4.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "oXUlSpRrserDzV5xFWRSow"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered static_pages/root.html.erb within layouts/application (31.8ms)
+Completed 200 OK in 387ms (Views: 359.4ms | ActiveRecord: 19.4ms)
+
+
+Started POST "/api/activities" for ::1 at 2021-11-01 23:32:45 -0400
+Processing by Api::ActivitiesController#create as JSON
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::InvalidAuthenticityToken - ActionController::InvalidAuthenticityToken:
+
+Started GET "/api/activities" for ::1 at 2021-11-01 23:32:57 -0400
+Processing by Api::ActivitiesController#index as JSON
+  Rendering api/activities/index.json.jbuilder
+  [1m[36mActivity Load (3.6ms)[0m  [1m[34mSELECT "activities".* FROM "activities"[0m
+  ↳ app/views/api/activities/index.json.jbuilder:1
+  Rendered api/activities/index.json.jbuilder (12.9ms)
+Completed 200 OK in 24ms (Views: 6.7ms | ActiveRecord: 9.9ms)
+
+
+Started GET "/" for ::1 at 2021-11-01 23:36:53 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "oXUlSpRrserDzV5xFWRSow"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 23ms (Views: 19.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/api/activities" for ::1 at 2021-11-01 23:37:19 -0400
+Processing by Api::ActivitiesController#index as JSON
+  Rendering api/activities/index.json.jbuilder
+  [1m[36mActivity Load (0.9ms)[0m  [1m[34mSELECT "activities".* FROM "activities"[0m
+  ↳ app/views/api/activities/index.json.jbuilder:1
+  Rendered api/activities/index.json.jbuilder (1.9ms)
+Completed 200 OK in 7ms (Views: 4.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/activities" for ::1 at 2021-11-01 23:46:57 -0400
+Processing by Api::ActivitiesController#index as JSON
+  Rendering api/activities/index.json.jbuilder
+  [1m[36mActivity Load (1.9ms)[0m  [1m[34mSELECT "activities".* FROM "activities"[0m
+  ↳ app/views/api/activities/index.json.jbuilder:1
+  Rendered api/activities/index.json.jbuilder (3.1ms)
+Completed 200 OK in 8ms (Views: 4.7ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/api/activities/1" for ::1 at 2021-11-01 23:47:11 -0400
+Processing by Api::ActivitiesController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mActivity Load (0.6ms)[0m  [1m[34mSELECT  "activities".* FROM "activities" WHERE "activities"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/activities_controller.rb:8
+Completed 404 Not Found in 18ms (ActiveRecord: 15.0ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Activity with 'id'=1:
+  app/controllers/api/activities_controller.rb:8:in `show'
+
+Started POST "/__better_errors/358f0c060e8ec891/variables" for ::1 at 2021-11-01 23:47:11 -0400
+Started GET "/api/activities/" for ::1 at 2021-11-01 23:47:29 -0400
+Processing by Api::ActivitiesController#index as JSON
+  Rendering api/activities/index.json.jbuilder
+  [1m[36mActivity Load (3.7ms)[0m  [1m[34mSELECT "activities".* FROM "activities"[0m
+  ↳ app/views/api/activities/index.json.jbuilder:1
+  Rendered api/activities/index.json.jbuilder (4.5ms)
+Completed 200 OK in 12ms (Views: 5.7ms | ActiveRecord: 3.7ms)
+
+
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (6.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 1]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.1ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 2]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.1ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 3]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[36mActivity Load (2.3ms)[0m  [1m[34mSELECT "activities".* FROM "activities"[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:9
+  [1m[36mActivity Load (0.4ms)[0m  [1m[34mSELECT "activities".* FROM "activities"[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:9
+  [1m[36mActivity Load (0.8ms)[0m  [1m[34mSELECT "activities".* FROM "activities"[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mUser Exists (5.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "mickey"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:12
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "O56ZM40YiBOtA3WUdoe4zQ"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:12
+  [1m[36mUser Create (3.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "mickey"], ["password_digest", "$2a$12$SAjVUJEkGRMH0nKLz2ODs.sgdLAvXt7841KQYgRnPENz1vPpzONsK"], ["session_token", "O56ZM40YiBOtA3WUdoe4zQ"], ["created_at", "2021-11-02 03:49:39.659066"], ["updated_at", "2021-11-02 03:49:39.659066"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:18
+  [1m[36mActivity Create (7.1ms)[0m  [1m[32mINSERT INTO "activities" ("user_id", "activity_type", "equipment_type", "duration", "heartrate", "date", "description", "created_at", "updated_at", "distance") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["user_id", 4], ["activity_type", "Running"], ["equipment_type", "none"], ["duration", 30], ["heartrate", 120], ["date", "12/10/2020"], ["description", "Running is life"], ["created_at", "2021-11-02 03:49:39.684884"], ["updated_at", "2021-11-02 03:49:39.684884"], ["distance", 3]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mActivity Load (1.4ms)[0m  [1m[34mSELECT "activities".* FROM "activities"[0m
+Started GET "/api/activities/" for ::1 at 2021-11-01 23:50:04 -0400
+Processing by Api::ActivitiesController#index as JSON
+  Rendering api/activities/index.json.jbuilder
+  [1m[36mActivity Load (0.6ms)[0m  [1m[34mSELECT "activities".* FROM "activities"[0m
+  ↳ app/views/api/activities/index.json.jbuilder:1
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1[0m  [["id", 4]]
+  ↳ app/views/api/activities/index.json.jbuilder:1
+  Rendered api/activities/index.json.jbuilder (20.5ms)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 1.8ms)
+
+
+
+NoMethodError - undefined method `id' for nil:NilClass:
+  app/views/api/activities/index.json.jbuilder:3:in `block (2 levels) in _app_views_api_activities_index_json_jbuilder__2693338902874609076_70297520323320'
+  app/views/api/activities/index.json.jbuilder:2:in `block in _app_views_api_activities_index_json_jbuilder__2693338902874609076_70297520323320'
+  app/views/api/activities/index.json.jbuilder:1:in `_app_views_api_activities_index_json_jbuilder__2693338902874609076_70297520323320'
+
+Started POST "/__better_errors/ee09f9142c516cc7/variables" for ::1 at 2021-11-01 23:50:04 -0400
+Started GET "/api/activities/" for ::1 at 2021-11-01 23:51:02 -0400
+Processing by Api::ActivitiesController#index as JSON
+  Rendering api/activities/index.json.jbuilder
+  [1m[36mActivity Load (0.6ms)[0m  [1m[34mSELECT "activities".* FROM "activities"[0m
+  ↳ app/views/api/activities/index.json.jbuilder:1
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1[0m  [["id", 4]]
+  ↳ app/views/api/activities/index.json.jbuilder:1
+  Rendered api/activities/index.json.jbuilder (4.8ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 1.1ms)
+
+
+
+NoMethodError - undefined method `user_id' for nil:NilClass:
+  app/views/api/activities/index.json.jbuilder:3:in `block (2 levels) in _app_views_api_activities_index_json_jbuilder__2693338902874609076_70297910313480'
+  app/views/api/activities/index.json.jbuilder:2:in `block in _app_views_api_activities_index_json_jbuilder__2693338902874609076_70297910313480'
+  app/views/api/activities/index.json.jbuilder:1:in `_app_views_api_activities_index_json_jbuilder__2693338902874609076_70297910313480'
+
+Started POST "/__better_errors/e78d842b28f5a1d5/variables" for ::1 at 2021-11-01 23:51:02 -0400
+Started GET "/api/activities/" for ::1 at 2021-11-01 23:51:04 -0400
+Processing by Api::ActivitiesController#index as JSON
+  Rendering api/activities/index.json.jbuilder
+  [1m[36mActivity Load (0.9ms)[0m  [1m[34mSELECT "activities".* FROM "activities"[0m
+  ↳ app/views/api/activities/index.json.jbuilder:1
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1[0m  [["id", 4]]
+  ↳ app/views/api/activities/index.json.jbuilder:1
+  Rendered api/activities/index.json.jbuilder (5.5ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 1.5ms)
+
+
+
+NoMethodError - undefined method `user_id' for nil:NilClass:
+  app/views/api/activities/index.json.jbuilder:3:in `block (2 levels) in _app_views_api_activities_index_json_jbuilder__2693338902874609076_70297520685820'
+  app/views/api/activities/index.json.jbuilder:2:in `block in _app_views_api_activities_index_json_jbuilder__2693338902874609076_70297520685820'
+  app/views/api/activities/index.json.jbuilder:1:in `_app_views_api_activities_index_json_jbuilder__2693338902874609076_70297520685820'
+
+Started POST "/__better_errors/52c1b736fa894916/variables" for ::1 at 2021-11-01 23:51:04 -0400
+Started GET "/api/activities/" for ::1 at 2021-11-01 23:53:46 -0400
+Processing by Api::ActivitiesController#index as JSON
+  Rendering api/activities/index.json.jbuilder
+  [1m[36mActivity Load (0.9ms)[0m  [1m[34mSELECT "activities".* FROM "activities"[0m
+  ↳ app/views/api/activities/index.json.jbuilder:1
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1[0m  [["id", 4]]
+  ↳ app/views/api/activities/index.json.jbuilder:1
+  Rendered api/activities/index.json.jbuilder (6.1ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 1.4ms)
+
+
+
+NoMethodError - undefined method `user_id' for nil:NilClass:
+  app/views/api/activities/index.json.jbuilder:3:in `block (2 levels) in _app_views_api_activities_index_json_jbuilder__2693338902874609076_70297526243240'
+  app/views/api/activities/index.json.jbuilder:2:in `block in _app_views_api_activities_index_json_jbuilder__2693338902874609076_70297526243240'
+  app/views/api/activities/index.json.jbuilder:1:in `_app_views_api_activities_index_json_jbuilder__2693338902874609076_70297526243240'
+
+Started POST "/__better_errors/1db62d24e21a943a/variables" for ::1 at 2021-11-01 23:53:46 -0400
+Started GET "/api/activities/1" for ::1 at 2021-11-01 23:53:57 -0400
+Processing by Api::ActivitiesController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mActivity Load (1.4ms)[0m  [1m[34mSELECT  "activities".* FROM "activities" WHERE "activities"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/activities_controller.rb:8
+  Rendering api/activities/show.json.jbuilder
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/api/activities/show.json.jbuilder:2
+  Rendered api/activities/show.json.jbuilder (9.2ms)
+Completed 200 OK in 17ms (Views: 12.3ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/api/activities/" for ::1 at 2021-11-01 23:54:24 -0400
+Processing by Api::ActivitiesController#index as JSON
+  Rendering api/activities/index.json.jbuilder
+  [1m[36mActivity Load (0.6ms)[0m  [1m[34mSELECT "activities".* FROM "activities"[0m
+  ↳ app/views/api/activities/index.json.jbuilder:1
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1[0m  [["id", 4]]
+  ↳ app/views/api/activities/index.json.jbuilder:1
+  Rendered api/activities/index.json.jbuilder (4.5ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 1.0ms)
+
+
+
+NoMethodError - undefined method `user_id' for nil:NilClass:
+  app/views/api/activities/index.json.jbuilder:3:in `block (2 levels) in _app_views_api_activities_index_json_jbuilder__2693338902874609076_70297777566680'
+  app/views/api/activities/index.json.jbuilder:2:in `block in _app_views_api_activities_index_json_jbuilder__2693338902874609076_70297777566680'
+  app/views/api/activities/index.json.jbuilder:1:in `_app_views_api_activities_index_json_jbuilder__2693338902874609076_70297777566680'
+
+Started POST "/__better_errors/8601bc9b8647d5d8/variables" for ::1 at 2021-11-01 23:54:24 -0400
+Started GET "/api/activities/1" for ::1 at 2021-11-01 23:54:42 -0400
+Processing by Api::ActivitiesController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mActivity Load (0.7ms)[0m  [1m[34mSELECT  "activities".* FROM "activities" WHERE "activities"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/activities_controller.rb:8
+  Rendering api/activities/show.json.jbuilder
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/api/activities/show.json.jbuilder:2
+  Rendered api/activities/show.json.jbuilder (1.6ms)
+Completed 200 OK in 8ms (Views: 4.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/api/activities/" for ::1 at 2021-11-01 23:55:05 -0400
+Processing by Api::ActivitiesController#index as JSON
+  Rendering api/activities/index.json.jbuilder
+  [1m[36mActivity Load (0.6ms)[0m  [1m[34mSELECT "activities".* FROM "activities"[0m
+  ↳ app/views/api/activities/index.json.jbuilder:1
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1[0m  [["id", 4]]
+  ↳ app/views/api/activities/index.json.jbuilder:1
+  Rendered api/activities/index.json.jbuilder (4.9ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 1.1ms)
+
+
+
+NoMethodError - undefined method `user_id' for nil:NilClass:
+  app/views/api/activities/index.json.jbuilder:3:in `block (2 levels) in _app_views_api_activities_index_json_jbuilder__2693338902874609076_70297520742480'
+  app/views/api/activities/index.json.jbuilder:2:in `block in _app_views_api_activities_index_json_jbuilder__2693338902874609076_70297520742480'
+  app/views/api/activities/index.json.jbuilder:1:in `_app_views_api_activities_index_json_jbuilder__2693338902874609076_70297520742480'
+
+Started POST "/__better_errors/0fd4b5d0d96d7a12/variables" for ::1 at 2021-11-01 23:55:05 -0400
+Started GET "/api/activities/" for ::1 at 2021-11-01 23:55:47 -0400
+Processing by Api::ActivitiesController#index as JSON
+  Rendering api/activities/index.json.jbuilder
+  [1m[36mActivity Load (0.8ms)[0m  [1m[34mSELECT "activities".* FROM "activities"[0m
+  ↳ app/views/api/activities/index.json.jbuilder:1
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1[0m  [["id", 4]]
+  ↳ app/views/api/activities/index.json.jbuilder:1
+  Rendered api/activities/index.json.jbuilder (5.8ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 1.2ms)
+
+
+
+NoMethodError - undefined method `user_id' for nil:NilClass:
+  app/views/api/activities/index.json.jbuilder:3:in `block (2 levels) in _app_views_api_activities_index_json_jbuilder__2693338902874609076_70297910644580'
+  app/views/api/activities/index.json.jbuilder:2:in `block in _app_views_api_activities_index_json_jbuilder__2693338902874609076_70297910644580'
+  app/views/api/activities/index.json.jbuilder:1:in `_app_views_api_activities_index_json_jbuilder__2693338902874609076_70297910644580'
+
+Started POST "/__better_errors/62abdc7b07b4d843/variables" for ::1 at 2021-11-01 23:55:47 -0400
+Started GET "/api/activities/" for ::1 at 2021-11-01 23:55:50 -0400
+Processing by Api::ActivitiesController#index as JSON
+  Rendering api/activities/index.json.jbuilder
+  [1m[36mActivity Load (0.6ms)[0m  [1m[34mSELECT "activities".* FROM "activities"[0m
+  ↳ app/views/api/activities/index.json.jbuilder:1
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1[0m  [["id", 4]]
+  ↳ app/views/api/activities/index.json.jbuilder:1
+  Rendered api/activities/index.json.jbuilder (4.5ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.9ms)
+
+
+
+NoMethodError - undefined method `user_id' for nil:NilClass:
+  app/views/api/activities/index.json.jbuilder:3:in `block (2 levels) in _app_views_api_activities_index_json_jbuilder__2693338902874609076_70297777252120'
+  app/views/api/activities/index.json.jbuilder:2:in `block in _app_views_api_activities_index_json_jbuilder__2693338902874609076_70297777252120'
+  app/views/api/activities/index.json.jbuilder:1:in `_app_views_api_activities_index_json_jbuilder__2693338902874609076_70297777252120'
+
+Started POST "/__better_errors/24ecff38f2983d60/variables" for ::1 at 2021-11-01 23:55:50 -0400
+Started GET "/" for ::1 at 2021-11-01 23:56:03 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "oXUlSpRrserDzV5xFWRSow"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered static_pages/root.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 19ms (Views: 16.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/activities" for ::1 at 2021-11-01 23:56:12 -0400
+Processing by Api::ActivitiesController#index as JSON
+  Rendering api/activities/index.json.jbuilder
+  [1m[36mActivity Load (8.6ms)[0m  [1m[34mSELECT "activities".* FROM "activities"[0m
+  ↳ app/views/api/activities/index.json.jbuilder:1
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1[0m  [["id", 4]]
+  ↳ app/views/api/activities/index.json.jbuilder:1
+  Rendered api/activities/index.json.jbuilder (19.3ms)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 9.0ms)
+
+
+
+NoMethodError - undefined method `user_id' for nil:NilClass:
+  app/views/api/activities/index.json.jbuilder:3:in `block (2 levels) in _app_views_api_activities_index_json_jbuilder__2693338902874609076_70297905303520'
+  app/views/api/activities/index.json.jbuilder:2:in `block in _app_views_api_activities_index_json_jbuilder__2693338902874609076_70297905303520'
+  app/views/api/activities/index.json.jbuilder:1:in `_app_views_api_activities_index_json_jbuilder__2693338902874609076_70297905303520'
+
+Started POST "/__better_errors/27e0c50181f20a34/variables" for ::1 at 2021-11-01 23:56:12 -0400
+Started GET "/api/activities" for ::1 at 2021-11-01 23:56:26 -0400
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/maddai/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by Api::ActivitiesController#index as JSON
+  Rendering api/activities/index.json.jbuilder
+  [1m[36mActivity Load (13.1ms)[0m  [1m[34mSELECT "activities".* FROM "activities"[0m
+  ↳ app/views/api/activities/index.json.jbuilder:1
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1[0m  [["id", 4]]
+  ↳ app/views/api/activities/index.json.jbuilder:1
+  Rendered api/activities/index.json.jbuilder (72.2ms)
+Completed 500 Internal Server Error in 86ms (ActiveRecord: 46.3ms)
+
+
+
+NoMethodError - undefined method `user_id' for nil:NilClass:
+  app/views/api/activities/index.json.jbuilder:3:in `block (2 levels) in _app_views_api_activities_index_json_jbuilder__345518626178842125_70223669242140'
+  app/views/api/activities/index.json.jbuilder:2:in `block in _app_views_api_activities_index_json_jbuilder__345518626178842125_70223669242140'
+  app/views/api/activities/index.json.jbuilder:1:in `_app_views_api_activities_index_json_jbuilder__345518626178842125_70223669242140'
+
+Started POST "/__better_errors/2231875d4f27d2d9/variables" for ::1 at 2021-11-01 23:56:27 -0400
+Started GET "/api/activities" for ::1 at 2021-11-01 23:57:15 -0400
+Processing by Api::ActivitiesController#index as JSON
+  Rendering api/activities/index.json.jbuilder
+  [1m[36mActivity Load (0.8ms)[0m  [1m[34mSELECT "activities".* FROM "activities"[0m
+  ↳ app/views/api/activities/index.json.jbuilder:1
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1[0m  [["id", 4]]
+  ↳ app/views/api/activities/index.json.jbuilder:1
+  Rendered api/activities/index.json.jbuilder (5.8ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 2.0ms)
+
+
+
+NoMethodError - undefined method `user_id' for nil:NilClass:
+  app/views/api/activities/index.json.jbuilder:3:in `block (2 levels) in _app_views_api_activities_index_json_jbuilder__345518626178842125_70223940610060'
+  app/views/api/activities/index.json.jbuilder:2:in `block in _app_views_api_activities_index_json_jbuilder__345518626178842125_70223940610060'
+  app/views/api/activities/index.json.jbuilder:1:in `_app_views_api_activities_index_json_jbuilder__345518626178842125_70223940610060'
+
+Started POST "/__better_errors/9f2b92eb6bf44644/variables" for ::1 at 2021-11-01 23:57:15 -0400
+Started GET "/api/activities" for ::1 at 2021-11-01 23:58:16 -0400
+Processing by Api::ActivitiesController#index as JSON
+  Rendering api/activities/index.json.jbuilder
+  [1m[36mActivity Load (1.1ms)[0m  [1m[34mSELECT "activities".* FROM "activities"[0m
+  ↳ app/views/api/activities/index.json.jbuilder:1
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1[0m  [["id", 4]]
+  ↳ app/views/api/activities/index.json.jbuilder:1
+  Rendered api/activities/index.json.jbuilder (8.1ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 2.8ms)
+
+
+
+NoMethodError - undefined method `user_id' for nil:NilClass:
+  app/views/api/activities/index.json.jbuilder:3:in `block (2 levels) in _app_views_api_activities_index_json_jbuilder__345518626178842125_70223941399200'
+  app/views/api/activities/index.json.jbuilder:2:in `block in _app_views_api_activities_index_json_jbuilder__345518626178842125_70223941399200'
+  app/views/api/activities/index.json.jbuilder:1:in `_app_views_api_activities_index_json_jbuilder__345518626178842125_70223941399200'
+
+Started POST "/__better_errors/84c4ad22ad7c1bfa/variables" for ::1 at 2021-11-01 23:58:16 -0400
+Started GET "/api/activities" for ::1 at 2021-11-01 23:58:17 -0400
+Processing by Api::ActivitiesController#index as JSON
+  Rendering api/activities/index.json.jbuilder
+  [1m[36mActivity Load (0.6ms)[0m  [1m[34mSELECT "activities".* FROM "activities"[0m
+  ↳ app/views/api/activities/index.json.jbuilder:1
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1[0m  [["id", 4]]
+  ↳ app/views/api/activities/index.json.jbuilder:1
+  Rendered api/activities/index.json.jbuilder (5.1ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 1.0ms)
+
+
+
+NoMethodError - undefined method `user_id' for nil:NilClass:
+  app/views/api/activities/index.json.jbuilder:3:in `block (2 levels) in _app_views_api_activities_index_json_jbuilder__345518626178842125_70223940677020'
+  app/views/api/activities/index.json.jbuilder:2:in `block in _app_views_api_activities_index_json_jbuilder__345518626178842125_70223940677020'
+  app/views/api/activities/index.json.jbuilder:1:in `_app_views_api_activities_index_json_jbuilder__345518626178842125_70223940677020'
+
+Started POST "/__better_errors/c07caafa8a6e3752/variables" for ::1 at 2021-11-01 23:58:17 -0400
+Started GET "/api/activities" for ::1 at 2021-11-01 23:58:21 -0400
+Processing by Api::ActivitiesController#index as JSON
+  Rendering api/activities/index.json.jbuilder
+  [1m[36mActivity Load (0.6ms)[0m  [1m[34mSELECT "activities".* FROM "activities"[0m
+  ↳ app/views/api/activities/index.json.jbuilder:1
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1[0m  [["id", 4]]
+  ↳ app/views/api/activities/index.json.jbuilder:1
+  Rendered api/activities/index.json.jbuilder (6.6ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 1.3ms)
+
+
+
+NoMethodError - undefined method `user_id' for nil:NilClass:
+  app/views/api/activities/index.json.jbuilder:3:in `block (2 levels) in _app_views_api_activities_index_json_jbuilder__345518626178842125_70223670035100'
+  app/views/api/activities/index.json.jbuilder:2:in `block in _app_views_api_activities_index_json_jbuilder__345518626178842125_70223670035100'
+  app/views/api/activities/index.json.jbuilder:1:in `_app_views_api_activities_index_json_jbuilder__345518626178842125_70223670035100'
+
+Started POST "/__better_errors/c26ea639a952cbb0/variables" for ::1 at 2021-11-01 23:58:21 -0400
+Started GET "/" for ::1 at 2021-11-01 23:58:36 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered static_pages/root.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 332ms (Views: 330.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/activities" for ::1 at 2021-11-01 23:58:54 -0400
+Processing by Api::ActivitiesController#index as JSON
+  Rendering api/activities/index.json.jbuilder
+  [1m[36mActivity Load (7.2ms)[0m  [1m[34mSELECT "activities".* FROM "activities"[0m
+  ↳ app/views/api/activities/index.json.jbuilder:1
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1[0m  [["id", 4]]
+  ↳ app/views/api/activities/index.json.jbuilder:1
+  Rendered api/activities/index.json.jbuilder (20.0ms)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 15.0ms)
+
+
+
+NoMethodError - undefined method `user_id' for nil:NilClass:
+  app/views/api/activities/index.json.jbuilder:3:in `block (2 levels) in _app_views_api_activities_index_json_jbuilder__345518626178842125_70223660129380'
+  app/views/api/activities/index.json.jbuilder:2:in `block in _app_views_api_activities_index_json_jbuilder__345518626178842125_70223660129380'
+  app/views/api/activities/index.json.jbuilder:1:in `_app_views_api_activities_index_json_jbuilder__345518626178842125_70223660129380'
+
+Started POST "/__better_errors/6a1b994e37354250/variables" for ::1 at 2021-11-01 23:58:54 -0400
+Started GET "/api/activities" for ::1 at 2021-11-02 09:16:04 -0400
+Processing by Api::ActivitiesController#index as JSON
+  Rendering api/activities/index.json.jbuilder
+  [1m[36mActivity Load (1.7ms)[0m  [1m[34mSELECT "activities".* FROM "activities"[0m
+  ↳ app/views/api/activities/index.json.jbuilder:1
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1[0m  [["id", 4]]
+  ↳ app/views/api/activities/index.json.jbuilder:1
+  Rendered api/activities/index.json.jbuilder (8.8ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 3.0ms)
+
+
+
+NoMethodError - undefined method `user' for nil:NilClass:
+  app/views/api/activities/index.json.jbuilder:4:in `block (2 levels) in _app_views_api_activities_index_json_jbuilder__345518626178842125_70223660212480'
+  app/views/api/activities/index.json.jbuilder:2:in `block in _app_views_api_activities_index_json_jbuilder__345518626178842125_70223660212480'
+  app/views/api/activities/index.json.jbuilder:1:in `_app_views_api_activities_index_json_jbuilder__345518626178842125_70223660212480'
+
+Started POST "/__better_errors/37b29cd4e6d172df/variables" for ::1 at 2021-11-02 09:16:04 -0400
+Started GET "/api/activities" for ::1 at 2021-11-02 09:16:06 -0400
+Processing by Api::ActivitiesController#index as JSON
+  Rendering api/activities/index.json.jbuilder
+  [1m[36mActivity Load (13.5ms)[0m  [1m[34mSELECT "activities".* FROM "activities"[0m
+  ↳ app/views/api/activities/index.json.jbuilder:1
+  [1m[36mUser Load (8.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1[0m  [["id", 4]]
+  ↳ app/views/api/activities/index.json.jbuilder:1
+  Rendered api/activities/index.json.jbuilder (32.7ms)
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 22.0ms)
+
+
+
+NoMethodError - undefined method `user' for nil:NilClass:
+  app/views/api/activities/index.json.jbuilder:4:in `block (2 levels) in _app_views_api_activities_index_json_jbuilder__345518626178842125_70223659916880'
+  app/views/api/activities/index.json.jbuilder:2:in `block in _app_views_api_activities_index_json_jbuilder__345518626178842125_70223659916880'
+  app/views/api/activities/index.json.jbuilder:1:in `_app_views_api_activities_index_json_jbuilder__345518626178842125_70223659916880'
+
+Started POST "/__better_errors/52bac526d5575fff/variables" for ::1 at 2021-11-02 09:16:06 -0400
+Started GET "/api/activities" for ::1 at 2021-11-02 09:16:14 -0400
+Processing by Api::ActivitiesController#index as JSON
+  Rendering api/activities/index.json.jbuilder
+  [1m[36mActivity Load (0.6ms)[0m  [1m[34mSELECT "activities".* FROM "activities"[0m
+  ↳ app/views/api/activities/index.json.jbuilder:1
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1[0m  [["id", 4]]
+  ↳ app/views/api/activities/index.json.jbuilder:1
+  Rendered api/activities/index.json.jbuilder (3.0ms)
+Completed 200 OK in 8ms (Views: 5.2ms | ActiveRecord: 1.2ms)
+
+
