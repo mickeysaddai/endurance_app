@@ -9,7 +9,7 @@
 User.destroy_all
 Activity.destroy_all
 
-mickey= User.create!(
+mickey = User.create!(
   username: "mickey",
   password: "password123"
 )
@@ -18,10 +18,23 @@ mickey= User.create!(
 activity1 = Activity.create!(
   user_id: mickey.id,
   activity_type: "Running", 
-  distance: 3,
   equipment_type: "none", 
   duration: 30, 
   heartrate: 120,
   date: "12/10/2020",
-  description: "Running is life"
+  time: "12.30pm",
+  description: "Running is life",
+  distance: 3,
+)
+
+activity2 = Activity.create!(
+  user_id: mickey.id,
+  activity_type: "Running", 
+  equipment_type: "none", 
+  duration: 40, 
+  heartrate: 120,
+  date: "12/10/2020",
+  time: "12.20pm",
+  description: "Running is life",
+  distance: 4,
 )
