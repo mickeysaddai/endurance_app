@@ -19,7 +19,7 @@ export const createUser = user => {
     })
 }
 
-export const updatePlayer = (user) => {
+export const updateUser = (user) => {
     return (
         $.ajax({
             method: 'PATCH',
@@ -29,7 +29,7 @@ export const updatePlayer = (user) => {
     )
 }
 
-export const deletePlayer = (userId) => {
+export const deleteUser = (userId) => {
     return (
         $.ajax({
             method: 'DELETE',
