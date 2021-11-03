@@ -1,9 +1,10 @@
 import { connect } from "react-redux";
 import ActivityIndex from './activity_index';
-import { fetchActivities } from "../../util/activity_util";
+import { fetchActivities } from "../../actions/activity_actions";
 
 const mapStateToProps = state => ({
-    activities: Object.values(state.activities)
+    // TODO: create selector for this
+    activities: Object.values(state.entities.activities)
 
 })
 

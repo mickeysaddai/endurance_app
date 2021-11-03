@@ -17,7 +17,7 @@ mickey = User.create!(
 
 activity1 = Activity.create!(
   user_id: mickey.id,
-  activity_type: "Running", 
+  activity_type: "running", 
   equipment_type: "none", 
   duration: 30, 
   heartrate: 120,
@@ -29,7 +29,7 @@ activity1 = Activity.create!(
 
 activity2 = Activity.create!(
   user_id: mickey.id,
-  activity_type: "Running", 
+  activity_type: "running", 
   equipment_type: "none", 
   duration: 40, 
   heartrate: 120,
@@ -37,4 +37,59 @@ activity2 = Activity.create!(
   time: "12.20pm",
   description: "Running is life",
   distance: 4,
+)
+activity3 = Activity.create!(
+  user_id: mickey.id,
+  activity_type: "running", 
+  equipment_type: "none", 
+  duration: 40, 
+  heartrate: 120,
+  date: "12/10/2020",
+  time: "12.20pm",
+  description: "Running is life",
+  distance: 5.5,
+)
+activity4 = Activity.create!(
+  user_id: mickey.id,
+  activity_type: "running", 
+  equipment_type: "none", 
+  duration: 40, 
+  heartrate: 120,
+  date: "12/10/2020",
+  time: "12.20pm",
+  description: "Running is life",
+  distance: 4.4,
+)
+activity5 = Activity.create!(
+  user_id: mickey.id,
+  activity_type: "running", 
+  equipment_type: "none", 
+  duration: 40, 
+  heartrate: 120,
+  date: "12/10/2020",
+  time: "12.20pm",
+  description: "Running is life",
+  distance: 2.7,
+)
+activity6 = Activity.create!(
+  user_id: mickey.id,
+  activity_type: "running", 
+  equipment_type: "none", 
+  duration: 40, 
+  heartrate: 120,
+  date: "12/10/2020",
+  time: "12.20pm",
+  description: "Running is life",
+  distance: 6.2,
+)
+activity7 = Activity.create!(
+  user_id: mickey.id,
+  activity_type: "running", 
+  equipment_type: "none", 
+  duration: 40, 
+  heartrate: 120,
+  date: "12/10/2020",
+  time: "12.20pm",
+  description: "Running is life",
+  distance: 3.5,
 )

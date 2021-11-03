@@ -1,7 +1,108 @@
 import { RECEIVE_ACTIVITIES, RECEIVE_ACTIVITY, REMOVE_ACTIVITY } from "../actions/activity_actions";
 
+const initialState = {
+    "1": {
+        "user_id": 1,
+        "activity_type": "running",
+        "distance": 3,
+        "time": "12.30pm",
+        "description": "running is life",
+        "heartrate": 120,
+        "duration": 30,
+        "equipment_type": "none",
+        "user": "mickey"
+    },
+    "2": {
+        "user_id": 1,
+        "activity_type": "running",
+        "distance": 4,
+        "time": "12.20pm",
+        "description": "running is life",
+        "heartrate": 120,
+        "duration": 40,
+        "equipment_type": "none",
+        "user": "mickey"
+    },
+    "3": {
+        "user_id": 1,
+        "activity_type": "running",
+        "distance": 3,
+        "time": "12.30pm",
+        "description": "Running is life",
+        "heartrate": 120,
+        "duration": 30,
+        "equipment_type": "none",
+        "user": "mickey"
+    },
+    "4": {
+        "user_id": 1,
+        "activity_type": "running",
+        "distance": 4,
+        "time": "12.20pm",
+        "description": "Running is life",
+        "heartrate": 120,
+        "duration": 40,
+        "equipment_type": "none",
+        "user": "mickey"
+    },
+    "5": {
+        "user_id": 1,
+        "activity_type": "running",
+        "distance": 5,
+        "time": "12.20pm",
+        "description": "Running is life",
+        "heartrate": 120,
+        "duration": 40,
+        "equipment_type": "none",
+        "user": "mickey"
+    },
+    "6": {
+        "user_id": 1,
+        "activity_type": "running",
+        "distance": 4,
+        "time": "12.20pm",
+        "description": "Running is life",
+        "heartrate": 120,
+        "duration": 40,
+        "equipment_type": "none",
+        "user": "mickey"
+    },
+    "7": {
+        "user_id": 1,
+        "activity_type": "running",
+        "distance": 2,
+        "time": "12.20pm",
+        "description": "Running is life",
+        "heartrate": 120,
+        "duration": 40,
+        "equipment_type": "none",
+        "user": "mickey"
+    },
+    "8": {
+        "user_id": 1,
+        "activity_type": "running",
+        "distance": 6,
+        "time": "12.20pm",
+        "description": "Running is life",
+        "heartrate": 120,
+        "duration": 40,
+        "equipment_type": "none",
+        "user": "mickey"
+    },
+    "9": {
+        "user_id": 1,
+        "activity_type": "running",
+        "distance": 3,
+        "time": "12.20pm",
+        "description": "Running is life",
+        "heartrate": 120,
+        "duration": 40,
+        "equipment_type": "none",
+        "user": "mickey"
+    }
+}
 
-const ActivitiesReducer = (oldState = {}, action) => {
+const ActivitiesReducer = (oldState = initialState, action) => {
     Object.freeze(oldState);
     let nextState = Object.assign({}, oldState)
 
