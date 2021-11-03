@@ -11,7 +11,8 @@ Activity.destroy_all
 
 mickey = User.create!(
   username: "mickey",
-  password: "password123"
+  password: "password123",
+  email: "mickey.addai@gmail.com"
 )
 
 

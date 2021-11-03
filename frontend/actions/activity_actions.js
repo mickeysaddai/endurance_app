@@ -1,4 +1,4 @@
-import * as APIUtil from '../util/activity_util';
+import * as APIUtil from '../util/activity_api_util';
 
 export const RECEIVE_ACTIVITIES = 'RECEIVE_ACTIVITIES';
 export const RECEIVE_ACTIVITY = 'RECEIVE_ACTIVITY';
