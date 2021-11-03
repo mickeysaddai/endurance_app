@@ -55,50 +55,6 @@ const initialState = {
         "duration": 40,
         "equipment_type": "none",
         "user": "mickey"
-    },
-    "6": {
-        "user_id": 1,
-        "activity_type": "running",
-        "distance": 4.08,
-        "time": "12.20pm",
-        "description": "Running is life",
-        "heartrate": 120,
-        "duration": 40,
-        "equipment_type": "none",
-        "user": "mickey"
-    },
-    "7": {
-        "user_id": 1,
-        "activity_type": "running",
-        "distance": 2.20,
-        "time": "12.20pm",
-        "description": "Running is life",
-        "heartrate": 120,
-        "duration": 40,
-        "equipment_type": "none",
-        "user": "mickey"
-    },
-    "8": {
-        "user_id": 1,
-        "activity_type": "running",
-        "distance": 6.02,
-        "time": "12.20pm",
-        "description": "Running is life",
-        "heartrate": 120,
-        "duration": 40,
-        "equipment_type": "none",
-        "user": "mickey"
-    },
-    "9": {
-        "user_id": 1,
-        "activity_type": "running",
-        "distance": 3.15,
-        "time": "12.20pm",
-        "description": "Running is life",
-        "heartrate": 120,
-        "duration": 40,
-        "equipment_type": "none",
-        "user": "mickey"
     }
 }
 

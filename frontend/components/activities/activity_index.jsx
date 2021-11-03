@@ -15,12 +15,12 @@ class ActivityIndex extends React.Component{
 
                 </div>
                 <div className="column is-two-thirds">
-                    <div class="box">
+                    <div className="box">
                         <h1><strong>FitnessFeed</strong></h1>
                     </div>
                     {
-                        activities.map(activity => {
-                            return (activity !== undefined && <ActivityIndexItem activity={activity} />)
+                        activities.map((activity, i)=> {
+                            return (activity !== undefined && <ActivityIndexItem key={i} activity={activity} />)
                         })
                     }
                     <Link to={'/'}>Log</Link>

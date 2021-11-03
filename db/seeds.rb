@@ -24,7 +24,7 @@ activity1 = Activity.create!(
   date: "12/10/2020",
   time: "12.30pm",
   description: "Running is life",
-  distance: 3,
+  distance: 3.50,
 )
 
 activity2 = Activity.create!(
@@ -36,7 +36,7 @@ activity2 = Activity.create!(
   date: "12/10/2020",
   time: "12.20pm",
   description: "Running is life",
-  distance: 4,
+  distance: 4.21,
 )
 activity3 = Activity.create!(
   user_id: mickey.id,
@@ -47,7 +47,7 @@ activity3 = Activity.create!(
   date: "12/10/2020",
   time: "12.20pm",
   description: "Running is life",
-  distance: 5.5,
+  distance: 5.50,
 )
 activity4 = Activity.create!(
   user_id: mickey.id,
@@ -58,7 +58,7 @@ activity4 = Activity.create!(
   date: "12/10/2020",
   time: "12.20pm",
   description: "Running is life",
-  distance: 4.4,
+  distance: 4.44,
 )
 activity5 = Activity.create!(
   user_id: mickey.id,
@@ -69,7 +69,7 @@ activity5 = Activity.create!(
   date: "12/10/2020",
   time: "12.20pm",
   description: "Running is life",
-  distance: 2.7,
+  distance: 2.73,
 )
 activity6 = Activity.create!(
   user_id: mickey.id,
@@ -80,7 +80,7 @@ activity6 = Activity.create!(
   date: "12/10/2020",
   time: "12.20pm",
   description: "Running is life",
-  distance: 6.2,
+  distance: 6.29,
 )
 activity7 = Activity.create!(
   user_id: mickey.id,
@@ -91,5 +91,5 @@ activity7 = Activity.create!(
   date: "12/10/2020",
   time: "12.20pm",
   description: "Running is life",
-  distance: 3.5,
+  distance: 3.58,
 )

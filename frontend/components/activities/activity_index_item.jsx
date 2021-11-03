@@ -29,7 +29,7 @@ const ActivityIndexItem = (props) =>  {
                             </a>
                             <a className="level-item" aria-label="reply">
                                 <span className="icon is-small">
-                                    <i class="fa-solid fa-comment" aria-hidden="true"></i>
+                                    <i className="fa-solid fa-comment" aria-hidden="true"></i>
                                 </span>
                             </a>
                 
