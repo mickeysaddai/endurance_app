@@ -55,9 +55,14 @@ class SessionForm extends React.Component {
                 <input type="submit" value={this.props.formtype} />
 
 
+
+                
+
+
             </form>
         )
     }
 }
 
 export default SessionForm;
+
