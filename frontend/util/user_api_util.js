@@ -1,7 +1,7 @@
 export const fetchUsers = () => (
     $.ajax({
         method: 'GET',
-        url: `api/users/`
+        url: 'api/users/'
     })
 );
 export const fetchUser = userId => (
@@ -10,3 +10,30 @@ export const fetchUser = userId => (
         url: `api/users/${userId}`
     })
 );
+
+export const createUser = user => {
+    return $.ajax({
+        method: 'POST',
+        url: '/api/users',
+        data: { user }
+    })
+}
+
+export const updatePlayer = (user) => {
+    return (
+        $.ajax({
+            method: 'PATCH',
+            url: `/api/users/${user.id}`,
+            data: { user }
+        })
+    )
+}
+
+export const deletePlayer = (userId) => {
+    return (
+        $.ajax({
+            method: 'DELETE',
+            url: `/api/users/${userId}`,
+        })
+    )
+}
