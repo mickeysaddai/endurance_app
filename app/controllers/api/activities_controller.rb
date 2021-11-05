@@ -9,8 +9,8 @@ class Api::ActivitiesController < ApplicationController
   end
 
   def create
+    # debugger
     @activity = Activity.new(activity_params)
-    
     if @activity.save
       render :show
     else
@@ -41,7 +41,7 @@ class Api::ActivitiesController < ApplicationController
   private
 
   def activity_params 
-    params.require(:activity).permit(:id, :user_id, :activity_type, :distance, :time, :description, :heartrate, :duration, :equipment_type)
+    params.require(:activity).permit(:id, :user_id, :activity_type, :distance, :date, :time, :description, :heartrate, :duration, :equipment_type)
   end
 
 end

@@ -6,8 +6,9 @@ const ActivityIndexItem = (props) =>  {
  
 // </strong> <small>@johnsmith</small> <small>31m</small>
     return (
+    <div>
 
-        <div className="box"> 
+        <div className="box margined"> 
             <article className="media">
                 <div className="media-left">
                     <figure className="image is-64x64">
@@ -23,21 +24,40 @@ const ActivityIndexItem = (props) =>  {
                     <nav className="level is-mobile">
                         <div className="level-left">
                             <a className="level-item" aria-label="like">
-                                <span className="icon is-small">
-                                    <i className="far fa-heart" aria-hidden="true"></i>
-                                </span>
+                                <button className="likeButton">Like</button>
                             </a>
                             <a className="level-item" aria-label="reply">
-                                <span className="icon is-small">
-                                    <i className="fa-solid fa-comment" aria-hidden="true"></i>
-                                </span>
+                                    <button className="commentButton">Comment</button>  
                             </a>
-                
+            
                         </div>
                     </nav>
                 </div>
+                            <a className="level-item rightAngle" aria-label="reply">
+                                <i className="fas fa-angle-right"></i>
+                            </a>
             </article>
         </div>
+
+
+   
+
+
+
+     
+
+    </div>
+
+     
+  
+
+
+
+
+      
+
+
+
     )
 }
 

@@ -9,21 +9,23 @@ class ActivityIndex extends React.Component{
     render(){
         const {activities} = this.props;
         console.log(activities)
+            
         return (
+        <div>
+                
             <div className="columns">
                 <div className="column">
 
                 </div>
-                <div className="column is-two-thirds">
-                    <div className="box">
-                        <h1><strong>FitnessFeed</strong></h1>
+                    <div className="column is-three-fifths">
+                    <div className="box feed">
+                        <h1>FitnessFeed</h1>
                     </div>
                     {
                         activities.map((activity, i)=> {
                             return (activity !== undefined && <ActivityIndexItem key={i} activity={activity} />)
                         })
                     }
-                    <Link to={'/'}>Log</Link>
                 </div>
                 <div className="column">
 
@@ -31,6 +33,7 @@ class ActivityIndex extends React.Component{
                  
 
             </div>
+        </div>
         )
     }
 }

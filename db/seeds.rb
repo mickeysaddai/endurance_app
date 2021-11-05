@@ -14,6 +14,11 @@ mickey = User.create!(
   password: "password123",
   email: "mickey.addai@gmail.com"
 )
+timmy = User.create!(
+  username: "timmyy",
+  password: "password456",
+  email: "mickey.addai@gmail.com"
+)
 
 
 activity1 = Activity.create!(

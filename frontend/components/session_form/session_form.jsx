@@ -32,7 +32,9 @@ class SessionForm extends React.Component {
         let navLink = this.props.formType === 'login' ? <Link to='./signup'>Sign Up</Link> : <Link to='./login'>Log In</Link>
 
         return (
-            <form onSubmit={(e) => this.handleSubmit(e)}>
+        <div>
+            
+            <form class="box" onSubmit={(e) => this.handleSubmit(e)}>
                 <h3>Please {this.props.formType} or {navLink} to get started with Endurance </h3>
                 {this.renderErrors()}
 
@@ -54,12 +56,9 @@ class SessionForm extends React.Component {
                 </label>
                 <input type="submit" value={this.props.formtype} />
 
+            </form>            
 
-
-                
-
-
-            </form>
+        </div>
         )
     }
 }

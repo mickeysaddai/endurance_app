@@ -1,0 +1,52 @@
+.navButtons{
+    background-color: #31a4d9;
+    display: flex;
+    justify-content: space-between;
+     padding: 18px 0;
+    margin: auto;
+    color: white;
+
+}
+
+.feedNav{
+
+   
+    // float: left;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: 20px 0;
+    cursor: pointer;
+    cursor: hand;
+    
+    // border-right: 1px
+ 
+}
+
+.meNav{
+    float:center;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: 20px 0;
+    cursor: pointer;
+    cursor: hand;
+    // border-right: 1px
+
+}
+
+.logNav{
+      float:center;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: 20px 0;
+    cursor: pointer;
+    cursor: hand;
+
+
+}
+
+.enduranceNav{
+    font-family:sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+}
+ 
