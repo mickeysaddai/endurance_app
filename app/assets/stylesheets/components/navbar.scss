@@ -2,10 +2,15 @@
     background-color: #31a4d9;
     display: flex;
     justify-content: space-between;
+
      padding: 18px 0;
     margin: auto;
-    color: white;
 
+}
+
+.navButtons:second-child{
+    // margin-left: 10px;
+    // color:red
 }
 
 .feedNav{
@@ -45,8 +50,15 @@
 }
 
 .enduranceNav{
+
     font-family:sans-serif;
-    font-size: 30px;
-    font-weight: bold;
+    // font-size: 30px;
+    
 }
  
+a {
+    color: white !important;
+    font-weight: bold !important;
+    font-family: Arial, Helvetica, sans-serif !important;
+
+}

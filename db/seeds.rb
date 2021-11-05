@@ -15,9 +15,9 @@ mickey = User.create!(
   email: "mickey.addai@gmail.com"
 )
 timmy = User.create!(
-  username: "timmyy",
+  username: "timmy",
   password: "password456",
-  email: "mickey.addai@gmail.com"
+  email: "timmy.addai@gmail.com"
 )
 
 
