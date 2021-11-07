@@ -14,10 +14,9 @@ const App = () => (
     <div >
             <div className="navButtons">
                 <div className='enduranceNav'>
-                <h1><Link to='/'>Endurance</Link></h1>
-                    
-
+                <Link to='/'>Endurance</Link>
                 </div>
+                    
                 <div className='feedNav'>
                 <Link to={'/'}>FEED</Link>
                 </div>

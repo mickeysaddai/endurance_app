@@ -29,9 +29,6 @@ h1{
   
 }
 
-.createActivity{
-    background-color: rgba(214, 214, 214, 0.897) !important;
-}
 
 .activityDetails{
     background-color: white;
@@ -52,9 +49,9 @@ h1{
     color: grey !important;
 }
 
-.column{
-    background-color: rgb(206, 204, 204);
-}
+// .column{
+//     background-color: rgb(206, 204, 204);
+// }
 
 .commentButton{
     font-weight: bold;
@@ -82,8 +79,11 @@ h1{
 }
 
 .rightAngle{
-margin-top: 40px;
-color:rgb(206, 204, 204)
+    margin-top: 40px !important;
+    color: grey !important;
+
+
+
 }
 
 
@@ -91,3 +91,16 @@ color:rgb(206, 204, 204)
 position: absolute;
 right: 0px;
 }
+
+.fifth{
+    background-color: white;
+}
+
+
+// .addActivityRight{
+//     float: right !important;
+//     width: 260px !important;
+//     margin-left: 0px !important;
+//     border-left: 1px !important;
+    
+// }

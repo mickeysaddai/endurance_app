@@ -2,24 +2,19 @@
     background-color: #31a4d9;
     display: flex;
     justify-content: space-between;
+    // height: 70px;
 
      padding: 18px 0;
-    margin: auto;
 
 }
 
-.navButtons:second-child{
-    // margin-left: 10px;
-    // color:red
-}
+
 
 .feedNav{
-
-   
-    // float: left;
-    position: relative;
-    background-repeat: no-repeat;
-    background-position: 20px 0;
+    padding-top: 4px;
+    font-size: 20px; 
+    // margin-right: 25px;
+    // margin-left: -90px;
     cursor: pointer;
     cursor: hand;
     
@@ -28,10 +23,10 @@
 }
 
 .meNav{
-    float:center;
-    position: relative;
-    background-repeat: no-repeat;
-    background-position: 20px 0;
+     padding-top: 4px;
+   font-size: 20px; 
+    // margin-right: 340px;
+    // margin-left: -100px;
     cursor: pointer;
     cursor: hand;
     // border-right: 1px
@@ -39,10 +34,10 @@
 }
 
 .logNav{
-      float:center;
-    position: relative;
-    background-repeat: no-repeat;
-    background-position: 20px 0;
+    padding-top: 4px;
+    // margin-right: 1200px;
+    // margin-left: -400px;
+     font-size: 20px; 
     cursor: pointer;
     cursor: hand;
 
@@ -50,15 +45,18 @@
 }
 
 .enduranceNav{
+     color: black;
+     font-size: 25px; 
+     margin-left: 390px;
+     font-family: cursive !important;
+    font-weight: bold !important;
 
-    font-family:sans-serif;
-    // font-size: 30px;
     
 }
  
 a {
     color: white !important;
-    font-weight: bold !important;
-    font-family: Arial, Helvetica, sans-serif !important;
+ 
+    
 
 }

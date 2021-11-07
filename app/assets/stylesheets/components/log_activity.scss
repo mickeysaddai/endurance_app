@@ -1,0 +1,209 @@
+.createActivity{
+    display: flex !important;
+    background-color: rgba(213, 213, 213, 0.897) !important;
+
+}
+.logForm{
+    margin-bottom: 100px;
+    font-family: Helvetica;
+    font-size: 15px;
+    font-weight: bold;
+   
+
+}
+ 
+
+.logColumn{
+   display: flex !important;
+   align-items: flex-start !important;
+   flex-direction: column;
+
+    
+ 
+ 
+}
+.logDuration{
+    display: flex;
+    flex-direction: column;
+    margin-right: 50px;
+    padding: 10px;
+
+}
+
+.inputDuration{
+    border-radius:4px !important;
+    width: 70px;
+    border: 3px solid white;
+    border-radius:4px !important;
+}
+
+.logStartTime{
+    margin-right: 50px;
+    padding: 10px;
+    width: 1px;
+    
+
+}
+
+.inputStartTime{
+    width: 90px;
+    margin-bottom: 20px;
+    border: 3px solid white;
+    border-radius:4px !important;
+
+}
+
+
+.logDistance{
+    padding-top: 10px;
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    // margin-right: 100px;
+}
+
+.inputDistance{
+    width: 70px;
+    margin-bottom: 20px;
+    border: 3px solid white;
+    border-radius:4px !important;
+
+}
+
+.logCalories{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+
+}
+
+
+.inputCalories{
+    width: 70px;
+    border: 3px solid white;
+    border-radius:4px !important;
+}
+
+
+
+.css-dhopo2{
+
+    min-height: 220px !important;
+    margin-left: 10px;
+  
+}
+
+.css-169iwlq-MuiCalendarPicker-root{
+    margin-left: 10px;
+}
+
+.logBPM{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.inputBPM{
+     width: 50px;
+    margin-bottom: 20px;
+    border: 5px solid white;
+    border-radius:4px !important;
+
+}
+
+.logActivitytype{
+    display: flex;
+    flex-direction: column;
+}
+
+.inputActivitytype{
+    width: 100px;
+    margin-bottom: 20px;
+    border: 4px solid white;
+    border-radius:4px !important;
+
+}
+
+.logDescription{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.description{
+    width: 300px;
+    height: 90px;
+    margin-bottom: 20px;
+    border: 1px solid white;
+    border-radius:4px !important;
+
+}
+
+.save {
+    // display: flex;
+    // flex-direction: column;
+    height: 35px !important;
+    // margin-top: 50px;
+    background-color: #8bd554 !important;
+    color: white !important;
+    // height: 15px;
+}
+
+
+
+
+// .fa-person-running:before, .fa-running:before {
+//     width: 100px !important;
+// }
+
+.activitySelector{
+   display: flex !important;
+   flex-direction: row;
+   justify-content: space-between;
+   background-color: lightgrey !important;
+}
+.runner{
+    width:89px;
+}
+
+.fa-person-running:before, .fa-running:before {
+    content: "\f70c";
+    font-size: 55px;
+    color: #31a4d9;
+}
+
+.walker{
+    width:89px;
+}
+
+.fa-person-walking:before, .fa-walking:before {
+    content: "\f554";
+    font-size: 55px;
+    color: #31a4d9;
+}
+
+.cycler{
+    width:89px;
+    height: 120px;
+}
+
+.fa-biking:before, .fa-person-biking:before {
+    content: "\f84a";
+     font-size: 45px;
+    color: #31a4d9;
+}
+
+
+.hiker{
+      width:89px;
+    height: 120px;
+      
+
+
+}
+
+.fa-hiking:before, .fa-person-hiking:before {
+    content: "\f6ec";
+     font-size: 45px;
+    color: #31a4d9;
+}
