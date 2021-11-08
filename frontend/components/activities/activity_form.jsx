@@ -1,5 +1,30 @@
 import React from "react";
 import DatePicker from './DatePicker';
+import ActivityType from "./activity_type";
+const ACTIVITIES = [
+    {
+        activityType: 'Running', 
+         activityIconType: "fa-solid fa-person-running",
+         className: 'runner'
+    }, 
+    
+    {
+        activityType: 'Walking', 
+         activityIconType: "fas fa-walking",
+         className: 'walker'
+    }, 
+    {
+        activityType: 'Cycling', 
+         activityIconType: "fas fa-biking",
+         className: 'cycler'
+    }, 
+    {
+        activityType: 'Hiking', 
+         activityIconType: "fas fa-hiking",
+         className: 'hiker'
+    }, 
+
+]
 
 class ActivityForm extends React.Component {
     constructor(props) {
@@ -46,6 +71,11 @@ class ActivityForm extends React.Component {
 
     }
 
+    onActivityTypeChange = (activity_type) => {
+        this.setState({activity_type})
+
+    }
+
 
 
     renderStep(){
@@ -56,7 +86,7 @@ class ActivityForm extends React.Component {
                     <button onClick={this.nextStep}>Next</button>
                     <div className="box activitySelector">
 
-                      <div className="box runner">
+                      {/* <div className="box runner">
                       <i className="fa-solid fa-person-running"></i>
                       <h2>Running</h2>
                       </div>
@@ -74,8 +104,21 @@ class ActivityForm extends React.Component {
                       <div className="box hiker">
                       <i className="fas fa-hiking"></i>
                       <h2>Hiking</h2>
+                      </div> */}
+                      {
+                          ACTIVITIES.map((activity, idx) => {
+                              return (<ActivityType key={idx} 
+                                                    activityType={activity.activityType} 
+                                                    activityIconType={activity.activityIconType}
+                                                    className={activity.className}
+                                                    onActivityTypeChange={this.onActivityTypeChange}
+                                                    />
+                                    )
+                          })
+                      }
                       </div>
-                      </div>
+
+
 
                     </div>
 
@@ -84,8 +127,8 @@ class ActivityForm extends React.Component {
             case 2:
             return(
                 <div>
-                 <button onClick={this.nextStep}>Next</button>
                  <button onClick={this.previousStep}>Back</button>
+                 <button onClick={this.nextStep}>Next</button>
                 <h2>MAPPING</h2>
                 </div>
             )
@@ -219,7 +262,7 @@ class ActivityForm extends React.Component {
 
                 <div className="box activityDetailsType">
                      <div className="activityDetails">
-                            <span className="activityType">Activity Type:</span>
+                            <span className="activityType">Activity Type: {this.state.activity_type}</span>
                             <br />
                             <span className="running">Running:</span>
                             <br />
