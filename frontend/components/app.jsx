@@ -1,7 +1,7 @@
 import React from "react";
 import LoginFormContainer from "./session_form/login_form_container";
 import SignUpFormContainer from "./session_form/signup_form_container";
-import HomePage from "./home_page";
+// import HomePage from "./home_page";
 import CreateActivityFormContainer from './activities/create_activity_form_container'
 import ActivityIndexContainer from "./activities/activity_index_container"
 import { AuthRoute } from "../util/route_util";

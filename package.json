@@ -25,6 +25,7 @@
     "@mui/lab": "*",
     "@mui/material": "^5.0.6",
     "@mui/styled-engine-sc": "^5.0.4",
+    "@react-google-maps/api": "^2.5.0",
     "babel-loader": "^8.2.3",
     "date-fns": "^2.25.0",
     "jquery": "^3.6.0",

@@ -1,6 +1,16 @@
 import React from "react";
 import DatePicker from './DatePicker';
 import ActivityType from "./activity_type";
+// import MapContainer from "../map/map_container";
+import { GoogleMap, LoadScript } from '@react-google-maps/api';
+  const mapStyles = {        
+    height: "50vh",
+    width: "100%"};
+  
+  const defaultCenter = {
+    lat: 42.36162230173623, lng: -71.06320468933582
+  }
+  
 const ACTIVITIES = [
     {
         activityType: 'Running', 
@@ -83,55 +93,51 @@ class ActivityForm extends React.Component {
             case 1:
                 return (
                     <div>
-                    <button onClick={this.nextStep}>Next</button>
                     <div className="box activitySelector">
+                        {/* <h1>Activity:</h1> */}
+                        <br/>
 
-                      {/* <div className="box runner">
-                      <i className="fa-solid fa-person-running"></i>
-                      <h2>Running</h2>
-                      </div>
 
-                      <div className="box walker">
-                      <i className="fas fa-walking"></i>
-                      <h2>Walking</h2>
-                      </div>
-
-                      <div className="box cycler">
-                      <i className="fas fa-biking"></i>
-                      <h2>Cycling</h2>
-                      </div>
-
-                      <div className="box hiker">
-                      <i className="fas fa-hiking"></i>
-                      <h2>Hiking</h2>
-                      </div> */}
                       {
                           ACTIVITIES.map((activity, idx) => {
                               return (<ActivityType key={idx} 
-                                                    activityType={activity.activityType} 
-                                                    activityIconType={activity.activityIconType}
-                                                    className={activity.className}
-                                                    onActivityTypeChange={this.onActivityTypeChange}
-                                                    />
-                                    )
-                          })
-                      }
+                                activityType={activity.activityType} 
+                                activityIconType={activity.activityIconType}
+                                className={activity.className}
+                                onActivityTypeChange={this.onActivityTypeChange}
+                                />
+                                )
+                            })
+                        }
                       </div>
 
-
-
+                        <button onClick={this.nextStep}>Next</button>
                     </div>
 
                 )
 
             case 2:
             return(
-                <div>
-                 <button onClick={this.previousStep}>Back</button>
-                 <button onClick={this.nextStep}>Next</button>
-                <h2>MAPPING</h2>
-                </div>
-            )
+            <div>
+                <div className="box">
+                <LoadScript
+                googleMapsApiKey='AIzaSyAVX076vD-t3L7hgugoMRRUeGlUric1vtA'>
+                    <GoogleMap
+                    mapContainerStyle={mapStyles}
+                    zoom={17}
+                    center={defaultCenter}
+                    />
+                    </LoadScript> 
+                    </div>
+
+                    <div className="buttons logBack">
+                        <button className="button is-success back" onClick={this.previousStep}>Back</button>
+                    </div> 
+                    <div className="buttons logNext">
+                        <button className="button is-success next"onClick={this.nextStep}>Next</button>
+                    </div> 
+            </div>
+                    )
             case 3:
                 return (
                 
@@ -223,10 +229,15 @@ class ActivityForm extends React.Component {
                            
 
                         </form>
-                            <div className="buttons logSave">
-                             <button className="button is-success save" onClick={this.handleSubmit}>Save</button>
-                             <button onClick={this.previousStep}>Back</button>
-                            </div>
+
+                             {/* <button className="backOnLast" onClick={this.previousStep}>Back</button> */}
+
+                              <div className="buttons logBack">
+                             <button className="button is-success back" onClick={this.previousStep}>Back</button>
+                            </div> 
+                             <div className="buttons logSave">
+                              <button className="button is-success save" onClick={this.handleSubmit}>Save</button>
+                             </div>
 
 
                     </div>
@@ -264,24 +275,22 @@ class ActivityForm extends React.Component {
                      <div className="activityDetails">
                             <span className="activityType">Activity Type: {this.state.activity_type}</span>
                             <br />
-                            <span className="running">Running:</span>
-                            <br />
                             <span className="equipementType">Equipment Type:</span>
                             <br />
                             <span className="route">Route:</span>
                             <br />
-                            <span className="distance">Distance:</span>
+                            <span className="distance">Distance:{this.state.distance}</span>
                             <br />
-                            <span className="duration">Duration:</span>
+                            <span className="duration">Duration:{this.state.duration}</span>
                             <br />
                             <span className="pace">Pace:</span>
                             <br />
                             <span className="heartrate">Avg. Heart Rate:</span>
                                 <div className="activityDetailsDetail">&nbsp;</div>
                                 <div className="activityDetailsLabel">&nbsp;</div>
-                            <span className="activityDate">Date of Activity:</span>
+                            <span className="activityDate">Date of Activity:{this.state.date.toDateString()}</span>
                             <br />
-                            <span className="startTime">Start Time:</span>
+                            <span className="startTime">Start Time:{this.state.time}</span>
                             <br />
                             <span className="endTime">End Time:</span>
 
