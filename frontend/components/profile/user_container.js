@@ -1,14 +1,15 @@
 import { connect } from "react-redux";
-import { login } from '../../actions/session_actions';
-import SessionForm from './session_form';
+import { fetchActivities } from "../../actions/activity_actions";
+import UserForm from "./user_form";
+
 
 const mapStateToProps = (state) => ({
-    errors: state.errors.session,
-    formType: 'login',
+    activities: Object.values(state.entities.activities)
+
 })
 const mapDispatchToProps = (dispatch) => ({
-    processForm: (user) => dispatch(login(user))
+     fetchActivities: () => dispatch(fetchActivities())
 })
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(SessionForm);
+export default connect(mapStateToProps, mapDispatchToProps)(UserForm);
