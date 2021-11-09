@@ -8,10 +8,6 @@ const ActivityIndexItem = (props) =>  {
     return (
     <div>
 
-
-    
-   
-
         <div className="box margined"> 
             <article className="media">
                 <div className="media-left">
@@ -43,24 +39,7 @@ const ActivityIndexItem = (props) =>  {
             </article>
         </div>
 
-
-   
-
-
-
-     
-
     </div>
-
-     
-  
-
-
-
-
-      
-
-
 
     )
 }

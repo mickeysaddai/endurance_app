@@ -8,7 +8,7 @@ import { GoogleMap, LoadScript } from '@react-google-maps/api';
     width: "100%"};
   
   const defaultCenter = {
-    lat: 42.36162230173623, lng: -71.06320468933582
+    lat: 42.26815277259402, lng: -71.75836401479359
   }
   
 const ACTIVITIES = [
@@ -93,9 +93,20 @@ class ActivityForm extends React.Component {
             case 1:
                 return (
                     <div>
+                        <div className="buttons logNext">
+                            <button class="button is-success is-rounded" onClick={this.nextStep}>Step 1: Activity/Equpment Type</button>
+                            <button class="button is-success is-rounded" onClick={this.nextStep}>Step 2: Activity/Equpment Type</button>
+                            <button class="button is-success is-rounded" onClick={this.nextStep}>Step 3: Additional Details</button>
+                       </div>
+                    
                     <div className="box activitySelector">
-                        {/* <h1>Activity:</h1> */}
-                        <br/>
+                        {/* <div className="activityTitles">
+                            <h1>Activity</h1>
+                        </div> */}
+                       
+                       {/* <div className="allActivities"> */}
+
+                      
 
 
                       {
@@ -109,9 +120,12 @@ class ActivityForm extends React.Component {
                                 )
                             })
                         }
+                         {/* </div> */}
                       </div>
 
-                        <button onClick={this.nextStep}>Next</button>
+                       <div className="buttons logNext">
+                        <button className="button is-success next"onClick={this.nextStep}>Next</button>
+                       </div>
                     </div>
 
                 )
@@ -124,7 +138,7 @@ class ActivityForm extends React.Component {
                 googleMapsApiKey='AIzaSyAVX076vD-t3L7hgugoMRRUeGlUric1vtA'>
                     <GoogleMap
                     mapContainerStyle={mapStyles}
-                    zoom={17}
+                    zoom={14}
                     center={defaultCenter}
                     />
                     </LoadScript> 
@@ -140,6 +154,7 @@ class ActivityForm extends React.Component {
                     )
             case 3:
                 return (
+                <div>
                 
                     <div className="box createActivity">
                         <form className="logForm">
@@ -232,12 +247,18 @@ class ActivityForm extends React.Component {
 
                              {/* <button className="backOnLast" onClick={this.previousStep}>Back</button> */}
 
-                              <div className="buttons logBack">
-                             <button className="button is-success back" onClick={this.previousStep}>Back</button>
-                            </div> 
-                             <div className="buttons logSave">
-                              <button className="button is-success save" onClick={this.handleSubmit}>Save</button>
-                             </div>
+
+                    </div>
+
+                    <div navigationButtons>
+                    
+                        <div className="buttons logBack">
+                        <button className="button is-success back" onClick={this.previousStep}>Back</button>
+                        </div> 
+                        <div className="buttons logSave">
+                            <button className="button is-success save" onClick={this.handleSubmit}>Save</button>
+                        </div>
+                    </div>
 
 
                     </div>
@@ -279,18 +300,18 @@ class ActivityForm extends React.Component {
                             <br />
                             <span className="route">Route:</span>
                             <br />
-                            <span className="distance">Distance:{this.state.distance}</span>
+                            <span className="distance">Distance:{this.state.distance} -mi</span>
                             <br />
-                            <span className="duration">Duration:{this.state.duration}</span>
+                            <span className="duration">Duration: {this.state.duration}</span>
                             <br />
-                            <span className="pace">Pace:</span>
+                            <span className="pace">Pace: min/mi</span>
                             <br />
-                            <span className="heartrate">Avg. Heart Rate:</span>
+                            <span className="heartrate">Avg. Heart Rate: --BPM</span>
                                 <div className="activityDetailsDetail">&nbsp;</div>
                                 <div className="activityDetailsLabel">&nbsp;</div>
-                            <span className="activityDate">Date of Activity:{this.state.date.toDateString()}</span>
+                            <span className="activityDate">Date of Activity: {this.state.date.toDateString()}</span>
                             <br />
-                            <span className="startTime">Start Time:{this.state.time}</span>
+                            <span className="startTime">Start Time: {this.state.time}</span>
                             <br />
                             <span className="endTime">End Time:</span>
 
@@ -301,7 +322,7 @@ class ActivityForm extends React.Component {
          
                 </div>
             </div>
-        </div>
+         </div>
         )
     }
 

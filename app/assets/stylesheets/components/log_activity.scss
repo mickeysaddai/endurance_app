@@ -1,5 +1,6 @@
 .createActivity{
     display: flex !important;
+    width: 800px;
     background-color: rgba(213, 213, 213, 0.897) !important;
 
 }
@@ -151,15 +152,12 @@
 
 
 
-
-// .fa-person-running:before, .fa-running:before {
-//     width: 100px !important;
-// }
-
 .activitySelector{
    display: flex !important;
+   padding-top: 60px !important;
    flex-direction: row;
    justify-content: space-between;
+   min-width: 10px !important;
    background-color: lightgrey !important;
 }
 .runner{
@@ -219,5 +217,26 @@
     height: 35px !important;
     background-color: #8bd554 !important;
     color: white !important;
+
+}
+
+
+.navigationButtons{
+    display: flex !important;
+    justify-self: row !important;
+}
+
+.is-rounded{
+    background-color: #1aa5e6!important;
+    font-size: 12px !important;
+    font-weight: bold;
+}
+
+.logNext{
+    padding-top: 30px;
+}
+
+.activityTitles{
+    margin-top: -50px !important;
 
 }
