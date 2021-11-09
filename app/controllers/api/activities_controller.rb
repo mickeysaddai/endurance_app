@@ -1,8 +1,13 @@
 class Api::ActivitiesController < ApplicationController
   
   def index
-    p :user
-    @activities = Activity.includes(params[:user_id]).all
+    # @activities = Activity.where(user_id: params[:user_id])
+     if params.has_key?(:user_id) 
+            @activities = Activity.where(user_id: params[:user_id])
+            
+        else
+            @activities = Activity.all
+        end
   end
 
   def show

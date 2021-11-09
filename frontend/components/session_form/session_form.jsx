@@ -50,7 +50,8 @@ class SessionForm extends React.Component {
 
     render() {
         const { showPassword } = this.state;
-        let navLink = this.props.formType === 'login' ? <Link to='./signup'>Sign Up</Link> : <Link to='./login'>Log In</Link>
+    
+        let navLink = this.props.formType === 'login' ? <Link to='/signup'>Sign Up</Link> : <Link to='/login'>Log In</Link>
 
         return (
         <div className="columns">

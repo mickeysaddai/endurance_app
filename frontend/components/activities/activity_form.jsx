@@ -114,21 +114,15 @@ class ActivityForm extends React.Component {
                 return (
                     <div>
                         <div className="buttons logNext">
-                            <button class="button is-success is-rounded" onClick={this.nextStep}>Step 1: Activity/Equpment Type</button>
-                            <button class="button is-success is-rounded" onClick={this.nextStep}>Step 2: Activity/Equpment Type</button>
-                            <button class="button is-success is-rounded" onClick={this.nextStep}>Step 3: Additional Details</button>
+                            <button className="button is-success is-rounded" onClick={this.nextStep}>Step 1: Activity/Equpment Type</button>
+                            <button className="button is-success is-rounded" onClick={this.nextStep}>Step 2: Activity/Equpment Type</button>
+                            <button className="button is-success is-rounded" onClick={this.nextStep}>Step 3: Additional Details</button>
                        </div>
-                    
-                    <div className="box activitySelector">
-                        {/* <div className="activityTitles">
-                            <h1>Activity</h1>
-                        </div> */}
-                       
-                       {/* <div className="allActivities"> */}
+
+
+                       <div className="box activities">
 
                       
-
-
                       {
                           ACTIVITIES.map((activity, idx) => {
                               return (<ActivityType key={idx} 
@@ -140,8 +134,8 @@ class ActivityForm extends React.Component {
                                 )
                             })
                         }
-                         {/* </div> */}
-                      </div>
+                
+                        </div>
 
                        <div className="buttons logNext">
                         <button className="button is-success next"onClick={this.nextStep}>Next</button>

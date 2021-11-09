@@ -1,0 +1,28 @@
+.row {
+  display: flex;
+}
+
+/* Create two equal columns that sits next to each other */
+.first-column {
+  flex: 100%;
+//   padding: 10px;
+  height: 900px; 
+}
+
+
+.box{
+    display: flex !important;
+    flex-direction: column !important;
+} 
+
+.img{
+    width: 600px;
+}
+
+.login{
+    background-color:#ffb636 !important;
+}
+
+a {
+    color: grey !important;
+}
