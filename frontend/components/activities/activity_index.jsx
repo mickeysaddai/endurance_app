@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import ActivityIndexItem from "./activity_index_item";
+import Navbar from "../navbar";
 class ActivityIndex extends React.Component{
     componentDidMount(){
         this.props.fetchActivities();
@@ -12,6 +13,7 @@ class ActivityIndex extends React.Component{
             
         return (
         <div>
+                <Navbar/>
                 
             <div className="columns">
                 <div className="column">

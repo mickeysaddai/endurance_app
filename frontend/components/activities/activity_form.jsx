@@ -2,6 +2,7 @@ import React from "react";
 import DatePicker from './DatePicker';
 import ActivityType from "./activity_type";
 // import MapContainer from "../map/map_container";
+import Navbar from "../navbar";
 import { GoogleMap, LoadScript } from '@react-google-maps/api';
   const mapStyles = {        
     height: "50vh",
@@ -56,9 +57,28 @@ class ActivityForm extends React.Component {
     }
     handleSubmit(e){
         console.log(this.state)
+        const {
+            activity_type,
+            duration,
+            distance,
+            time,
+            heartrate,
+            date,
+            description, 
+    } = this.state
+        const activity = {
+            user_id: this.props.userId,
+            activity_type,
+            duration,
+            distance,
+            time,
+            heartrate,
+            date,
+            description
+    }
         e.preventDefault();
-        // do some validation
-        this.props.action(this.state)
+   
+        this.props.action(activity)
     }
     update(field) {
         return e => this.setState({ [field]: e.target.value })
@@ -274,7 +294,10 @@ class ActivityForm extends React.Component {
     }
 
     render() {
+        console.log("userid",this.props.userId)
         return (
+            <div>
+                <Navbar/>
             <div className="box">
             <div className="columns activityDetails">
                     <div className="column is-one-fifth fifth"></div>
@@ -322,6 +345,7 @@ class ActivityForm extends React.Component {
          
                 </div>
             </div>
+         </div>
          </div>
         )
     }

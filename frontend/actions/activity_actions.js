@@ -11,11 +11,11 @@ export const receiveActivities = activities => ({
 })
 
 export const receiveActivity = activity => ({
-    type: RECEIVE_ACTIVITIES, 
+    type: RECEIVE_ACTIVITY, 
     activity
 })
 export const removeActivity = activityId => ({
-    type: RECEIVE_ACTIVITIES, 
+    type: REMOVE_ACTIVITY, 
     activityId
 })
 
@@ -28,7 +28,7 @@ export const fetchActivities = () => dispatch => (
 );
 
 export const fetchActivity = (id) => dispatch => (
-    APIUtil.fetchActivities(id).then(activity => (
+    APIUtil.fetchActivity(id).then(activity => (
         dispatch(receiveActivity(activity))
     ))
 );

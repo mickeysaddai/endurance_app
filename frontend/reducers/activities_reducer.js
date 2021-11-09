@@ -12,50 +12,50 @@ const initialState = {
         "equipment_type": "none",
         "user": "mickey"
     },
-    "2": {
-        "user_id": 1,
-        "activity_type": "running",
-        "distance": 4.15,
-        "time": "12.20pm",
-        "description": "running is life",
-        "heartrate": 120,
-        "duration": 40,
-        "equipment_type": "none",
-        "user": "mickey"
-    },
-    "3": {
-        "user_id": 1,
-        "activity_type": "running",
-        "distance": 3.28,
-        "time": "12.30pm",
-        "description": "Running is life",
-        "heartrate": 120,
-        "duration": 30,
-        "equipment_type": "none",
-        "user": "mickey"
-    },
-    "4": {
-        "user_id": 1,
-        "activity_type": "running",
-        "distance": 4.02,
-        "time": "12.20pm",
-        "description": "Running is life",
-        "heartrate": 120,
-        "duration": 40,
-        "equipment_type": "none",
-        "user": "mickey"
-    },
-    "5": {
-        "user_id": 1,
-        "activity_type": "running",
-        "distance": 5.31,
-        "time": "12.20pm",
-        "description": "Running is life",
-        "heartrate": 120,
-        "duration": 40,
-        "equipment_type": "none",
-        "user": "mickey"
-    }
+    // "2": {
+    //     "user_id": 1,
+    //     "activity_type": "running",
+    //     "distance": 4.15,
+    //     "time": "12.20pm",
+    //     "description": "running is life",
+    //     "heartrate": 120,
+    //     "duration": 40,
+    //     "equipment_type": "none",
+    //     "user": "mickey"
+    // },
+    // "3": {
+    //     "user_id": 1,
+    //     "activity_type": "running",
+    //     "distance": 3.28,
+    //     "time": "12.30pm",
+    //     "description": "Running is life",
+    //     "heartrate": 120,
+    //     "duration": 30,
+    //     "equipment_type": "none",
+    //     "user": "mickey"
+    // },
+    // "4": {
+    //     "user_id": 1,
+    //     "activity_type": "running",
+    //     "distance": 4.02,
+    //     "time": "12.20pm",
+    //     "description": "Running is life",
+    //     "heartrate": 120,
+    //     "duration": 40,
+    //     "equipment_type": "none",
+    //     "user": "mickey"
+    // },
+    // "5": {
+    //     "user_id": 1,
+    //     "activity_type": "running",
+    //     "distance": 5.31,
+    //     "time": "12.20pm",
+    //     "description": "Running is life",
+    //     "heartrate": 120,
+    //     "duration": 40,
+    //     "equipment_type": "none",
+    //     "user": "mickey"
+    // }
 }
 
 const ActivitiesReducer = (oldState = initialState, action) => {

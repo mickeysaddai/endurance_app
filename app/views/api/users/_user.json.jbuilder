@@ -1,3 +1,3 @@
 if (user.id)
-    json.extract! user, :id, :username, :email
+    json.extract! user, :id, :username
 end

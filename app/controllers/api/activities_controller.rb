@@ -1,7 +1,8 @@
 class Api::ActivitiesController < ApplicationController
   
   def index
-    @activities = Activity.includes(:user).all
+    p :user
+    @activities = Activity.includes(params[:user_id]).all
   end
 
   def show
