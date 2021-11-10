@@ -2,6 +2,7 @@ import React from "react";
 import DatePicker from './DatePicker';
 import ActivityType from "./activity_type";
 // import MapContainer from "../map/map_container";
+import GoogleMapsComponent from "./MapComponent";
 import Navbar from "../navbar";
 import { GoogleMap, LoadScript } from '@react-google-maps/api';
   const mapStyles = {        
@@ -94,6 +95,9 @@ class ActivityForm extends React.Component {
         this.setState({step: nextStep })
 
     }
+    setStep = (step) => {
+         this.setState({step: step })
+    }
     previousStep(){
         let curStep = this.state.step
         let lastStep = curStep - 1
@@ -113,11 +117,7 @@ class ActivityForm extends React.Component {
             case 1:
                 return (
                     <div>
-                        <div className="buttons logNext">
-                            <button className="button is-success is-rounded" onClick={this.nextStep}>Step 1: Activity/Equpment Type</button>
-                            <button className="button is-success is-rounded" onClick={this.nextStep}>Step 2: Activity/Equpment Type</button>
-                            <button className="button is-success is-rounded" onClick={this.nextStep}>Step 3: Additional Details</button>
-                       </div>
+                       
 
 
                        <div className="box activities">
@@ -148,14 +148,7 @@ class ActivityForm extends React.Component {
             return(
             <div>
                 <div className="box">
-                <LoadScript
-                googleMapsApiKey='AIzaSyAVX076vD-t3L7hgugoMRRUeGlUric1vtA'>
-                    <GoogleMap
-                    mapContainerStyle={mapStyles}
-                    zoom={14}
-                    center={defaultCenter}
-                    />
-                    </LoadScript> 
+                <GoogleMapsComponent />
                     </div>
 
                     <div className="buttons logBack">
@@ -288,22 +281,23 @@ class ActivityForm extends React.Component {
     }
 
     render() {
-        console.log("userid",this.props.userId)
+        const { step } = this.state;
         return (
             <div>
-                <Navbar/>
             <div className="box">
-            <div className="columns activityDetails">
-                    <div className="column is-one-fifth fifth"></div>
-
-
-                <div className="column is-half half">
+            <div className="columns activityDetails">              
+                <div className="column is-two-thirds">
+                     <div className="buttons logNext">
+                            <button className={`button is-success is-rounded ${step === 1 ? "" : 'nonActiveStep' } `} onClick={() => this.setStep(1)}>Step 1: Activity/Equpment Type</button>
+                            <button className={`button is-success is-rounded ${step === 2 ? "" : 'nonActiveStep' } `} onClick={()=> this.setStep(2)}>Step 2: Add a Map</button>
+                            <button className={`button is-success is-rounded ${step === 3 ? "" : 'nonActiveStep' } `} onClick={()=> this.setStep(3)}>Step 3: Additional Details</button>
+                       </div>
                     {this.renderStep()}
-                    
+                  
                  </div>
 
 
-                <div className="column is-one-fifth addActivityRight">
+                <div className="column addActivityRight">
                     <div className="box activityDetailsTitle">
                         <h1>Add An Activity</h1>
                     </div>
@@ -331,12 +325,8 @@ class ActivityForm extends React.Component {
                             <span className="startTime">Start Time: {this.state.time}</span>
                             <br />
                             <span className="endTime">End Time:</span>
-
-
                         </div>
-
                 </div>
-         
                 </div>
             </div>
          </div>

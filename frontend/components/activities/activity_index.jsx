@@ -12,9 +12,7 @@ class ActivityIndex extends React.Component{
         console.log(activities)
             
         return (
-        <div>
-                <Navbar/>
-                
+        <div>                
             <div className="columns">
                 <div className="column">
 

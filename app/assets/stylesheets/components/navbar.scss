@@ -2,8 +2,6 @@
     background-color: #31a4d9;
     display: flex;
     justify-content: space-between;
-    // height: 70px;
-
      padding: 18px 0;
 
 }
@@ -13,10 +11,8 @@
 .feedNav{
     padding-top: 4px;
     font-size: 20px; 
-    // margin-right: 25px;
-    // margin-left: -90px;
     cursor: pointer;
-    cursor: hand;
+  
     
     // border-right: 1px
  
@@ -25,21 +21,14 @@
 .meNav{
      padding-top: 4px;
    font-size: 20px; 
-    // margin-right: 340px;
-    // margin-left: -100px;
     cursor: pointer;
-    cursor: hand;
-    // border-right: 1px
+
 
 }
 
 .logNav{
     padding-top: 4px;
-    // margin-right: 1200px;
-    // margin-left: -400px;
      font-size: 20px; 
-    cursor: pointer;
-    cursor: hand;
 
 
 }
@@ -55,8 +44,23 @@
 }
  
 a {
-    color: white !important;
- 
-    
+    color: white !important;  
 
 }
+
+.settingButton{
+    color: white;
+}
+
+.rootDiv{
+    background-color: greenyellow !important;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}

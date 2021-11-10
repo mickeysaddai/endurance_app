@@ -78,7 +78,7 @@ class SessionForm extends React.Component {
                <OutlinedInput
                     id="outlined-name"
                     label="Password"
-                    type={showPassword ? "password" : "text" }  
+                    type={!showPassword ? "password" : "text" }  
                     value={this.state.password}
                     onChange={this.handleChange('password')}
                     endAdornment={
@@ -89,7 +89,7 @@ class SessionForm extends React.Component {
                             // onMouseDown={handleMouseDownPassword}
                             edge="end"
                         >
-                            {showPassword ? <VisibilityOff /> : <Visibility />}
+                            {!showPassword ? <VisibilityOff /> : <Visibility />}
                         </IconButton>
                         </InputAdornment>
                     }

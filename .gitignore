@@ -2,9 +2,9 @@
 bundle.js
 bundle.js.map
 /node_modules
-
-
-
+/tmp
+/tmp/*
+tmp/
 # Ignore master key for decrypting credentials and more.
 master.key
 

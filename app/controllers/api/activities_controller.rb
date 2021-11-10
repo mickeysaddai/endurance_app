@@ -1,13 +1,16 @@
 class Api::ActivitiesController < ApplicationController
   
   def index
-    # @activities = Activity.where(user_id: params[:user_id])
-     if params.has_key?(:user_id) 
-            @activities = Activity.where(user_id: params[:user_id])
+    # if params.has_key?(:user_id) 
+    #   debugger
+    #   # @activities = Activity.find_by(user_id: params[:user_id])
+    #   @activities = Activity.where(user_id: params[:user_id])
+    #         render :index
             
-        else
+        # else
             @activities = Activity.all
-        end
+            render :index;
+        # end
   end
 
   def show
@@ -15,13 +18,14 @@ class Api::ActivitiesController < ApplicationController
   end
 
   def create
-    # debugger
     @activity = Activity.new(activity_params)
     if @activity.save
       render :show
     else
       render json: @activity.errors.full_messages, status: 401
     end
+
+  
   end
 
   def update

@@ -8,25 +8,25 @@ import { AuthRoute } from "../util/route_util";
 import { Link } from "react-router-dom";
 import { Route, Switch } from "react-router";
 import UserForm from "./profile/user_form";
-// import { Route, Redirect, withRouter } from 'react-router-dom';
-
-
+import Navbar from '../components/navbar';
 const App = () => {
-    console.log("HELLO", window.location.hash)
-
     return (
-
-    <div >
-
-
-       
-        <Switch>
+     <div>  
+         <Navbar /> 
+          <Switch>
+               <AuthRoute exact path='/login' component={LoginFormContainer} />
+            <AuthRoute exact path='/signup' component={SignUpFormContainer} />
+        <div className="columns"> 
+            <div className="column" />
+        <div className="column is-two-thirds">
             <Route exact path='/activities/profile' component={UserFormContainer}></Route>
             <Route exact path='/activities/new' component={CreateActivityFormContainer}></Route>
             <Route exact path='/' component={ActivityIndexContainer}></Route>
-            <AuthRoute exact path='/login' component={LoginFormContainer} />
-            <AuthRoute exact path='/signup' component={SignUpFormContainer} />
-        </Switch>
+        </div>
+          <div className="column" />
+       
+    </div>
+      </Switch>
     </div>
     )
 
