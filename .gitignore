@@ -7,5 +7,7 @@ bundle.js.map
 tmp/
 # Ignore master key for decrypting credentials and more.
 master.key
+.env
+
 
 public/assets/*

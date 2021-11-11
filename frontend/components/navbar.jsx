@@ -1,8 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from "react-redux";
+import { logoutAndReroute } from '../actions/session_actions';
 
-const Navbar = ({showNav}) => {
+const Navbar = ({showNav, logoutAndReroute}) => {
     console.log(showNav)
     if (!showNav)  {
         return null
@@ -27,16 +28,21 @@ const Navbar = ({showNav}) => {
                 </div>
 
 
-                <div className="settings">
-                    <i class="fas fa-cog settingButton"></i>
+                {/* <div className="settings">
+                    <i class="fas fa-cog settingButton"></i> */}
                     {/* <div class="dropdown-content">
                         <a href="#">Link 1</a>
                         <a href="#">Link 2</a>
                         <a href="#">Link 3</a>
                     </div> */}
             
-                </div>
-                </div>
+                {/* </div> */}
+
+                    <div className="buttons logNext">
+                        <button className="button is-success next"onClick={logoutAndReroute}>Log Out</button>
+                    </div>
+              
+            </div>
     )
 }
 
@@ -44,4 +50,9 @@ const mapStateToProps = (state) => ({
     showNav : !!state.session.id
 })
 
-export default connect(mapStateToProps, null)(Navbar);
+
+const mapDispatchToProps = (dispatch) => ({
+    logoutAndReroute: () => dispatch(logoutAndReroute())
+
+})
+export default connect(mapStateToProps, mapDispatchToProps)(Navbar);

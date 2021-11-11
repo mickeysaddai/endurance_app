@@ -1,4 +1,5 @@
 import * as APIUtil from '../util/session_api_util';
+import history from '../util/history';
 
 export const RECEIVE_CURRENT_USER = 'RECEIVE_CURRENT_USER';
 export const LOGOUT_CURRENT_USER = 'LOGOUT_CURRENT_USER';
@@ -38,7 +39,17 @@ export const login = user => dispatch => (
 );
 
 export const logout = () => dispatch => {
+    
     return APIUtil.logout().then(user => (
         dispatch(logoutCurrentUser())
     ))
+} ;
+
+
+export const logoutAndReroute = () => dispatch => {
+   dispatch(logout()).then(() => {
+        history.push('/#/login')
+        window.location.reload()    
+
+   })
 } ;

@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { GoogleMap, LoadScript } from '@react-google-maps/api';
   const mapStyles = {        
@@ -10,6 +9,7 @@ import { GoogleMap, LoadScript } from '@react-google-maps/api';
   }
   
 const GoogleMapsComponent = () => {
+  // console.log("ehlo", process.env.API_KEY)
 
     return (
         <div>

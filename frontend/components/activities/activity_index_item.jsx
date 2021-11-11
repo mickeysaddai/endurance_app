@@ -7,13 +7,13 @@ const ActivityIndexItem = (props) =>  {
  
 // </strong> <small>@johnsmith</small> <small>31m</small>
     return (
-    <div>
+    <div className="activityList">
 
         <div className="box margined"> 
             <article className="media">
                 <div className="media-left">
                     <figure className="image is-64x64">
-                        <img src={userPhoto} alt="Image"></img>
+                        <img src={userPhoto }alt="Image"></img>
                     </figure>
                 </div>
                 <div className="media-content">

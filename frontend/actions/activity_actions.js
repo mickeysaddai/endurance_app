@@ -22,6 +22,7 @@ export const removeActivity = activityId => ({
 
 
 export const fetchActivities = () => dispatch => (
+    
     APIUtil.fetchActivities().then(activities => (
         dispatch(receiveActivities(activities))
     ))
@@ -44,7 +45,7 @@ export const updateActivity = (activity) => dispatch => (
     ))
 );
 
-export const deleteeActivity = (activityId) => dispatch => (
+export const deleteActivity = (activityId) => dispatch => (
     APIUtil.deleteActivity(activityId).then(() => (
         dispatch(removeActivity(activityId))
     ))
