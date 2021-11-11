@@ -51,15 +51,16 @@ class UserForm extends React.Component{
 
     render(){
         const { activeTab } = this.state
+        const { userPhoto } = this.props;
         return (
             <div className="box">
               
           <div className="tabs user-tabs">
             <div style={{ paddingRight: "20px"}}> 
-                <img src="https://profile-pic.runkeeper.com/JN5wo7onFOrxoTImLNm1NDkp_med.jpg" />
+                <img src={userPhoto} className="image is-128x128" />
             </div>  
             <div style={{ marginTop: "30px", marginRight: "20px"}}>
-                <p>Michelle</p>
+                <p>Mickey</p>
                 <p style={{ fontSize: "small"}}> Active member since November 2021</p>
             </div>  
             <ul>

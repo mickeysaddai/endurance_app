@@ -6,7 +6,8 @@ const mapStateToProps = state => {
 
     return {
 
-        activities: Object.values(state.entities.activities).filter(activity => activity.user_id === state.session.id)
+        activities: Object.values(state.entities.activities).filter(activity => activity.user_id === state.session.id),
+        userPhoto: Object.values(state.entities.users)[0].photoUrl
     }
     // TODO: create selector for this
 

@@ -3,12 +3,13 @@ import ReactDOM from "react-dom";
 import configureStore from "./store/store"
 import Root from './components/root';
 import {logout} from './actions/session_actions'
-
+import history from './util/history'
+import { WindowRounded } from "@mui/icons-material";
 
 document.addEventListener("DOMContentLoaded", () => {
     let store;
     const root = document.getElementById("root");
-    window.logout = logout;
+    // window.logout = logout;
   
     
     if (window.currentUser){
@@ -23,6 +24,13 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     
     window.store = store
+    window.logout = () => {
+        store.dispatch(logout()).then(() => {
+            history.push('/#/login')
+            window.location.reload()    
+        })
+        
+    }
     ReactDOM.render(<Root store={store} />, root);
 
 });

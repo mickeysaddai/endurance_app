@@ -17,21 +17,21 @@ const UserActivityOverview = () => {
             <div>
              <i class="fas fa-stopwatch"></i>
             <p class="heading">Duration</p>
-            <p class="title">123</p>
+            <p class="title">18:00</p>
             </div>
         </div>
         <div class="level-item has-text-centered user-overview">
             <div>
-            <i class="fa fa-dashboard"></i>
+           <i class="fas fa-history"></i>
             <p class="heading">Pace</p>
-            <p class="title">456K</p>
+            <p class="title">8:30</p>
             </div>
         </div>
         <div class="level-item has-text-centered">
             <div>
                 <i class="fas fa-fire-alt"></i>
             <p class="heading">Calories</p>
-            <p class="title">789</p>
+            <p class="title">120</p>
             </div>
         </div>
         </nav>

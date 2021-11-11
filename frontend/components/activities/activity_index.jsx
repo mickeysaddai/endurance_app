@@ -8,7 +8,7 @@ class ActivityIndex extends React.Component{
 
     }
     render(){
-        const {activities} = this.props;
+        const {activities, userPhoto } = this.props;
         console.log(activities)
             
         return (
@@ -23,7 +23,7 @@ class ActivityIndex extends React.Component{
                     </div>
                     {
                         activities.map((activity, i)=> {
-                            return (activity !== undefined && <ActivityIndexItem key={i} activity={activity} />)
+                            return (activity !== undefined && <ActivityIndexItem key={i} activity={activity} userPhoto={userPhoto} />)
                         })
                     }
                 </div>
