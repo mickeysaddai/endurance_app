@@ -9,6 +9,9 @@ log/
 /log/
 config/
 config/*
+
+/node_modules
+
 # Ignore master key for decrypting credentials and more.
 master.key
 .env
