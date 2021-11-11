@@ -1,10 +1,20 @@
 # We want to generate our own bundle not use any pre-existing bundles
 bundle.js
 bundle.js.map
+/node_modules
+/tmp
+/tmp/*
+tmp/
+log/
+/log/
+config/
+config/*
 
 /node_modules
 
 # Ignore master key for decrypting credentials and more.
 master.key
+.env
+
 
 public/assets/*

@@ -123,10 +123,11 @@ render() {
 console.log(this.state)
 const { originCoords, defaultCtr } = this.state;
 console.log(originCoords)
+console.log("key", window.googleAPIKey)
     return (
         <div>
              <LoadScript
-                googleMapsApiKey=''>
+                googleMapsApiKey={window.googleAPIKey}>
                     <GoogleMap
                     mapContainerStyle={mapStyles}
                     zoom={14}
@@ -157,9 +158,8 @@ console.log(originCoords)
                     </LoadScript> 
         </div>
     )
-
+  // console.log("ehlo", process.env.API_KEY)
     }
 }
 
 export default GoogleMapsComponent2
-

@@ -1,0 +1,113 @@
+p {
+    font-size: 16px;
+    color: black;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.margined{
+    margin-bottom: 0px !important;
+    border-radius: 0px !important;
+}
+
+.feed{
+    margin-bottom: 0px !important;
+    border-radius: 0px !important;
+    font-family: Arial, Helvetica, sans-serif !important;
+
+}
+
+strong{
+    color: #1596D2 !important;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold !important;
+}
+
+h1{
+    font-family:sans-serif;
+    font-size: 23px !important;
+    font-weight: bold !important;
+  
+}
+
+
+.activityDetails{
+    background-color: white;
+    font-size: 14px;
+    color: black;
+
+}
+
+.activityDetailsTitle{
+    margin-bottom: 0px !important;
+    border-radius: 0px !important;
+
+}
+
+
+.activityDetailsType{
+    margin-bottom: 0px !important;
+    border-radius: 0px !important;
+    color: grey !important;
+}
+
+// .column{
+//     background-color: rgb(206, 204, 204);
+// }
+
+.commentButton{
+    font-weight: bold;
+    line-height: 20px;
+    font-size: 12px;
+    border-radius: 0px;
+    background-color: #8bd554 !important;
+    padding: 0 7px;
+    color: #fff;
+    border: none;
+ 
+
+}
+
+.likeButton{
+    font-weight: bold;
+    line-height: 20px;
+    font-size: 12px;
+    border-radius: 0px;
+    background-color: #31a4d9 !important;
+    padding: 0 7px;
+    color: #fff;
+    border: none;
+
+}
+
+.rightAngle{
+    margin-top: 40px !important;
+    color: grey !important;
+
+
+
+}
+
+
+.rightDiv{
+position: absolute;
+right: 0px;
+}
+
+.fifth{
+    background-color: white;
+}
+
+
+
+.addActivityRight{
+  
+    margin-left: 85px !important;
+    
+}
+
+
+.activityList{
+    display: flex !important;
+    flex-direction: column-reverse !important;
+
+}
