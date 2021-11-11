@@ -8,8 +8,9 @@ import { GoogleMap, LoadScript } from '@react-google-maps/api';
     lat: 42.26815277259402, lng: -71.75836401479359
   }
   
-const GoogleMapsComponent = () => {
-  // console.log("ehlo", process.env.API_KEY)
+class GoogleMapsComponent extends React.Component{
+
+  render(){
 
     return (
         <div>
@@ -23,6 +24,9 @@ const GoogleMapsComponent = () => {
                     </LoadScript> 
         </div>
     )
+  }
+  // console.log("ehlo", process.env.API_KEY)
+
 }
 
 export default GoogleMapsComponent
