@@ -3,6 +3,7 @@ import DatePicker from './DatePicker';
 import ActivityType from "./activity_type";
 // import MapContainer from "../map/map_container";
 import GoogleMapsComponent from "./MapComponent";
+import GoogleMapsComponent2 from "./MapComponent2";
 import Navbar from "../navbar";
 import { GoogleMap, LoadScript } from '@react-google-maps/api';
   const mapStyles = {        
@@ -148,7 +149,8 @@ class ActivityForm extends React.Component {
             return(
             <div>
                 <div className="box">
-                <GoogleMapsComponent />
+                {/* <GoogleMapsComponent /> */}
+                <GoogleMapsComponent2 />
                     </div>
 
                     <div className="buttons logBack">

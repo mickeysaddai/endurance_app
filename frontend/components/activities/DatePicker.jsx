@@ -8,11 +8,11 @@ import CalendarPicker from '@mui/lab/CalendarPicker';
 
 export default function DatePicker(props) {
     const { onDateChange } = props;
-  const [value, setValue] = React.useState(new Date());
-  const [date, setDate] = React.useState(new Date());
+  // const [value, setValue] = React.useState(new Date());
+  // const [date, setDate] = React.useState(new Date());
 
   const handleOnChange = (newDate) => {
-      setDate(newDate);
+      // setDate(newDate);
     onDateChange(newDate);
   }
 
