@@ -126,7 +126,7 @@ console.log(originCoords)
     return (
         <div>
              <LoadScript
-                googleMapsApiKey=''>
+                googleMapsApiKey={window.googleAPIKey}>
                     <GoogleMap
                     mapContainerStyle={mapStyles}
                     zoom={14}
