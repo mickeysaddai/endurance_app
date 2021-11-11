@@ -157,7 +157,7 @@ console.log(originCoords)
                     </LoadScript> 
         </div>
     )
-  // console.log("ehlo", process.env.API_KEY)
+
     }
 }
 
