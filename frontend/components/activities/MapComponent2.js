@@ -123,6 +123,7 @@ render() {
 console.log(this.state)
 const { originCoords, defaultCtr } = this.state;
 console.log(originCoords)
+console.log("key", window.googleAPIKey)
     return (
         <div>
              <LoadScript
