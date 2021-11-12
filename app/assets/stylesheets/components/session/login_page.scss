@@ -45,3 +45,39 @@
   margin-right: 90px;
   margin-top: 100px;
 }
+
+// body{
+//   padding: 0;
+//   margin: 0;
+//   background-color: #000;
+//   // display: flex;
+//   // align-items: center;
+//   // justify-content: center;
+//   // min-height: 100vh
+// }
+.titled{
+  color:lightslategray!important;
+  font-size: 70px !important;
+  font-weight: bold;
+  font-family: monospace;
+  letter-spacing: 7px;
+  cursor: pointer
+}
+// h1 span{
+//   transition: .5s linear
+// }
+// h1:hover span:nth-child(1){
+//   margin-right: 5px
+// }
+// h1:hover span:nth-child(1):after{
+//   content: "'";
+// }
+// h1:hover span:nth-child(2){
+//   margin-left: 30px
+// }
+.titled:hover{
+  color: #fff;
+  text-shadow: 0 0 10px #1ec3ec,
+               0 0 20px #1ec3ec,
+               0 0 40px #1ec3ec;
+}

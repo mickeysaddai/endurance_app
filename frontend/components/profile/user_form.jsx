@@ -3,6 +3,9 @@ import { Link } from "react-router-dom";
 import ActivityIndexContainer from "../activities/activity_index_container";
 import GoogleMapsComponent from "../activities/MapComponent";
 import UserActivityOverview from "./user_activitiy_overview";
+import Avatar from '@mui/material/Avatar';
+import Stack from '@mui/material/Stack';
+import { deepOrange, deepPurple } from '@mui/material/colors';
 const TABS = {
     DASHBOARD: 'DASHBOARD',
     ACTIVITIES: 'ACTIVITIES',
@@ -51,17 +54,24 @@ class UserForm extends React.Component{
 
     render(){
         const { activeTab } = this.state
-        const { userPhoto } = this.props;
+        const { userPhoto, username } = this.props;
         return (
             <div className="box">
+
+                
               
           <div className="tabs user-tabs">
             <div style={{ paddingRight: "20px"}}> 
+                        {/* <Stack direction="row" spacing={2}>
+                            <Avatar sx={{ bgcolor: deepOrange[500], width: 56, height: 56 }}>M</Avatar>
+                        </Stack> */}
                 <img src={userPhoto} className="image is-128x128" />
             </div>  
             <div style={{ marginTop: "30px", marginRight: "20px"}}>
-                <p>Mickey</p>
+                <p>{username}</p>
                 <p style={{ fontSize: "small"}}> Active member since November 2021</p>
+
+                
             </div>  
             <ul>
                 <li className={`${activeTab === TABS.DASHBOARD ? "is-active": ""} `} onClick={() => this.setActiveTab(TABS.DASHBOARD)}>

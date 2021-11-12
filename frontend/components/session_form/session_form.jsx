@@ -62,7 +62,9 @@ class SessionForm extends React.Component {
               </div>
              <div>   
             <form className="column login-container" onSubmit={(e) => this.handleSubmit(e)}>
-                <h3>Please {this.props.formType} or {navLink} to get started with Endurance </h3>
+                <h1 className="titled">ENDURANCE</h1>
+                {/* <h1><span>I</span>M<span>POSSIBLE</span></h1> */}
+                <h3 style={{color: "black\\"}}>Please {this.props.formType} or {navLink} to get started with Endurance </h3>
                 {this.renderErrors()}
             <div style={{ marginTop: "50px"}}> 
             <FormControl fullWidth sx={{ m: 1 }} variant="filled">

@@ -35,7 +35,7 @@ class ActivityIndex extends React.Component{
                         <h1>FitnessFeed</h1>
                     </div>
                     {
-                        activities.map((activity, i)=> {
+                        activities.reverse().map((activity, i)=> {
                             return (activity !== undefined && <ActivityIndexItem key={i} activity={activity} userPhoto={userPhoto} />)
                         })
                     }
