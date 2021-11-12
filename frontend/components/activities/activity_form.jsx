@@ -124,6 +124,12 @@ class ActivityForm extends React.Component {
        
     }
 
+    onDistanceUpdate= (distance) => {
+        this.setState({
+            distance
+        })
+    }
+
 
 
     renderStep(){
@@ -163,7 +169,7 @@ class ActivityForm extends React.Component {
             <div>
                 <div className="box">
                 {/* <GoogleMapsComponent /> */}
-                <GoogleMapsComponent2 />
+                <GoogleMapsComponent2 onDistanceUpdate={this.onDistanceUpdate}/>
                     </div >
                     <div className="backNextButtons">
                         <button className="button is-success back" onClick={this.previousStep}>Back</button>

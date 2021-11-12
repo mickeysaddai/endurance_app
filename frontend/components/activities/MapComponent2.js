@@ -1,9 +1,10 @@
 import React from 'react';
-import { GoogleMap, LoadScript } from '@react-google-maps/api';
+import { GoogleMap, LoadScript, } from '@react-google-maps/api';
 import { DistanceMatrixService } from '@react-google-maps/api';
 import { Marker } from '@react-google-maps/api';
 import { Polyline } from '@react-google-maps/api';
-import { Polygon } from '@react-google-maps/api';
+import { Polygon, UnitSystem } from '@react-google-maps/api';
+
   const mapStyles = {        
     height: "50vh",
     width: "100%"};
@@ -101,11 +102,39 @@ onMapClick = (args) => {
   console.log("dragEns", args)
 }
 
+onMarkerDragEnd = ({ latLng }) => {
+  const { lat, lng } = latLng;
+  const { defaultCtr} = this.state
+  const finalLat = lat();
+  const finalLng = lng();
+  const newPath = [
+    defaultCtr|| defaultCenter,
+     { lat: finalLat, lng: finalLng}
+  ];
+  this.setState({
+    originCoords: newPath
+  })
+}
+
+onDistanceChange = (distanceResponse) => {
+  if (distanceResponse.rows) {
+    console.log(distanceResponse)
+    const { rows } = distanceResponse
+    const latestDistanceObject = rows[0].elements[rows[0].elements.length -1];
+    const { distance } = latestDistanceObject;
+    console.log("DI", distance.text, parseFloat(distance.text.split(' ')[0], 10), )
+    const kmFloatValue = parseFloat(distance.text.split(' ')[0], 10);
+    const miles = parseFloat(0.621371* kmFloatValue).toFixed(2);
+    this.props.onDistanceUpdate(miles)
+
+  }
+}
+
 getOptions = () => {
     return {
         strokeColor: '#FF0000',
         strokeOpacity: 0.8,
-        strokeWeight: 2,
+        strokeWeight: 4,
         fillColor: '#FF0000',
         fillOpacity: 0.35,
         clickable: true,
@@ -113,6 +142,8 @@ getOptions = () => {
         editable: true,
         visible: true,
         radius: 30000,
+        onDragStart: () => console.log('drag state'),
+        onDragEnd: () => console.log('drag end'),
         onDrag: (e)=> { console.log('dragging ...', e)},
         paths: this.state.originCoords,
         zIndex: 1
@@ -123,7 +154,6 @@ render() {
 console.log(this.state)
 const { originCoords, defaultCtr } = this.state;
 console.log(originCoords)
-console.log("key", window.googleAPIKey)
     return (
         <div>
              <LoadScript
@@ -146,13 +176,20 @@ console.log("key", window.googleAPIKey)
                         onDragEnd={this.onPolyLineDragEnd}
                         onDragStart={this.onPolyLinkDragStart}
                       />
+                      <Marker 
+                        position={defaultCtr || defaultCenter}
+                        clickable={true}
+                        draggable={true}
+                        onClick={console.log}
+                        onDragEnd={this.onMarkerDragEnd}
+                      />
                       <DistanceMatrixService
                         options={{
                                 destinations:originCoords,
                                 origins: [defaultCtr || defaultCenter],
                                 travelMode: "DRIVING",
                                 }}
-                        callback = {(response) => {console.log("distance response", response)}}
+                        callback = {this.onDistanceChange}
 />
                     </GoogleMap> 
                     </LoadScript> 
