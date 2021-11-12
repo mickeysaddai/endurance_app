@@ -6,6 +6,8 @@ import GoogleMapsComponent from "./MapComponent";
 import GoogleMapsComponent2 from "./MapComponent2";
 import Navbar from "../navbar";
 import { GoogleMap, LoadScript } from '@react-google-maps/api';
+import history from "../../util/history";;
+
   const mapStyles = {        
     height: "50vh",
     width: "100%"};
@@ -51,7 +53,8 @@ class ActivityForm extends React.Component {
             heartrate: '',
             date: new Date(),
             description: '',
-            step: 1  
+            step: 1 ,
+            isCreatingActivity: false 
     },
         this.handleSubmit = this.handleSubmit.bind(this)
         this.nextStep = this.nextStep.bind(this)
@@ -59,6 +62,9 @@ class ActivityForm extends React.Component {
     }
     handleSubmit(e){
         console.log(this.state)
+        this.setState({
+            isCreatingActivity: true
+        })
         const {
             activity_type,
             duration,
@@ -80,7 +86,14 @@ class ActivityForm extends React.Component {
     }
         e.preventDefault();
    
-        this.props.action(activity)
+        this.props.action(activity).then(()=> {
+            setTimeout(() => {
+                this.setState({ isCreatingActivity: false})
+                history.push('#/')
+                window.location.reload()
+            },2000)
+        
+        })
     }
     update(field) {
         return e => this.setState({ [field]: e.target.value })
@@ -108,7 +121,7 @@ class ActivityForm extends React.Component {
 
     onActivityTypeChange = (activity_type) => {
         this.setState({activity_type})
-
+       
     }
 
 
@@ -121,9 +134,9 @@ class ActivityForm extends React.Component {
                        
 
 
-                       <div className="box activities">
+                       <div className="box activityContainer">
 
-                      
+                      <div className="activities">
                       {
                           ACTIVITIES.map((activity, idx) => {
                               return (<ActivityType key={idx} 
@@ -135,7 +148,7 @@ class ActivityForm extends React.Component {
                                 )
                             })
                         }
-                
+                        </div>
                         </div>
 
                        <div className="buttons logNext">
@@ -151,14 +164,11 @@ class ActivityForm extends React.Component {
                 <div className="box">
                 {/* <GoogleMapsComponent /> */}
                 <GoogleMapsComponent2 />
-                    </div>
-
-                    <div className="buttons logBack">
+                    </div >
+                    <div className="backNextButtons">
                         <button className="button is-success back" onClick={this.previousStep}>Back</button>
-                    </div> 
-                    <div className="buttons logNext">
                         <button className="button is-success next"onClick={this.nextStep}>Next</button>
-                    </div> 
+                    </div>
             </div>
                     )
             case 3:
@@ -261,12 +271,10 @@ class ActivityForm extends React.Component {
 
                     <div navigationButtons>
                     
-                        <div className="buttons logBack">
-                        <button className="button is-success back" onClick={this.previousStep}>Back</button>
+                        <div className="backNextButtons">
+                            <button className="button is-success back" onClick={this.previousStep}>Back</button>
+                            <button className={`button is-success save ${this.state.isCreatingActivity? 'is-loading': ''}`} onClick={this.handleSubmit}>Save</button>
                         </div> 
-                        <div className="buttons logSave">
-                            <button className="button is-success save" onClick={this.handleSubmit}>Save</button>
-                        </div>
                     </div>
 
 

@@ -7,11 +7,14 @@ import { createActivity } from "../../actions/activity_actions";
 const mapStateToProps = state => ({
    
     formType: 'Log Activity',
-    userId: state.session.id
+    userId: state.session.id,
+
 })
 
 const mapDispatchToProps = dispatch => ({
-    action: (activity) => dispatch(createActivity(activity))
+    action: (activity) => {
+        return dispatch(createActivity(activity))
+    }
 
 })
 

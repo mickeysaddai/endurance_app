@@ -1,8 +1,9 @@
 .navButtons{
     background-color: #31a4d9;
     display: flex;
-    justify-content: space-between;
-     padding: 18px 0;
+    justify-content: space-evenly;
+    padding-top: 18px;
+    margin-bottom: 30px;
 
 }
 
@@ -12,10 +13,6 @@
     padding-top: 4px;
     font-size: 20px; 
     cursor: pointer;
-  
-    
-    // border-right: 1px
- 
 }
 
 .meNav{
@@ -29,8 +26,6 @@
 .logNav{
     padding-top: 4px;
      font-size: 20px; 
-
-
 }
 
 .enduranceNav{
@@ -39,8 +34,6 @@
      margin-left: 390px;
      font-family: cursive !important;
     font-weight: bold !important;
-
-    
 }
  
 a {

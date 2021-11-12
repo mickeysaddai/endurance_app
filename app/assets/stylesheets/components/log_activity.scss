@@ -162,6 +162,11 @@
 }
 .runner{
     width:89px;
+     transition: transform 250ms;
+}
+
+.runner:hover {
+        transform: translateY(-10px);
 }
 
 .fa-person-running:before, .fa-running:before {
@@ -172,6 +177,11 @@
 
 .walker{
     width:89px;
+     transition: transform 250ms;
+}
+
+.walker:hover {
+        transform: translateY(-10px);
 }
 
 .fa-person-walking:before, .fa-walking:before {
@@ -183,6 +193,12 @@
 .cycler{
     width:89px;
     height: 120px;
+     transition: transform 250ms;
+}
+
+
+.cycler:hover {
+        transform: translateY(-10px);
 }
 
 .fa-biking:before, .fa-person-biking:before {
@@ -195,9 +211,11 @@
 .hiker{
       width:89px;
     height: 120px;
-      
+      transition: transform 250ms;
+}
 
-
+.hiker:hover {
+        transform: translateY(-10px);
 }
 
 .fa-hiking:before, .fa-person-hiking:before {
@@ -251,4 +269,14 @@
     flex-direction: row !important;
     justify-content: space-evenly;
     
+}
+
+.activityContainer {
+    background-color: rgb(179, 223, 243) !important;
+}
+
+.backNextButtons {
+     display: flex !important;
+    flex-direction: row !important;
+     justify-content: space-between ;
 }

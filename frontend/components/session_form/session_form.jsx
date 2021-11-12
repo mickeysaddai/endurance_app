@@ -61,7 +61,7 @@ class SessionForm extends React.Component {
                 </div>
               </div>
              <div>   
-            <form className="column" onSubmit={(e) => this.handleSubmit(e)}>
+            <form className="column login-container" onSubmit={(e) => this.handleSubmit(e)}>
                 <h3>Please {this.props.formType} or {navLink} to get started with Endurance </h3>
                 {this.renderErrors()}
             <div style={{ marginTop: "50px"}}> 

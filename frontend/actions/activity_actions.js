@@ -33,11 +33,11 @@ export const fetchActivity = (id) => dispatch => (
         dispatch(receiveActivity(activity))
     ))
 );
-export const createActivity = (activity) => dispatch => (
-    APIUtil.createActivity(activity).then(activity => (
-        dispatch(receiveActivity(activity))
-    ))
-);
+export const createActivity = (activity) => dispatch => {
+    return APIUtil.createActivity(activity).then(activity => {
+       return dispatch(receiveActivity(activity))
+    })
+}
 
 export const updateActivity = (activity) => dispatch => (
     APIUtil.updateActivity(activity).then(activity => (

@@ -38,8 +38,22 @@ const Navbar = ({showNav, logoutAndReroute}) => {
             
                 {/* </div> */}
 
-                    <div className="buttons logNext">
-                        <button className="button is-success next"onClick={logoutAndReroute}>Log Out</button>
+                    <div className="buttons">
+                        {/* <button className="button is-success next"onClick={logoutAndReroute}>Log Out</button> */}
+                        <div class="dropdown is-hoverable is-right logoutMenu">
+                        <div class="dropdown-trigger logoutMenu">
+                            <i class="fas fa-cog logout" aria-controls="dropdown-menu4"></i>
+                        </div>
+                        <div class="dropdown-menu logoutMenu " id="dropdown-menu3" role="menu">
+                            <div class="dropdown-content logoutMenu">
+                            <div class="dropdown-item logoutMenu logoutMenuItem">
+                                 <a className="dropdown-item logoutMenu" onClick={() => logoutAndReroute()}>
+                                   Log Out
+                                </a>
+                            </div>
+                            </div>
+                        </div>
+                        </div>
                     </div>
               
             </div>
