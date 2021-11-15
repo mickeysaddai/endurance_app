@@ -1,5 +1,6 @@
 # README
-## Welcome to the endurance_app 
+## Welcome to Endurance
+Endurance is a clone of RunKeeper a smartphone application that watches and tracks your speed, pace, distance and other data while you work out. Endurance models the webapp version of Runkeeper where a user can log in activites not tracked by the GPS. The app allows a user to optionally map out their distance trail and to calculate the corresponding pace given a time input.
 
 ##Technologies
 * Javascript
