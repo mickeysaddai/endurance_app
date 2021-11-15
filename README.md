@@ -28,7 +28,7 @@ Endurance is a clone of RunKeeper a smartphone application that watches and trac
 * PostgreSQL
 * BCrypt - for passwords and create password digests
 
-#Features
+# Features
 * Frontend to backend user authentication with hashed passwords using BCrypt
 * Logged in users can Create, Read, Update, and Delete an activity.
 * Users can utilize the Map functionality in creating a route.
