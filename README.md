@@ -1,24 +1,38 @@
 # README
+## Welcome to Endurance
+Endurance is a clone of RunKeeper a smartphone application that watches and tracks your speed, pace, distance and other data while you work out. Endurance models the webapp version of Runkeeper where a user can log in activites not tracked by the GPS. The app allows a user to optionally map out their distance trail and to calculate the corresponding pace given a time input.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+##Technologies
+* Javascript
+* React
+* Redux
+* Ruby on Rails
+* PostgreSQL
+* webpack
+* jbuilder
+* SCSS
+* Heroku
+* Ajax
 
-Things you may want to cover:
 
-* Ruby version
 
-* System dependencies
+# Frontend
+* React/Redux
+* Javascript
+* React Router
+* jQuery/Ajax
+* React DOM
 
-* Configuration
+# Backend
+* Ruby on Rails
+* PostgreSQL
+* BCrypt - for passwords and create password digests
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# Features
+* Frontend to backend user authentication with hashed passwords using BCrypt
+* Logged in users can Create, Read, Update, and Delete an activity.
+* Users can utilize the Map functionality in creating a route.
+* Users can update their profile information
+* Users can like and comment on logged activities both on theirs and thier friends.
+* Users can search for friends
+(** - to be completed)
