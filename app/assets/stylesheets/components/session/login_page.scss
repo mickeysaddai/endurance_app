@@ -61,7 +61,11 @@
   font-weight: bold;
   font-family: monospace;
   letter-spacing: 7px;
-  cursor: pointer
+  cursor: pointer;
+   color: #fff;
+  text-shadow: 0 0 10px #1ec3ec,
+               0 0 20px #1ec3ec,
+               0 0 40px #1ec3ec;
 }
 // h1 span{
 //   transition: .5s linear
@@ -75,9 +79,3 @@
 // h1:hover span:nth-child(2){
 //   margin-left: 30px
 // }
-.titled:hover{
-  color: #fff;
-  text-shadow: 0 0 10px #1ec3ec,
-               0 0 20px #1ec3ec,
-               0 0 40px #1ec3ec;
-}
