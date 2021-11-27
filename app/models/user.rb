@@ -11,6 +11,11 @@ class User < ApplicationRecord
     foreign_key: :user_id,
     class_name: :Activity
 
+    has_many :comments,
+    foreign_key: :person_id, 
+    class_name: :Comment
+    
+
     # has_one_attached :photo
 
     def self.find_by_credentials(username, password)
