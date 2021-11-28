@@ -6,6 +6,7 @@ class Activity < ApplicationRecord
     class_name: :User
 
     has_many :comments,
+    dependent: :destroy,
     foreign_key: :activity_id,
     class_name: :Comment
 end

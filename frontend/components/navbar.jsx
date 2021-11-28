@@ -40,13 +40,13 @@ const Navbar = ({showNav, logoutAndReroute}) => {
 
                     <div className="buttons">
                         {/* <button className="button is-success next"onClick={logoutAndReroute}>Log Out</button> */}
-                        <div class="dropdown is-hoverable is-right logoutMenu">
-                        <div class="dropdown-trigger logoutMenu">
-                            <i class="fas fa-cog logout" aria-controls="dropdown-menu4"></i>
+                        <div className="dropdown is-hoverable is-right logoutMenu">
+                        <div className="dropdown-trigger logoutMenu">
+                            <i className="fas fa-cog logout" aria-controls="dropdown-menu4"></i>
                         </div>
-                        <div class="dropdown-menu logoutMenu " id="dropdown-menu3" role="menu">
-                            <div class="dropdown-content logoutMenu">
-                            <div class="dropdown-item logoutMenu logoutMenuItem">
+                        <div className="dropdown-menu logoutMenu " id="dropdown-menu3" role="menu">
+                            <div className="dropdown-content logoutMenu">
+                            <div className="dropdown-item logoutMenu logoutMenuItem">
                                  <a className="dropdown-item logoutMenu" onClick={() => logoutAndReroute()}>
                                    Log Out
                                 </a>

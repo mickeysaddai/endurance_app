@@ -8,6 +8,7 @@
 
 User.destroy_all
 Activity.destroy_all
+Comment.destroy_all
 
 mickey = User.create!(
   username: "mickey",
@@ -96,4 +97,17 @@ activity7 = Activity.create!(
   time: "12.20pm",
   description: "Running is life",
   distance: 3.58,
+
+)
+
+comment1 = Comment.create!(
+person_id: mickey.id, 
+activity_id: activity1.id,
+body: "Everything is awesome. Everything is cool when you apart of a team"
+)
+
+comment2 = Comment.create!(
+person_id: mickey.id, 
+activity_id: activity1.id,
+body: "Feeling gucci!"
 )
