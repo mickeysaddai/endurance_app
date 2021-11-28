@@ -1,11 +1,16 @@
 import React from "react";
-import CommentBox from "./comment_box";
 
-const ActivityIndexItem = (props) =>  {
-  const { activity, userPhoto } = props;
- 
-// </strong> <small>@johnsmith</small> <small>31m</small>
+class ActivityIndexItem extends React.Component{
+    constructor(props){
+        super(props);
+        this.state = {
+            commenting: false
+        }
+    }
+ render(){
+ const { activity, userPhoto } = this.props;
     return (
+        
     <div className="activityList">
 
         <div className="box margined"> 
@@ -29,8 +34,6 @@ const ActivityIndexItem = (props) =>  {
                             <a className="level-item" aria-label="reply">
                                     <button className="commentButton">Comment</button>  
                             </a>
-
-                            < CommentBox />
             
                         </div>
                     </nav>
@@ -42,8 +45,9 @@ const ActivityIndexItem = (props) =>  {
         </div>
 
     </div>
-
     )
+ }
+
 }
 
 
