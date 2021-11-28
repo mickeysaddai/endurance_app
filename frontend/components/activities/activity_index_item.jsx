@@ -1,6 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
-// import Navbar from "../navbar";
+import CommentBox from "./comment_box";
 
 const ActivityIndexItem = (props) =>  {
   const { activity, userPhoto } = props;
@@ -30,6 +29,8 @@ const ActivityIndexItem = (props) =>  {
                             <a className="level-item" aria-label="reply">
                                     <button className="commentButton">Comment</button>  
                             </a>
+
+                            < CommentBox />
             
                         </div>
                     </nav>

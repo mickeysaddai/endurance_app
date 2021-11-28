@@ -1,4 +1,3 @@
-import React from "react";
 import { connect } from "react-redux";
 import ActivityForm from "./activity_form";
 import { createActivity } from "../../actions/activity_actions";
