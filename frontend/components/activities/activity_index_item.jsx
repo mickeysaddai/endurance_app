@@ -7,8 +7,15 @@ class ActivityIndexItem extends React.Component{
             commenting: false
         }
     }
+
+    changeToCommenting = (event) => {
+        console.log(event.target.innerText)
+        this.setState({commenting: true})
+
+    }
  render(){
  const { activity, userPhoto } = this.props;
+ const {commenting} = this.state;
     return (
         
     <div className="activityList">
@@ -32,7 +39,15 @@ class ActivityIndexItem extends React.Component{
                                 <button className="likeButton">Like</button>
                             </a>
                             <a className="level-item" aria-label="reply">
-                                    <button className="commentButton">Comment</button>  
+                                    <button onClick={this.changeToCommenting} className="commentButton">Comment</button>  
+                                   {commenting &&  <div>
+                                        <textarea className="commentBox" 
+                                        //    id="comment"
+                                           cols="30" rows="20">
+                                            
+                                        </textarea>
+                                    </div>
+                                    }
                             </a>
             
                         </div>
