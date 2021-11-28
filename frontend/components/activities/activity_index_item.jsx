@@ -40,13 +40,17 @@ class ActivityIndexItem extends React.Component{
                             </a>
                             <a className="level-item" aria-label="reply">
                                     <button onClick={this.changeToCommenting} className="commentButton">Comment</button>  
-                                   {commenting &&  <div>
+                                   {commenting &&  <div className="commentBoxDiv">
                                         <textarea className="commentBox" 
-                                        //    id="comment"
-                                           cols="30" rows="20">
-                                            
-                                        </textarea>
+                                        id="" cols="30" rows="10"></textarea>
+                                            <Button
+    android:id="@+id/containedButton"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Contained button"
+/>
                                     </div>
+
                                     }
                             </a>
             
