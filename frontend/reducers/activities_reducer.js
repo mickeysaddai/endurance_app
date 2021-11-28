@@ -1,4 +1,4 @@
-import { RECEIVE_ACTIVITIES, RECEIVE_ACTIVITY, REMOVE_ACTIVITY } from "../actions/activity_actions";
+import { RECEIVE_ACTIVITIES, RECEIVE_ACTIVITY, REMOVE_ACTIVITY, RECEIVE_COMMENT } from "../actions/activity_actions";
 
 const initialState = {
     "1": {
@@ -65,13 +65,14 @@ const ActivitiesReducer = (oldState = initialState, action) => {
     switch (action.type) {
         case RECEIVE_ACTIVITIES:
             return action.activities;
-
         case RECEIVE_ACTIVITY:
             nextState[action.activity.id] = action.activity
             return nextState;
         case REMOVE_ACTIVITY:
             delete nextState[action.activityId]
             return nextState;
+        case RECEIVE_COMMENT:
+            nextState[action.comment.id] = action.comment
         
         default:
             return oldState;

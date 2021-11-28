@@ -3,6 +3,7 @@ import * as APIUtil from '../util/activity_api_util';
 export const RECEIVE_ACTIVITIES = 'RECEIVE_ACTIVITIES';
 export const RECEIVE_ACTIVITY = 'RECEIVE_ACTIVITY';
 export const REMOVE_ACTIVITY = 'REMOVE_WORKOUT';
+export const RECEIVE_COMMENT = 'RECEIVE_COMMENT';
 
 
 export const receiveActivities = activities => ({
@@ -17,6 +18,11 @@ export const receiveActivity = activity => ({
 export const removeActivity = activityId => ({
     type: REMOVE_ACTIVITY, 
     activityId
+})
+
+export const receiveComment = comment => ({
+    type: RECEIVE_COMMENT, 
+    comment
 })
 
 
@@ -50,5 +56,12 @@ export const deleteActivity = (activityId) => dispatch => (
         dispatch(removeActivity(activityId))
     ))
 );
+
+
+export const createAComment = (comment) => dispatch => {
+    dispatch(receiveComment(comment))
+    return APIUtil.createComment(comment).then(comment =>  console.log(comment)
+    )
+}
 
 

@@ -42,3 +42,13 @@ export const deleteActivity = (activityId) => {
     )
 }
 
+export const createComment = (comment) => {
+    return (
+        $.ajax({
+            method: 'POST',
+            url: `/api/activities/:activity_id/comments`,
+            data: {comment}
+            
+        })
+    )
+}
