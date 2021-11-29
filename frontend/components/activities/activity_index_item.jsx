@@ -27,11 +27,10 @@ class ActivityIndexItem extends React.Component{
             userId: this.props.userId
 
         }
-        console.log(
-            commentPayload
-        )
+    
         this.props.createComment(commentPayload);
         this.setState({comment: ''})
+        this.setState({commenting: false})
 
            
     }
@@ -57,7 +56,6 @@ class ActivityIndexItem extends React.Component{
                 <div className="media-content">
                     <div className="content">
                         <p>
-                            {comments.length}
                             <strong>{activity.user}</strong> completed a {activity.distance} mi. {activity.activity_type} activity
                         </p>
                     </div>
@@ -95,8 +93,11 @@ class ActivityIndexItem extends React.Component{
             {
                  comments.map((commentObj, index) => {
                      return (
-                     <div className='rendering' key={index}> 
-                     <p> {commentObj.body}</p>
+                     <div className="renderComment" key={index}> 
+                     <img className="renderCommentPic" src={userPhoto} alt="profilepic" width="50" height="60" />
+                     <p className="renderCommentText"> {commentObj.body}</p>
+
+
                     </div>
                      )
                     
