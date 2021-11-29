@@ -50,10 +50,6 @@ h1{
     color: grey !important;
 }
 
-// .column{
-//     background-color: rgb(206, 204, 204);
-// }
-
 .commentButton{
     direction: flex;
     flex-direction: column;
@@ -69,6 +65,10 @@ h1{
 
 }
 
+.commentButton:hover{
+     background-color: #76e621 !important;
+}
+
 .likeButton{
     font-weight: bold;
     line-height: 20px;
@@ -78,6 +78,14 @@ h1{
     padding: 0 7px;
     color: #fff;
     border: none;
+
+}
+
+.likeButton:hover{
+    background-color: #1285bb !important;
+    cursor: pointer;
+    
+   
 
 }
 
@@ -129,13 +137,16 @@ right: 0px;
 
 
 .postComment{
-    margin-left: 200px;
-      padding: 10px;
-
- 
-
+    margin-left: 170px !important;
+     background-color: #81da3d !important;
+     line-height: 10px !important;
+      font-weight: bold;
 }
 
+
+.postComment:hover{
+     background-color: #75e420 !important;
+}
 
 // .header {
 //   transition: opacity var(--transition) 0.2s;

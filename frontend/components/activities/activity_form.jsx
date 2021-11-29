@@ -287,8 +287,6 @@ class ActivityForm extends React.Component {
                     </div>
 
                 )
-            
-                break;
         
             default:
                 break;

@@ -1,4 +1,5 @@
 import React from "react";
+import Button from '@mui/material/Button';
 
 class ActivityIndexItem extends React.Component{
     constructor(props){
@@ -9,12 +10,19 @@ class ActivityIndexItem extends React.Component{
     }
 
     changeToCommenting = (event) => {
-        console.log(event.target.innerText)
         this.setState({commenting: true})
 
     }
+
+    handleComment = (event) => {
+        this.props.createComment();
+
+
+
+        
+    }
  render(){
- const { activity, userPhoto } = this.props;
+ const { activity, userPhoto, createComment} = this.props;
  const {commenting} = this.state;
     return (
         
@@ -41,14 +49,13 @@ class ActivityIndexItem extends React.Component{
                             <a className="level-item" aria-label="reply">
                                     <button onClick={this.changeToCommenting} className="commentButton">Comment</button>  
                                    {commenting &&  <div className="commentBoxDiv">
-                                        <textarea className="commentBox" 
-                                        id="" cols="30" rows="10"></textarea>
-                                            <Button
-    android:id="@+id/containedButton"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="Contained button"
-/>
+                                        <textarea className="commentBox">
+                                            
+                                        </textarea>
+                                      
+                                             <Button onClick={this.handleComment} className="postComment"variant="contained">Post Comment</Button>
+                                           
+                                  
                                     </div>
 
                                     }
