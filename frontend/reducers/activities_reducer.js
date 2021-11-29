@@ -10,7 +10,8 @@ const initialState = {
         "heartrate": 120,
         "duration": 30,
         "equipment_type": "none",
-        "user": "mickey"
+        "user": "mickey",
+        "comments": []
     },
     // "2": {
     //     "user_id": 1,
@@ -72,7 +73,10 @@ const ActivitiesReducer = (oldState = initialState, action) => {
             delete nextState[action.activityId]
             return nextState;
         case RECEIVE_COMMENT:
-            nextState[action.comment.id] = action.comment
+            const currentActivity = nextState[action.comment.activityId];
+            currentActivity.comments.push(action.comment)
+            nextState[action.comment.activityId] = currentActivity
+            return nextState;
         
         default:
             return oldState;

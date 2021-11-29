@@ -5,7 +5,8 @@ class ActivityIndexItem extends React.Component{
     constructor(props){
         super(props);
         this.state = {
-            commenting: false
+            commenting: false,
+            comment: ''
         }
     }
 
@@ -14,16 +15,34 @@ class ActivityIndexItem extends React.Component{
 
     }
 
-    handleComment = (event) => {
-        this.props.createComment();
-
-
-
-        
+    handleCommentChange = (e) => {
+        const newComment = e.target.value
+        this.setState({comment: newComment})    
     }
+
+    submitComment = () => {
+        const commentPayload = {
+            body: this.state.comment,
+            activityId: this.props.activity.id,
+            userId: this.props.userId
+
+        }
+        console.log(
+            commentPayload
+        )
+        this.props.createComment(commentPayload);
+        this.setState({comment: ''})
+
+           
+    }
+
+
+
  render(){
  const { activity, userPhoto, createComment} = this.props;
- const {commenting} = this.state;
+ const { comments } = activity;
+ const {commenting, comment} = this.state;
+ console.log(comments)
     return (
         
     <div className="activityList">
@@ -38,6 +57,7 @@ class ActivityIndexItem extends React.Component{
                 <div className="media-content">
                     <div className="content">
                         <p>
+                            {comments.length}
                             <strong>{activity.user}</strong> completed a {activity.distance} mi. {activity.activity_type} activity
                         </p>
                     </div>
@@ -49,11 +69,15 @@ class ActivityIndexItem extends React.Component{
                             <a className="level-item" aria-label="reply">
                                     <button onClick={this.changeToCommenting} className="commentButton">Comment</button>  
                                    {commenting &&  <div className="commentBoxDiv">
-                                        <textarea className="commentBox">
-                                            
+                                        <textarea className="commentBox"
+                                        onChange={this.handleCommentChange}
+                                        value={comment}
+                                        >
+
+
                                         </textarea>
                                       
-                                             <Button onClick={this.handleComment} className="postComment"variant="contained">Post Comment</Button>
+                                             <Button onClick={this.submitComment} className="postComment"variant="contained">Post Comment</Button>
                                            
                                   
                                     </div>
@@ -68,7 +92,20 @@ class ActivityIndexItem extends React.Component{
                                 <i className="fas fa-angle-right"></i>
                             </a>
             </article>
+            {
+                 comments.map((commentObj, index) => {
+                     return (
+                     <div className='rendering' key={index}> 
+                     <p> {commentObj.body}</p>
+                    </div>
+                     )
+                    
+                } )
+            }                    
+           
         </div>
+
+
 
     </div>
     )

@@ -15,7 +15,7 @@ class ActivityIndex extends React.Component{
 
     }
     render(){
-        const {activities, userPhoto, loggedIn, createComment} = this.props;
+        const {activities, userPhoto, loggedIn, createComment, userId} = this.props;
         if (!loggedIn) {
              return (
                 <Box style={{ margin: "150px"}}>
@@ -35,7 +35,7 @@ class ActivityIndex extends React.Component{
                     </div>
                     {
                         activities.reverse().map((activity, i)=> {
-                            return (activity !== undefined && <ActivityIndexItem key={i} activity={activity} userPhoto={userPhoto} createComment={createComment} />)
+                            return (activity !== undefined && <ActivityIndexItem key={i} activity={activity} userPhoto={userPhoto} createComment={createComment} userId={userId}/>)
                         })
                     }
                 </div>
