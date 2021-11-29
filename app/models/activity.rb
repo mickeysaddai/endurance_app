@@ -9,4 +9,7 @@ class Activity < ApplicationRecord
     dependent: :destroy,
     foreign_key: :activity_id,
     class_name: :Comment
+
+    has_many :likes,
+    dependent: :destroy
 end

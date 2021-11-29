@@ -14,10 +14,9 @@ class Api::CommentsController < ApplicationController
 
     def destroy
         @activity = Activity.find(params[:activity_id])
-        
+        @comment = Comment.find(params[:id])
+        @comment.destroy
+   
     end
     
-
-    
-
 end

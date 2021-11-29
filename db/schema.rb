@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_27_052006) do
+ActiveRecord::Schema.define(version: 2021_11_29_044050) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -38,6 +38,15 @@ ActiveRecord::Schema.define(version: 2021_11_27_052006) do
     t.integer "person_id"
   end
 
+  create_table "likes", force: :cascade do |t|
+    t.bigint "activity_id"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["activity_id"], name: "index_likes_on_activity_id"
+    t.index ["user_id"], name: "index_likes_on_user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "username", null: false
     t.string "password_digest", null: false
@@ -48,4 +57,6 @@ ActiveRecord::Schema.define(version: 2021_11_27_052006) do
     t.index ["username"], name: "index_users_on_username", unique: true
   end
 
+  add_foreign_key "likes", "activities"
+  add_foreign_key "likes", "users"
 end
