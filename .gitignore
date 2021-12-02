@@ -7,8 +7,7 @@ bundle.js.map
 tmp/
 log/
 /log/
-config/
-config/*
+
 
 /node_modules
 
