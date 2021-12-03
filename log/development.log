@@ -24867,3 +24867,315 @@ FOREIGN KEY ("user_id")
   ↳ db/seeds.rb:109
   [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
   ↳ db/seeds.rb:109
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (2.9ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 1]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 2]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[36mActivity Load (0.9ms)[0m  [1m[34mSELECT "activities".* FROM "activities"[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."activity_id" = $1[0m  [["activity_id", 1]]
+  ↳ db/seeds.rb:10
+  [1m[36mComment Destroy (0.2ms)[0m  [1m[31mDELETE FROM "comments" WHERE "comments"."id" = $1[0m  [["id", 1]]
+  ↳ db/seeds.rb:10
+  [1m[36mComment Destroy (0.1ms)[0m  [1m[31mDELETE FROM "comments" WHERE "comments"."id" = $1[0m  [["id", 2]]
+  ↳ db/seeds.rb:10
+  [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."activity_id" = $1[0m  [["activity_id", 1]]
+  ↳ db/seeds.rb:10
+  [1m[36mActivity Destroy (0.3ms)[0m  [1m[31mDELETE FROM "activities" WHERE "activities"."id" = $1[0m  [["id", 1]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."activity_id" = $1[0m  [["activity_id", 2]]
+  ↳ db/seeds.rb:10
+  [1m[36mLike Load (0.2ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."activity_id" = $1[0m  [["activity_id", 2]]
+  ↳ db/seeds.rb:10
+  [1m[36mActivity Destroy (0.6ms)[0m  [1m[31mDELETE FROM "activities" WHERE "activities"."id" = $1[0m  [["id", 2]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."activity_id" = $1[0m  [["activity_id", 3]]
+  ↳ db/seeds.rb:10
+  [1m[36mLike Load (0.2ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."activity_id" = $1[0m  [["activity_id", 3]]
+  ↳ db/seeds.rb:10
+  [1m[36mActivity Destroy (0.7ms)[0m  [1m[31mDELETE FROM "activities" WHERE "activities"."id" = $1[0m  [["id", 3]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."activity_id" = $1[0m  [["activity_id", 4]]
+  ↳ db/seeds.rb:10
+  [1m[36mLike Load (0.2ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."activity_id" = $1[0m  [["activity_id", 4]]
+  ↳ db/seeds.rb:10
+  [1m[36mActivity Destroy (0.5ms)[0m  [1m[31mDELETE FROM "activities" WHERE "activities"."id" = $1[0m  [["id", 4]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."activity_id" = $1[0m  [["activity_id", 5]]
+  ↳ db/seeds.rb:10
+  [1m[36mLike Load (0.2ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."activity_id" = $1[0m  [["activity_id", 5]]
+  ↳ db/seeds.rb:10
+  [1m[36mActivity Destroy (0.5ms)[0m  [1m[31mDELETE FROM "activities" WHERE "activities"."id" = $1[0m  [["id", 5]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."activity_id" = $1[0m  [["activity_id", 6]]
+  ↳ db/seeds.rb:10
+  [1m[36mLike Load (0.2ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."activity_id" = $1[0m  [["activity_id", 6]]
+  ↳ db/seeds.rb:10
+  [1m[36mActivity Destroy (0.5ms)[0m  [1m[31mDELETE FROM "activities" WHERE "activities"."id" = $1[0m  [["id", 6]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."activity_id" = $1[0m  [["activity_id", 7]]
+  ↳ db/seeds.rb:10
+  [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."activity_id" = $1[0m  [["activity_id", 7]]
+  ↳ db/seeds.rb:10
+  [1m[36mActivity Destroy (0.3ms)[0m  [1m[31mDELETE FROM "activities" WHERE "activities"."id" = $1[0m  [["id", 7]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mUser Exists (1.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "mickey"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:13
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "K2rdcs3EyHEoN5KgGvxYyQ"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:13
+  [1m[36mUser Create (4.6ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "mickey"], ["password_digest", "$2a$12$2jYTGeBQp0OlL9c7ZNsqce/9TdIfRk3Ai6Z4p9MX6HLlX7bj6NXvy"], ["session_token", "K2rdcs3EyHEoN5KgGvxYyQ"], ["created_at", "2021-12-03 17:19:17.027058"], ["updated_at", "2021-12-03 17:19:17.027058"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "timmy"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:17
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "DP8xvrnOaco06mbRNSvHVg"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:17
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "timmy"], ["password_digest", "$2a$12$fQsVeq10wA/4rb7B5lA5xujF32jCo9B9ynIWVzzhSB.h90nJBhCVK"], ["session_token", "DP8xvrnOaco06mbRNSvHVg"], ["created_at", "2021-12-03 17:19:17.299641"], ["updated_at", "2021-12-03 17:19:17.299641"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:23
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[36mActivity Create (1.9ms)[0m  [1m[32mINSERT INTO "activities" ("user_id", "activity_type", "equipment_type", "duration", "heartrate", "date", "time", "description", "created_at", "updated_at", "distance") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["user_id", 3], ["activity_type", "running"], ["equipment_type", "none"], ["duration", 30], ["heartrate", 120], ["date", "12/10/2020"], ["time", "12.30pm"], ["description", "Running is life"], ["created_at", "2021-12-03 17:19:17.304606"], ["updated_at", "2021-12-03 17:19:17.304606"], ["distance", 3.5]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:35
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:35
+  [1m[36mActivity Create (0.5ms)[0m  [1m[32mINSERT INTO "activities" ("user_id", "activity_type", "equipment_type", "duration", "heartrate", "date", "time", "description", "created_at", "updated_at", "distance") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["user_id", 3], ["activity_type", "running"], ["equipment_type", "none"], ["duration", 40], ["heartrate", 120], ["date", "12/10/2020"], ["time", "12.20pm"], ["description", "Running is life"], ["created_at", "2021-12-03 17:19:17.308887"], ["updated_at", "2021-12-03 17:19:17.308887"], ["distance", 4.21]]
+  ↳ db/seeds.rb:35
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:35
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:46
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:46
+  [1m[36mActivity Create (0.4ms)[0m  [1m[32mINSERT INTO "activities" ("user_id", "activity_type", "equipment_type", "duration", "heartrate", "date", "time", "description", "created_at", "updated_at", "distance") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["user_id", 3], ["activity_type", "running"], ["equipment_type", "none"], ["duration", 40], ["heartrate", 120], ["date", "12/10/2020"], ["time", "12.20pm"], ["description", "Running is life"], ["created_at", "2021-12-03 17:19:17.311160"], ["updated_at", "2021-12-03 17:19:17.311160"], ["distance", 5.5]]
+  ↳ db/seeds.rb:46
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:46
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:57
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:57
+  [1m[36mActivity Create (0.3ms)[0m  [1m[32mINSERT INTO "activities" ("user_id", "activity_type", "equipment_type", "duration", "heartrate", "date", "time", "description", "created_at", "updated_at", "distance") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["user_id", 3], ["activity_type", "running"], ["equipment_type", "none"], ["duration", 40], ["heartrate", 120], ["date", "12/10/2020"], ["time", "12.20pm"], ["description", "Running is life"], ["created_at", "2021-12-03 17:19:17.312983"], ["updated_at", "2021-12-03 17:19:17.312983"], ["distance", 4.44]]
+  ↳ db/seeds.rb:57
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:57
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:68
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:68
+  [1m[36mActivity Create (0.5ms)[0m  [1m[32mINSERT INTO "activities" ("user_id", "activity_type", "equipment_type", "duration", "heartrate", "date", "time", "description", "created_at", "updated_at", "distance") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["user_id", 3], ["activity_type", "running"], ["equipment_type", "none"], ["duration", 40], ["heartrate", 120], ["date", "12/10/2020"], ["time", "12.20pm"], ["description", "Running is life"], ["created_at", "2021-12-03 17:19:17.314683"], ["updated_at", "2021-12-03 17:19:17.314683"], ["distance", 2.73]]
+  ↳ db/seeds.rb:68
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:68
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:79
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:79
+  [1m[36mActivity Create (0.4ms)[0m  [1m[32mINSERT INTO "activities" ("user_id", "activity_type", "equipment_type", "duration", "heartrate", "date", "time", "description", "created_at", "updated_at", "distance") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["user_id", 3], ["activity_type", "running"], ["equipment_type", "none"], ["duration", 40], ["heartrate", 120], ["date", "12/10/2020"], ["time", "12.20pm"], ["description", "Running is life"], ["created_at", "2021-12-03 17:19:17.316633"], ["updated_at", "2021-12-03 17:19:17.316633"], ["distance", 6.29]]
+  ↳ db/seeds.rb:79
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:79
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:90
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:90
+  [1m[36mActivity Create (0.4ms)[0m  [1m[32mINSERT INTO "activities" ("user_id", "activity_type", "equipment_type", "duration", "heartrate", "date", "time", "description", "created_at", "updated_at", "distance") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["user_id", 3], ["activity_type", "running"], ["equipment_type", "none"], ["duration", 40], ["heartrate", 120], ["date", "12/10/2020"], ["time", "12.20pm"], ["description", "Running is life"], ["created_at", "2021-12-03 17:19:17.318319"], ["updated_at", "2021-12-03 17:19:17.318319"], ["distance", 3.58]]
+  ↳ db/seeds.rb:90
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:90
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:103
+  [1m[36mActivity Load (0.4ms)[0m  [1m[34mSELECT  "activities".* FROM "activities" WHERE "activities"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ db/seeds.rb:103
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:103
+  [1m[36mComment Create (0.6ms)[0m  [1m[32mINSERT INTO "comments" ("activity_id", "body", "created_at", "updated_at", "person_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["activity_id", 8], ["body", "Everything is awesome. Everything is cool when you apart of a team"], ["created_at", "2021-12-03 17:19:17.322634"], ["updated_at", "2021-12-03 17:19:17.322634"], ["person_id", 3]]
+  ↳ db/seeds.rb:103
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:103
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:109
+  [1m[36mActivity Load (0.4ms)[0m  [1m[34mSELECT  "activities".* FROM "activities" WHERE "activities"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ db/seeds.rb:109
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:109
+  [1m[36mComment Create (0.4ms)[0m  [1m[32mINSERT INTO "comments" ("activity_id", "body", "created_at", "updated_at", "person_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["activity_id", 8], ["body", "Feeling gucci!"], ["created_at", "2021-12-03 17:19:17.325470"], ["updated_at", "2021-12-03 17:19:17.325470"], ["person_id", 3]]
+  ↳ db/seeds.rb:109
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:109
+Started GET "/" for ::1 at 2021-12-03 12:19:47 -0500
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/maddai/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered static_pages/root.html.erb within layouts/application (31.0ms)
+Completed 200 OK in 4187ms (Views: 4147.4ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/" for ::1 at 2021-12-03 12:19:54 -0500
+Started GET "/api/activities" for ::1 at 2021-12-03 12:19:54 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+Processing by Api::ActivitiesController#index as JSON
+  [1m[36mUser Load (7.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered static_pages/root.html.erb within layouts/application (19.4ms)
+  Rendering api/activities/index.json.jbuilder
+  [1m[36mActivity Load (2.6ms)[0m  [1m[34mSELECT "activities".* FROM "activities"[0m
+  ↳ app/views/api/activities/index.json.jbuilder:1
+Completed 200 OK in 50ms (Views: 30.3ms | ActiveRecord: 16.2ms)
+
+
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/api/activities/index.json.jbuilder:4
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/api/activities/index.json.jbuilder:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/api/activities/index.json.jbuilder:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/api/activities/index.json.jbuilder:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/api/activities/index.json.jbuilder:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/api/activities/index.json.jbuilder:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/api/activities/index.json.jbuilder:4
+  [1m[36mComment Load (0.8ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."activity_id" = $1[0m  [["activity_id", 8]]
+  ↳ app/views/api/activities/index.json.jbuilder:9
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."activity_id" = $1[0m  [["activity_id", 9]]
+  ↳ app/views/api/activities/index.json.jbuilder:9
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."activity_id" = $1[0m  [["activity_id", 10]]
+  ↳ app/views/api/activities/index.json.jbuilder:9
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."activity_id" = $1[0m  [["activity_id", 11]]
+  ↳ app/views/api/activities/index.json.jbuilder:9
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."activity_id" = $1[0m  [["activity_id", 12]]
+  ↳ app/views/api/activities/index.json.jbuilder:9
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."activity_id" = $1[0m  [["activity_id", 13]]
+  ↳ app/views/api/activities/index.json.jbuilder:9
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."activity_id" = $1[0m  [["activity_id", 14]]
+  ↳ app/views/api/activities/index.json.jbuilder:9
+  Rendered api/activities/index.json.jbuilder (82.7ms)
+Completed 200 OK in 96ms (Views: 46.4ms | ActiveRecord: 42.8ms)
+
+
+Started POST "/api/session" for ::1 at 2021-12-03 12:20:02 -0500
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"mimi@email.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "mimi@email.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:22
+Completed 401 Unauthorized in 4ms (Views: 0.2ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/api/session" for ::1 at 2021-12-03 12:20:12 -0500
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"mickey", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "mickey"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:22
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:51
+  [1m[36mUser Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "mickey"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:51
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "V4-UDIgnCrhp09SNqeMPww"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:51
+  [1m[36mUser Update (21.7ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "V4-UDIgnCrhp09SNqeMPww"], ["updated_at", "2021-12-03 17:20:13.168390"], ["id", 3]]
+  ↳ app/models/user.rb:51
+  [1m[35m (4.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:51
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (0.3ms)
+Completed 200 OK in 349ms (Views: 5.3ms | ActiveRecord: 28.6ms)
+
+
+Started GET "/api/activities" for ::1 at 2021-12-03 12:20:13 -0500
+Processing by Api::ActivitiesController#index as JSON
+  Rendering api/activities/index.json.jbuilder
+  [1m[36mActivity Load (0.7ms)[0m  [1m[34mSELECT "activities".* FROM "activities"[0m
+  ↳ app/views/api/activities/index.json.jbuilder:1
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/api/activities/index.json.jbuilder:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/api/activities/index.json.jbuilder:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/api/activities/index.json.jbuilder:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/api/activities/index.json.jbuilder:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/api/activities/index.json.jbuilder:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/api/activities/index.json.jbuilder:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/api/activities/index.json.jbuilder:4
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."activity_id" = $1[0m  [["activity_id", 8]]
+  ↳ app/views/api/activities/index.json.jbuilder:9
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."activity_id" = $1[0m  [["activity_id", 9]]
+  ↳ app/views/api/activities/index.json.jbuilder:9
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."activity_id" = $1[0m  [["activity_id", 10]]
+  ↳ app/views/api/activities/index.json.jbuilder:9
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."activity_id" = $1[0m  [["activity_id", 11]]
+  ↳ app/views/api/activities/index.json.jbuilder:9
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."activity_id" = $1[0m  [["activity_id", 12]]
+  ↳ app/views/api/activities/index.json.jbuilder:9
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."activity_id" = $1[0m  [["activity_id", 13]]
+  ↳ app/views/api/activities/index.json.jbuilder:9
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."activity_id" = $1[0m  [["activity_id", 14]]
+  ↳ app/views/api/activities/index.json.jbuilder:9
+  Rendered api/activities/index.json.jbuilder (12.0ms)
+Completed 200 OK in 19ms (Views: 16.2ms | ActiveRecord: 2.5ms)
+
+
