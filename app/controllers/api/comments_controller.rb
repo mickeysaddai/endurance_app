@@ -2,7 +2,7 @@ class Api::CommentsController < ApplicationController
     def create
         @activity = Activity.find(params[:activity_id])
         @comment = @activity.comments.create(params[:comment].permit(:activity_id, :person_id, :body))
-        render :show
+        # render :show
     end
 
     def index
