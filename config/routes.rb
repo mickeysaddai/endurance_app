@@ -5,10 +5,10 @@ Rails.application.routes.draw do
    
 
       resource :session, only: [:create, :destroy]
-      # resources :activities do
-        # resources :comments, only: [:create, :index, :show, :destroy]
-        # resources :likes, only: [:create, :destroy]
-      # end
+      resources :activities do
+        resources :comments, only: [:create, :index, :show, :destroy]
+        resources :likes, only: [:create, :show, :destroy]
+      end
 
     
   end
