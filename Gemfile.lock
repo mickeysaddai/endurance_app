@@ -47,22 +47,6 @@ GEM
     archive-zip (0.12.0)
       io-like (~> 0.3.0)
     arel (9.0.0)
-    aws-eventstream (1.2.0)
-    aws-partitions (1.539.0)
-    aws-sdk-core (3.124.0)
-      aws-eventstream (~> 1, >= 1.0.2)
-      aws-partitions (~> 1, >= 1.525.0)
-      aws-sigv4 (~> 1.1)
-      jmespath (~> 1.0)
-    aws-sdk-kms (1.52.0)
-      aws-sdk-core (~> 3, >= 3.122.0)
-      aws-sigv4 (~> 1.1)
-    aws-sdk-s3 (1.109.0)
-      aws-sdk-core (~> 3, >= 3.122.0)
-      aws-sdk-kms (~> 1)
-      aws-sigv4 (~> 1.4)
-    aws-sigv4 (1.4.0)
-      aws-eventstream (~> 1, >= 1.0.2)
     bcrypt (3.1.16)
     better_errors (2.9.1)
       coderay (>= 1.0.0)
@@ -112,7 +96,6 @@ GEM
     io-like (0.3.1)
     jbuilder (2.11.3)
       activesupport (>= 5.0.0)
-    jmespath (1.4.0)
     jquery-rails (4.4.0)
       rails-dom-testing (>= 1, < 3)
       railties (>= 4.2.0)
@@ -133,8 +116,6 @@ GEM
     msgpack (1.4.2)
     nio4r (2.5.8)
     nokogiri (1.12.5-x86_64-darwin)
-      racc (~> 1.4)
-    nokogiri (1.12.5-x86_64-linux)
       racc (~> 1.4)
     pg (1.2.3)
     pry (0.14.1)
@@ -229,10 +210,8 @@ GEM
 
 PLATFORMS
   x86_64-darwin-20
-  x86_64-linux
 
 DEPENDENCIES
-  aws-sdk-s3
   bcrypt (~> 3.1.7)
   better_errors
   binding_of_caller
