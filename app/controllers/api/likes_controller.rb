@@ -3,7 +3,7 @@ class Api::LikesController < ApplicationController
       
     def create
         @activity.likes.create(user_id: current_user.id)
-        render: show
+        # render: show
     end
 
       private
