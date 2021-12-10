@@ -9,6 +9,9 @@
 User.destroy_all
 Activity.destroy_all
 Comment.destroy_all
+Like.destroy_all
+
+
 
 mickey = User.create!(
   username: "mickey",
@@ -100,6 +103,19 @@ activity7 = Activity.create!(
 
 )
 
+activity8 = Activity.create!(
+  user_id: timmy.id,
+  activity_type: "running", 
+  equipment_type: "none", 
+  duration: 40, 
+  heartrate: 120,
+  date: "12/10/2020",
+  time: "12.20pm",
+  description: "Running is life",
+  distance: 3.58,
+
+)
+
 comment1 = Comment.create!(
 person_id: mickey.id, 
 activity_id: activity1.id,
@@ -111,3 +127,5 @@ person_id: mickey.id,
 activity_id: activity1.id,
 body: "Feeling gucci!"
 )
+
+# like1 = Like.create!(activity1: activity1)

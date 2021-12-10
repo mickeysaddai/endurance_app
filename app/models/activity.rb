@@ -11,5 +11,6 @@ class Activity < ApplicationRecord
     class_name: :Comment
 
     has_many :likes,
+    as: :reference,
     dependent: :destroy
 end
