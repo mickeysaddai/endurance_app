@@ -40,7 +40,7 @@ class Api::ActivitiesController < ApplicationController
 
   def destroy
     @activity = Activity.find(params[:id])
-
+ 
     if @activity.destroy
       render :show
     else

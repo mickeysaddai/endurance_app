@@ -60,7 +60,12 @@ export const deleteActivity = (activityId) => dispatch => (
 
 export const createAComment = (comment) => dispatch => {
     dispatch(receiveComment(comment))
-    return APIUtil.createComment(comment).then(comment =>  console.log(comment)
+    const newComment = {
+        person_id: comment.userId,
+        activity_id: comment.activityId,
+        body: comment.body
+    }
+    return APIUtil.createComment(newComment).then(comment =>  console.log(comment)
     )
 }
 
