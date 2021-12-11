@@ -4,6 +4,7 @@ import SignUpFormContainer from "./session_form/signup_form_container";
 import UserFormContainer from "./profile/user_form_container"
 import CreateActivityFormContainer from './activities/create_activity_form_container'
 import ActivityIndexContainer from "./activities/activity_index_container"
+import EditActivityFormContainer from "./activities/edit_activity_form_container"
 import { AuthRoute } from "../util/route_util";
 import { Link } from "react-router-dom";
 import { Route, Switch } from "react-router";
@@ -21,6 +22,7 @@ const App = () => {
         <div className="column is-two-thirds">
             <Route exact path='/activities/profile' component={UserFormContainer}></Route>
             <Route exact path='/activities/new' component={CreateActivityFormContainer}></Route>
+            <Route exact path='/activities/edit' component={EditActivityFormContainer}></Route>
             <Route exact path='/' component={ActivityIndexContainer}></Route>
         </div>
           <div className="column" />
