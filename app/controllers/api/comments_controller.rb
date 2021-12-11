@@ -5,7 +5,7 @@ class Api::CommentsController < ApplicationController
         @comment = Comment.new(comment_params)
         begin
             savedComment = @comment.save
-            debugger
+            # debugger
             if savedComment
                 
                 render :show
@@ -29,11 +29,8 @@ class Api::CommentsController < ApplicationController
 
     def comment_params
         # debugger
-        # params.require(:comment).permit(:activity_id, :person_id, :body)
-      comment = { person_id: params["person_id"], 
-                    activity_id: params["activity_id"],
-                    body: params["body"]
-                }
+        params.require(:comment).permit(:activity_id, :person_id, :body)
+      
     end
 
     
