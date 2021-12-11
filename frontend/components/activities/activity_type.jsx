@@ -6,7 +6,7 @@ class ActivityType extends React.Component{
         this.state = {
             activityType: 'Running',
             activityIconType: "fa-solid fa-person-running",
-            className: "runner"
+            className: "runner",
         }
 
     }
@@ -27,9 +27,11 @@ class ActivityType extends React.Component{
 
     }
     render(){
+        const { selected } = this.props;
+        const highlightBox = selected ? "selectedBox" : ""
         return (
-            <div className={`box ${this.state.className}`} onClick={this.onActivityTypeClick}>
-            <i className={`${this.state.activityIconType}`}></i>
+            <div className={`box ${this.state.className} ${highlightBox}`} onClick={this.onActivityTypeClick}>
+            <i className={`${this.state.activityIconType} `}></i>
             <h2>{this.state.activityType}</h2>
 
             </div>

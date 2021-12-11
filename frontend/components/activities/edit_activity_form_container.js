@@ -4,13 +4,18 @@ import { updateActivity } from "../../actions/activity_actions";
 import EditActivityForm from "./edit_activity_form";
 
 
-const mapStateToProps = state => ({
-   
+const mapStateToProps = (state, ownProps) => {
+    console.log(ownProps, ownProps.match.params.id)
+    const activity_id = ownProps.match.params.id;
+    console.log(activity_id, state.entities.activities ,state.entities.activities[activity_id])
+   return {
     formType: 'Edit Activity',
     user_id: state.session.id,
-    activity: Object.values(state.entities.activities)[0]
+    activity: state.entities.activities[activity_id]
 
-})
+}
+
+}
 
 const mapDispatchToProps = dispatch => ({
     action: (activity) => {

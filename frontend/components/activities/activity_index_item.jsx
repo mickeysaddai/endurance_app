@@ -1,6 +1,7 @@
 import React from "react";
 import Button from '@mui/material/Button';
-
+import  history from '../../util/history'
+import { Link } from "react-router-dom";
 class ActivityIndexItem extends React.Component{
     constructor(props){
         super(props);
@@ -18,6 +19,14 @@ class ActivityIndexItem extends React.Component{
     handleCommentChange = (e) => {
         const newComment = e.target.value
         this.setState({comment: newComment})    
+    }
+
+    handleEditActivity = () => {
+        console.log("clicking ")
+        const id = this.props.activity.id
+        history.push(`/#/activities/edit/${id}`);
+        //   window.location.reload()   
+
     }
 
     submitComment = () => {
@@ -44,7 +53,7 @@ class ActivityIndexItem extends React.Component{
  console.log(comments)
     return (
         
-    <div className="activityList">
+    <div className="activityList" onClick={this.handleEditActivity}>
 
         <div className="box margined"> 
             <article className="media">
@@ -86,9 +95,11 @@ class ActivityIndexItem extends React.Component{
                         </div>
                     </nav>
                 </div>
+                <Link to={`/#/activities/edit/${activity.id}`}>
                             <a className="level-item rightAngle" aria-label="reply">
                                 <i className="fas fa-angle-right"></i>
                             </a>
+                </Link>
             </article>
             {
                  comments.map((commentObj, index) => {

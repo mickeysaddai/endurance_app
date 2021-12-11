@@ -45,15 +45,16 @@ const ACTIVITIES = [
 export default class EditActivityForm extends Component {
     constructor(props) {
         super(props)
+        const { activity} = props;
         this.state = {
-            user_id: 4,
-            activity_type: '',
-            duration: '',
-            distance: '',
-            time: '',
-            heartrate: '',
+            user_id: activity.user_id ,
+            activity_type: activity.activity_type,
+            duration: activity.duration,
+            distance: activity.distance,
+            time: activity.time,
+            heartrate: activity.heartrate,
             date: new Date(),
-            description: '',
+            description: activity.description,
             isCreatingActivity: false 
     },
         this.handleSubmit = this.handleSubmit.bind(this)
@@ -117,6 +118,7 @@ export default class EditActivityForm extends Component {
 
 
     render() {
+        const { activity_type} = this.state;
         return (
             <div className="box">
                 <UserActivityOverview/>
@@ -129,13 +131,14 @@ export default class EditActivityForm extends Component {
                 
                     </div>
                    
-                 <div className="box activityContainer">
+                 <div className="box editActivityContainer">
 
-                      <div className="activities">
+                      <div className="editActivities">
                       {
                           ACTIVITIES.map((activity, idx) => {
                               return (<ActivityType key={idx} 
                                 activityType={activity.activityType} 
+                                selected={activity.activityType === activity_type}
                                 activityIconType={activity.activityIconType}
                                 className={activity.className}
                                 onActivityTypeChange={this.onActivityTypeChange}
@@ -149,7 +152,7 @@ export default class EditActivityForm extends Component {
             
                      <div>
                 
-                    <div className="box createActivity">
+                    <div className="box editActivity">
                         <form className="logForm">
                             <div className="columns">
                                 <div className="column">
