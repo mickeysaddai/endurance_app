@@ -33863,3 +33863,317 @@ Processing by Api::ActivitiesController#index as JSON
 Completed 200 OK in 75ms (Views: 57.8ms | ActiveRecord: 16.6ms)
 
 
+Started GET "/" for ::1 at 2021-12-10 22:44:46 -0500
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/maddai/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "hGHcimfN0zHj-0wLrtq20Q"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered static_pages/root.html.erb within layouts/application (30.2ms)
+Started GET "/" for ::1 at 2021-12-10 22:44:48 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "hGHcimfN0zHj-0wLrtq20Q"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered static_pages/root.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 2426ms (Views: 2402.4ms | ActiveRecord: 19.0ms)
+
+
+Completed 200 OK in 293ms (Views: 290.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/api/activities" for ::1 at 2021-12-10 22:44:48 -0500
+Processing by Api::ActivitiesController#index as JSON
+  Rendering api/activities/index.json.jbuilder
+  [1m[36mActivity Load (2.8ms)[0m  [1m[34mSELECT "activities".* FROM "activities"[0m
+  ↳ app/views/api/activities/index.json.jbuilder:1
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/activities/index.json.jbuilder:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/activities/index.json.jbuilder:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/activities/index.json.jbuilder:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/activities/index.json.jbuilder:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/activities/index.json.jbuilder:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/activities/index.json.jbuilder:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/activities/index.json.jbuilder:4
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/api/activities/index.json.jbuilder:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/activities/index.json.jbuilder:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/activities/index.json.jbuilder:4
+  [1m[36mComment Load (0.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."activity_id" = $1[0m  [["activity_id", 1]]
+  ↳ app/views/api/activities/index.json.jbuilder:9
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."activity_id" = $1[0m  [["activity_id", 2]]
+  ↳ app/views/api/activities/index.json.jbuilder:9
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."activity_id" = $1[0m  [["activity_id", 3]]
+  ↳ app/views/api/activities/index.json.jbuilder:9
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."activity_id" = $1[0m  [["activity_id", 4]]
+  ↳ app/views/api/activities/index.json.jbuilder:9
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."activity_id" = $1[0m  [["activity_id", 5]]
+  ↳ app/views/api/activities/index.json.jbuilder:9
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."activity_id" = $1[0m  [["activity_id", 6]]
+  ↳ app/views/api/activities/index.json.jbuilder:9
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."activity_id" = $1[0m  [["activity_id", 7]]
+  ↳ app/views/api/activities/index.json.jbuilder:9
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."activity_id" = $1[0m  [["activity_id", 8]]
+  ↳ app/views/api/activities/index.json.jbuilder:9
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."activity_id" = $1[0m  [["activity_id", 9]]
+  ↳ app/views/api/activities/index.json.jbuilder:9
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."activity_id" = $1[0m  [["activity_id", 10]]
+  ↳ app/views/api/activities/index.json.jbuilder:9
+  Rendered api/activities/index.json.jbuilder (93.3ms)
+Completed 200 OK in 104ms (Views: 52.5ms | ActiveRecord: 47.1ms)
+
+
+Started POST "/api/activities/undefined/comments" for ::1 at 2021-12-10 22:45:11 -0500
+Processing by Api::CommentsController#create as JSON
+  Parameters: {"comment"=>{"person_id"=>"1", "activity_id"=>"10", "body"=>"hi"}, "activity_id"=>"undefined"}
+  [1m[36mActivity Load (1.3ms)[0m  [1m[34mSELECT  "activities".* FROM "activities" WHERE "activities"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/api/comments_controller.rb:3
+Completed 404 Not Found in 5ms (ActiveRecord: 1.3ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Activity with 'id'=undefined:
+  app/controllers/api/comments_controller.rb:3:in `create'
+
+Started POST "/api/activities/undefined/comments" for ::1 at 2021-12-10 22:46:22 -0500
+Processing by Api::CommentsController#create as JSON
+  Parameters: {"comment"=>{"person_id"=>"1", "activity_id"=>"10", "body"=>"hello"}, "activity_id"=>"undefined"}
+  [1m[36mActivity Load (10.1ms)[0m  [1m[34mSELECT  "activities".* FROM "activities" WHERE "activities"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/api/comments_controller.rb:3
+Completed 404 Not Found in 15ms (ActiveRecord: 10.1ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Activity with 'id'=undefined:
+  app/controllers/api/comments_controller.rb:3:in `create'
+
+Started GET "/" for ::1 at 2021-12-10 22:46:46 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "hGHcimfN0zHj-0wLrtq20Q"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered api/users/_user.json.jbuilder (1.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 602ms (Views: 595.2ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/api/activities" for ::1 at 2021-12-10 22:46:47 -0500
+Processing by Api::ActivitiesController#index as JSON
+  Rendering api/activities/index.json.jbuilder
+  [1m[36mActivity Load (25.0ms)[0m  [1m[34mSELECT "activities".* FROM "activities"[0m
+  ↳ app/views/api/activities/index.json.jbuilder:1
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/activities/index.json.jbuilder:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/activities/index.json.jbuilder:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/activities/index.json.jbuilder:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/activities/index.json.jbuilder:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/activities/index.json.jbuilder:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/activities/index.json.jbuilder:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/activities/index.json.jbuilder:4
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/api/activities/index.json.jbuilder:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/activities/index.json.jbuilder:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/activities/index.json.jbuilder:4
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."activity_id" = $1[0m  [["activity_id", 1]]
+  ↳ app/views/api/activities/index.json.jbuilder:9
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."activity_id" = $1[0m  [["activity_id", 2]]
+  ↳ app/views/api/activities/index.json.jbuilder:9
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."activity_id" = $1[0m  [["activity_id", 3]]
+  ↳ app/views/api/activities/index.json.jbuilder:9
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."activity_id" = $1[0m  [["activity_id", 4]]
+  ↳ app/views/api/activities/index.json.jbuilder:9
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."activity_id" = $1[0m  [["activity_id", 5]]
+  ↳ app/views/api/activities/index.json.jbuilder:9
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."activity_id" = $1[0m  [["activity_id", 6]]
+  ↳ app/views/api/activities/index.json.jbuilder:9
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."activity_id" = $1[0m  [["activity_id", 7]]
+  ↳ app/views/api/activities/index.json.jbuilder:9
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."activity_id" = $1[0m  [["activity_id", 8]]
+  ↳ app/views/api/activities/index.json.jbuilder:9
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."activity_id" = $1[0m  [["activity_id", 9]]
+  ↳ app/views/api/activities/index.json.jbuilder:9
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."activity_id" = $1[0m  [["activity_id", 10]]
+  ↳ app/views/api/activities/index.json.jbuilder:9
+  Rendered api/activities/index.json.jbuilder (81.3ms)
+Completed 200 OK in 88ms (Views: 57.4ms | ActiveRecord: 29.8ms)
+
+
+Started POST "/api/activities/10/comments" for ::1 at 2021-12-10 22:47:06 -0500
+Processing by Api::CommentsController#create as JSON
+  Parameters: {"comment"=>{"person_id"=>"1", "activity_id"=>"10", "body"=>"how"}, "activity_id"=>"10"}
+  [1m[36mActivity Load (1.9ms)[0m  [1m[34mSELECT  "activities".* FROM "activities" WHERE "activities"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/api/comments_controller.rb:3
+  [1m[35m (4.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/comments_controller.rb:7
+  [1m[36mActivity Load (1.2ms)[0m  [1m[34mSELECT  "activities".* FROM "activities" WHERE "activities"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/api/comments_controller.rb:7
+  [1m[35m (0.8ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/comments_controller.rb:7
+Completed 401 Unauthorized in 74456ms (Views: 1.4ms | ActiveRecord: 8.3ms)
+
+
+Started GET "/" for ::1 at 2021-12-10 22:48:26 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "hGHcimfN0zHj-0wLrtq20Q"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered static_pages/root.html.erb within layouts/application (34.9ms)
+Completed 200 OK in 58ms (Views: 31.1ms | ActiveRecord: 25.3ms)
+
+
+Started GET "/api/activities" for ::1 at 2021-12-10 22:48:26 -0500
+Processing by Api::ActivitiesController#index as JSON
+  Rendering api/activities/index.json.jbuilder
+  [1m[36mActivity Load (0.9ms)[0m  [1m[34mSELECT "activities".* FROM "activities"[0m
+  ↳ app/views/api/activities/index.json.jbuilder:1
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/activities/index.json.jbuilder:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/activities/index.json.jbuilder:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/activities/index.json.jbuilder:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/activities/index.json.jbuilder:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/activities/index.json.jbuilder:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/activities/index.json.jbuilder:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/activities/index.json.jbuilder:4
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/api/activities/index.json.jbuilder:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/activities/index.json.jbuilder:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/activities/index.json.jbuilder:4
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."activity_id" = $1[0m  [["activity_id", 1]]
+  ↳ app/views/api/activities/index.json.jbuilder:9
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."activity_id" = $1[0m  [["activity_id", 2]]
+  ↳ app/views/api/activities/index.json.jbuilder:9
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."activity_id" = $1[0m  [["activity_id", 3]]
+  ↳ app/views/api/activities/index.json.jbuilder:9
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."activity_id" = $1[0m  [["activity_id", 4]]
+  ↳ app/views/api/activities/index.json.jbuilder:9
+  [1m[36mComment Load (0.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."activity_id" = $1[0m  [["activity_id", 5]]
+  ↳ app/views/api/activities/index.json.jbuilder:9
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."activity_id" = $1[0m  [["activity_id", 6]]
+  ↳ app/views/api/activities/index.json.jbuilder:9
+  [1m[36mComment Load (1.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."activity_id" = $1[0m  [["activity_id", 7]]
+  ↳ app/views/api/activities/index.json.jbuilder:9
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."activity_id" = $1[0m  [["activity_id", 8]]
+  ↳ app/views/api/activities/index.json.jbuilder:9
+  [1m[36mComment Load (0.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."activity_id" = $1[0m  [["activity_id", 9]]
+  ↳ app/views/api/activities/index.json.jbuilder:9
+  [1m[36mComment Load (2.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."activity_id" = $1[0m  [["activity_id", 10]]
+  ↳ app/views/api/activities/index.json.jbuilder:9
+  Rendered api/activities/index.json.jbuilder (92.4ms)
+Completed 200 OK in 106ms (Views: 54.6ms | ActiveRecord: 44.3ms)
+
+
+Started POST "/api/activities/10/comments" for ::1 at 2021-12-10 22:49:13 -0500
+Processing by Api::CommentsController#create as JSON
+  Parameters: {"comment"=>{"person_id"=>"1", "activity_id"=>"10", "body"=>"done"}, "activity_id"=>"10"}
+  [1m[36mActivity Load (0.8ms)[0m  [1m[34mSELECT  "activities".* FROM "activities" WHERE "activities"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/api/comments_controller.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/comments_controller.rb:7
+  [1m[36mActivity Load (0.8ms)[0m  [1m[34mSELECT  "activities".* FROM "activities" WHERE "activities"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/api/comments_controller.rb:7
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/comments_controller.rb:7
+Completed 401 Unauthorized in 12ms (Views: 0.3ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/" for ::1 at 2021-12-10 22:50:06 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (5.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "hGHcimfN0zHj-0wLrtq20Q"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (22.3ms)
+Completed 200 OK in 116ms (Views: 103.9ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/api/activities" for ::1 at 2021-12-10 22:50:06 -0500
+Processing by Api::ActivitiesController#index as JSON
+  Rendering api/activities/index.json.jbuilder
+  [1m[36mActivity Load (1.6ms)[0m  [1m[34mSELECT "activities".* FROM "activities"[0m
+  ↳ app/views/api/activities/index.json.jbuilder:1
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/activities/index.json.jbuilder:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/activities/index.json.jbuilder:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/activities/index.json.jbuilder:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/activities/index.json.jbuilder:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/activities/index.json.jbuilder:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/activities/index.json.jbuilder:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/activities/index.json.jbuilder:4
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/api/activities/index.json.jbuilder:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/activities/index.json.jbuilder:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/activities/index.json.jbuilder:4
+  [1m[36mComment Load (1.9ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."activity_id" = $1[0m  [["activity_id", 1]]
+  ↳ app/views/api/activities/index.json.jbuilder:9
+  [1m[36mComment Load (0.8ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."activity_id" = $1[0m  [["activity_id", 2]]
+  ↳ app/views/api/activities/index.json.jbuilder:9
+  [1m[36mComment Load (0.8ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."activity_id" = $1[0m  [["activity_id", 3]]
+  ↳ app/views/api/activities/index.json.jbuilder:9
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."activity_id" = $1[0m  [["activity_id", 4]]
+  ↳ app/views/api/activities/index.json.jbuilder:9
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."activity_id" = $1[0m  [["activity_id", 5]]
+  ↳ app/views/api/activities/index.json.jbuilder:9
+  [1m[36mComment Load (0.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."activity_id" = $1[0m  [["activity_id", 6]]
+  ↳ app/views/api/activities/index.json.jbuilder:9
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."activity_id" = $1[0m  [["activity_id", 7]]
+  ↳ app/views/api/activities/index.json.jbuilder:9
+  [1m[36mComment Load (0.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."activity_id" = $1[0m  [["activity_id", 8]]
+  ↳ app/views/api/activities/index.json.jbuilder:9
+  [1m[36mComment Load (1.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."activity_id" = $1[0m  [["activity_id", 9]]
+  ↳ app/views/api/activities/index.json.jbuilder:9
+  [1m[36mComment Load (0.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."activity_id" = $1[0m  [["activity_id", 10]]
+  ↳ app/views/api/activities/index.json.jbuilder:9
+  Rendered api/activities/index.json.jbuilder (52.6ms)
+Completed 200 OK in 58ms (Views: 46.2ms | ActiveRecord: 11.7ms)
+
+
+Started POST "/api/activities/10/comments" for ::1 at 2021-12-10 22:50:19 -0500
+Processing by Api::CommentsController#create as JSON
+  Parameters: {"comment"=>{"person_id"=>"1", "activity_id"=>"10", "body"=>"hi"}, "activity_id"=>"10"}
+  [1m[36mActivity Load (0.4ms)[0m  [1m[34mSELECT  "activities".* FROM "activities" WHERE "activities"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/api/comments_controller.rb:3
+  [1m[35m (2.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/comments_controller.rb:7
+  [1m[36mActivity Load (0.5ms)[0m  [1m[34mSELECT  "activities".* FROM "activities" WHERE "activities"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/api/comments_controller.rb:7
+  [1m[35m (0.8ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/comments_controller.rb:7
+Completed 401 Unauthorized in 13ms (Views: 0.1ms | ActiveRecord: 3.8ms)
+
+

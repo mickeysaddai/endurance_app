@@ -46,7 +46,7 @@ export const createComment = (comment) => {
     return (
         $.ajax({
             method: 'POST',
-            url: `/api/activities/${comment.activityId}/comments`,
+            url: `/api/activities/${comment.activity_id}/comments`,
             data: {comment}
             
         })

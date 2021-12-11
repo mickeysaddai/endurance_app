@@ -3,7 +3,7 @@ class Api::CommentsController < ApplicationController
         @activity = Activity.find(params[:activity_id])
         # @comment = @activity.comments.create(comment_params)
         @comment = Comment.new(comment_params)
-        debugger
+        # debugger
         if @comment.save
             render :show
         else
