@@ -2,12 +2,12 @@
 import React, { Component } from 'react'
 import DatePicker from './DatePicker';
 import ActivityType from "./activity_type";
-// import MapContainer from "../map/map_container";
 import GoogleMapsComponent from "./MapComponent";
 import GoogleMapsComponent2 from "./MapComponent2";
 import Navbar from "../navbar";
 import { GoogleMap, LoadScript } from '@react-google-maps/api';
-import history from "../../util/history";;
+import history from "../../util/history";
+import UserActivityOverview from '../profile/user_activitiy_overview';
 
   const mapStyles = {        
     height: "50vh",
@@ -43,10 +43,213 @@ const ACTIVITIES = [
 ]
 
 export default class EditActivityForm extends Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            user_id: 4,
+            activity_type: '',
+            duration: '',
+            distance: '',
+            time: '',
+            heartrate: '',
+            date: new Date(),
+            description: '',
+            isCreatingActivity: false 
+    },
+        this.handleSubmit = this.handleSubmit.bind(this)
+        
+    }
+
+     handleSubmit(e){
+        console.log(this.state)
+        this.setState({
+            isEditingActivity: true
+        })
+        const {
+            activity_type,
+            duration,
+            distance,
+            time,
+            heartrate,
+            date,
+            description, 
+    } = this.state
+        const activity = {
+            user_id: this.props.userId,
+            activity_type,
+            duration,
+            distance,
+            time,
+            heartrate,
+            date,
+            description
+    }
+        e.preventDefault();
+   
+        this.props.action(activity).then(()=> {
+            setTimeout(() => {
+                this.setState({ isEditingActivity: false})
+                history.push('#/')
+                window.location.reload()
+            },2000)
+        
+        })
+    }
+
+     update(field) {
+        return e => this.setState({ [field]: e.target.value })
+    }
+
+    handleDateChange = (newDate) => {
+        this.setState({['date']: newDate})
+    }
+
+     onActivityTypeChange = (activity_type) => {
+        this.setState({activity_type})
+       
+    }
+
+    onDistanceUpdate= (distance) => {
+        this.setState({
+            distance
+        })
+    }
+
 
     render() {
         return (
-            <div>
+            <div className="box">
+                <UserActivityOverview/>
+                
+                
+                <div>
+                <div className="box">
+                    <GoogleMapsComponent2 onDistanceUpdate={this.onDistanceUpdate}/>
+                    </div >
+                
+                    </div>
+                   
+                 <div className="box activityContainer">
+
+                      <div className="activities">
+                      {
+                          ACTIVITIES.map((activity, idx) => {
+                              return (<ActivityType key={idx} 
+                                activityType={activity.activityType} 
+                                activityIconType={activity.activityIconType}
+                                className={activity.className}
+                                onActivityTypeChange={this.onActivityTypeChange}
+                                />
+                                )
+                            })
+                        }
+                        </div>
+                        </div>
+
+            
+                     <div>
+                
+                    <div className="box createActivity">
+                        <form className="logForm">
+                            <div className="columns">
+                                <div className="column">
+                                <div>
+                                <label className="logDate">Date of Activity
+                                <div>
+                                <DatePicker date={this.state.date} onDateChange={this.handleDateChange} />
+                                </div>
+                             
+                                </label>
+                                </div>
+                                <label className="logBPM">Average Heart Rate (optional):
+                                <input className="inputBPM" type="text" 
+                                name="BPM"
+                                value={this.state.heartrate} 
+                                id="" 
+                                onChange={this.update('heartrate')}
+                                />
+                                </label>
+
+
+                                <div>
+                                <label className="logActivitytype">Activity type:
+                                <input className="inputActivitytype" type="text" 
+                                name="activity_type"
+                                value={this.state.activity_type} 
+                                onChange={this.update('activity_type')}
+                                />
+                                </label>
+                            </div>
+
+                                </div>
+                                <div className ="column logColumn">
+                                <label className="logDuration">Duration:
+                                <input className="inputDuration" type="text" 
+                                name="duration"
+                                value={this.state.duration} 
+                                id="" 
+                                onChange={this.update('duration')}
+                                />
+                                </label>
+
+
+                             <label className="logStartTime">Start Time:
+                            <input className="inputStartTime"type="time" 
+                            name="time"
+                            value={this.state.time} 
+                            onChange={this.update('time')}
+                            />
+                            </label>
+
+
+                            <div>
+                             <label className="logDistance">Distance:
+                            <input className="inputDistance" type="text" 
+                            name="distance"
+                            value={this.state.distance} 
+                            id="" 
+                            onChange={this.update('distance')}
+                            />
+                            </label>
+                            </div>
+
+
+                            <div>
+                             <label className="logCalories">Calories:
+                            <input className="inputCalories" type="text" 
+                            name="time"
+                            value={this.state.calories} 
+                            onChange={this.update('calories')}
+                            />
+                            </label>  
+                            </div>
+                                </div>
+                            </div>
+                
+                        
+                            <label className="logDescription">How did it go?:
+                            <textarea className="description"  
+                            value={this.state.description} 
+                            onChange={this.update('description')}>
+                            </textarea>
+                            </label>
+
+                           
+
+                        </form>
+
+                             {/* <button className="backOnLast" onClick={this.previousStep}>Back</button> */}
+
+
+                    </div>
+
+                    <div navigationButtons>
+                        <button className={`button is-success save ${this.state.isCreatingActivity? 'is-loading': ''}`} onClick={this.handleSubmit}>Save</button>
+                    
+                    </div>
+
+
+                    </div>
                 
             </div>
         )
