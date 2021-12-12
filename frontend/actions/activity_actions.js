@@ -45,11 +45,18 @@ export const createActivity = (activity) => dispatch => {
     })
 }
 
-export const updateActivity = (activity) => dispatch => (
-    APIUtil.updateActivity(activity).then(activity => (
-        dispatch(receiveActivity(activity))
-    ))
-);
+export const updateActivity = (activity) => dispatch => {
+    debugger
+    return (
+
+        APIUtil.updateActivity(activity).then(activity => (
+            dispatch(receiveActivity(activity))
+        ))
+    )
+
+}
+
+
 
 export const deleteActivity = (activityId) => dispatch => (
     APIUtil.deleteActivity(activityId).then(() => (

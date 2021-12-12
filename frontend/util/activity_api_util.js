@@ -28,7 +28,7 @@ export const updateActivity = (activity) => {
     return (
         $.ajax({
             method: 'PATCH',
-            url: `api/activities/`,
+            url: `api/activities/${activity.id}`,
             data: {activity}
     })
     )
