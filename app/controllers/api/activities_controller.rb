@@ -29,7 +29,7 @@ class Api::ActivitiesController < ApplicationController
   end
 
   def update
-    debugger
+    # debugger
     @activity = Activity.find(params[:id])
 
     if @activity.update(activity_params)

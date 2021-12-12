@@ -47,6 +47,7 @@ export default class EditActivityForm extends Component {
         super(props)
         const { activity} = props;
         this.state = {
+            id: activity.id,
             user_id: activity.user_id ,
             activity_type: activity.activity_type,
             duration: activity.duration,
@@ -62,6 +63,7 @@ export default class EditActivityForm extends Component {
     }
 
      handleSubmit(e){
+      
         console.log(this.state)
         this.setState({
             isEditingActivity: true
@@ -76,6 +78,7 @@ export default class EditActivityForm extends Component {
             description, 
     } = this.state
         const activity = {
+            id: this.props.activity.id,
             user_id: this.props.userId,
             activity_type,
             duration,
@@ -126,7 +129,7 @@ export default class EditActivityForm extends Component {
                 
                 <div>
                 <div className="box">
-                    <GoogleMapsComponent2 onDistanceUpdate={this.onDistanceUpdate}/>
+                    {/* <GoogleMapsComponent2 onDistanceUpdate={this.onDistanceUpdate}/> */}
                     </div >
                 
                     </div>

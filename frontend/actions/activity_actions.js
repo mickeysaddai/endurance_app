@@ -47,13 +47,14 @@ export const createActivity = (activity) => dispatch => {
 
 export const updateActivity = (activity) => dispatch => {
     debugger
-    return (
-
-        APIUtil.updateActivity(activity).then(activity => (
-            dispatch(receiveActivity(activity))
-        ))
+    return  APIUtil.updateActivity(activity).then(activity => {
+        debugger
+            return (
+                dispatch(receiveActivity(activity))
     )
 
+        })
+            
 }
 
 

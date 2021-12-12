@@ -25,6 +25,7 @@ export const createActivity = (activity) => {
     )
 }
 export const updateActivity = (activity) => {
+    debugger
     return (
         $.ajax({
             method: 'PATCH',
