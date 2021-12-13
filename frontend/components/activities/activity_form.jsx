@@ -50,6 +50,7 @@ class ActivityForm extends React.Component {
             duration: '',
             distance: '',
             time: '',
+            calories: '',
             heartrate: '',
             date: new Date(),
             description: '',
@@ -70,6 +71,7 @@ class ActivityForm extends React.Component {
             duration,
             distance,
             time,
+            calories,
             heartrate,
             date,
             description, 
@@ -80,6 +82,7 @@ class ActivityForm extends React.Component {
             duration,
             distance,
             time,
+            calories,
             heartrate,
             date,
             description
