@@ -1,3 +1,4 @@
+
 .navButtons{
     background-color: #31a4d9;
     display: flex;
@@ -6,7 +7,8 @@
     margin-bottom: 30px;
     padding-bottom: 10px;
     padding-right: 25%;
-;
+  
+
 
 }
 
@@ -17,6 +19,7 @@
     font-size: 20px; 
     cursor: pointer;
     font-weight: bold;
+   
     
 }
 .fa-receipt{
@@ -57,7 +60,7 @@
      font-size: 25px; 
      margin-left: 390px;
      font-family: cursive !important;
-    font-weight: bold !important;
+   
 }
 .fa-heartbeat{
     color: rgb(180, 224, 245);
@@ -93,3 +96,4 @@ a:hover{
 }
 
 .dropdown-content a:hover {background-color: #ddd;}
+
