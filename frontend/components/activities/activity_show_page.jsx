@@ -40,8 +40,8 @@ class ActivityShowPage extends React.Component{
       handleDeleteActivity = () => {
         console.log("clicking ")
         this.props.action(this.props.activity.id)
-        // history.push(`/#/`);
-        //   window.location.reload()   
+        history.push(`/#/`);
+          window.location.reload()   
 
     }
 

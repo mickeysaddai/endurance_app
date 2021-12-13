@@ -29,7 +29,6 @@ class Api::ActivitiesController < ApplicationController
   end
 
   def update
-    # debugger
     @activity = Activity.find(params[:id])
 
     if @activity.update(activity_params)
@@ -41,8 +40,7 @@ class Api::ActivitiesController < ApplicationController
 
   def destroy
     @activity = Activity.find(params[:id])
-    
-    debugger
+  
     if @activity
       @activity.destroy
       render :show
