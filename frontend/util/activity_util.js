@@ -31,7 +31,7 @@ export const deleteActivity = activity => {
     return (
         $.ajax({
             method: 'delete',
-            url: `api/activities/${activity}`,
+            url: `api/activities/${activity.id}`,
         })
     )
 }

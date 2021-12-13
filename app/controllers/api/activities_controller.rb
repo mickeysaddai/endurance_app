@@ -42,7 +42,8 @@ class Api::ActivitiesController < ApplicationController
   def destroy
     @activity = Activity.find(params[:id])
  
-    if @activity.destroy
+    if @activity
+      @activity.destroy
       render :show
     else
       render json: @activity.errors.full_messages, status: 422
