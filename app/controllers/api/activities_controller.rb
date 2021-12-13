@@ -41,7 +41,8 @@ class Api::ActivitiesController < ApplicationController
 
   def destroy
     @activity = Activity.find(params[:id])
- 
+    
+    debugger
     if @activity
       @activity.destroy
       render :show
