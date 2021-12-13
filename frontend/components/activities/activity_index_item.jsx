@@ -53,6 +53,7 @@ class ActivityIndexItem extends React.Component{
  console.log(comments)
     return (
         
+        
     <div className="activityList" onClick={this.handleEditActivity}>
 
         <div className="box margined"> 
@@ -64,9 +65,11 @@ class ActivityIndexItem extends React.Component{
                 </div>
                 <div className="media-content">
                     <div className="content">
+         <Link to={`/#/activities/edit/${activity.id}`}>
                         <p>
                             <strong>{activity.user}</strong> completed a {activity.distance} mi. {activity.activity_type} activity
                         </p>
+                                       </Link>                 
                     </div>
                     <nav className="level is-mobile">
                         <div className="level-left">
@@ -113,7 +116,7 @@ class ActivityIndexItem extends React.Component{
                      )
                     
                 } )
-            }                    
+            }   
            
         </div>
 
