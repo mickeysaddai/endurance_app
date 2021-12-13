@@ -126,7 +126,7 @@ right: 0px;
     flex-direction: column !important;
     border-radius: 10px !important;
     max-width: 400px !important;
-    margin-left: 30px;
+    margin-left: 42%;
     box-shadow: 0 0 8px rgba(7, 85, 202, 0.2) !important;
     overflow: hidden;
     padding: 14px;
@@ -181,4 +181,9 @@ right: 0px;
 .feedColumn{
     width: 120% !important;
         margin-left: -10% !important;
+}
+
+html{
+
+  background-color: #dadada !important;
 }
