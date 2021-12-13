@@ -31,7 +31,7 @@ class UserActivityOverview extends React.Component {
                 <div>
                <i className="fas fa-history"></i>
                 <p className="heading">Pace</p>
-                <p className="title">{Math.round((duration/distance) * 100)/1000}</p>
+                <p className="title">{Math.round((duration/distance) * 100)/100}</p>
                 </div>
             </div>
             <div className="level-item has-text-centered">

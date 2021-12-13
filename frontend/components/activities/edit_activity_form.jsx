@@ -53,6 +53,7 @@ export default class EditActivityForm extends Component {
             duration: activity.duration,
             distance: activity.distance,
             time: activity.time,
+            calories: activity.calories,
             heartrate: activity.heartrate,
             date: new Date(),
             description: activity.description,
@@ -73,6 +74,7 @@ export default class EditActivityForm extends Component {
             duration,
             distance,
             time,
+            calories,
             heartrate,
             date,
             description, 
@@ -84,6 +86,7 @@ export default class EditActivityForm extends Component {
             duration,
             distance,
             time,
+            calories,
             heartrate,
             date,
             description
