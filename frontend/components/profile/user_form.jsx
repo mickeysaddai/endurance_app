@@ -6,6 +6,7 @@ import UserActivityOverview from "./user_activitiy_overview";
 import Avatar from '@mui/material/Avatar';
 import Stack from '@mui/material/Stack';
 import { deepOrange, deepPurple } from '@mui/material/colors';
+
 const TABS = {
     DASHBOARD: 'DASHBOARD',
     ACTIVITIES: 'ACTIVITIES',
