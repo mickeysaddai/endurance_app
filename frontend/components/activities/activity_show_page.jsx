@@ -1,6 +1,5 @@
 import React from "react";
-import DatePicker from './DatePicker';
-import ActivityType from "./activity_type";
+import Button from '@mui/material/Button';
 import GoogleMapsComponent from "./MapComponent";
 import GoogleMapsComponent2 from "./MapComponent2";
 import UserActivityOverview from '../profile/user_activitiy_overview';
@@ -38,9 +37,14 @@ class ActivityShowPage extends React.Component{
     render(){
         return (
             <div>
-                Show Page
+              
                  <div className="box">
-                <UserActivityOverview distance={this.state.distance} duration={this.state.duration} calorites={this.state.calories}/>
+    
+                <div>
+
+                  <Button variant="contained">Edit</Button>
+                </div>
+                <UserActivityOverview distance={this.state.distance} duration={this.state.duration} calories={this.state.calories}/>
                  <GoogleMapsComponent2/>
                 
                 </div>
