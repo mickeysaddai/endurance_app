@@ -3,9 +3,8 @@ import { Link } from "react-router-dom";
 import ActivityIndexContainer from "../activities/activity_index_container";
 import GoogleMapsComponent from "../activities/MapComponent";
 import UserActivityOverview from "./user_activitiy_overview";
-import Avatar from '@mui/material/Avatar';
-import Stack from '@mui/material/Stack';
-import { deepOrange, deepPurple } from '@mui/material/colors';
+import UserActivityTotal from "./user_activity_total";
+import UserStats from "./user_stats";
 
 const TABS = {
     DASHBOARD: 'DASHBOARD',
@@ -38,13 +37,15 @@ class UserForm extends React.Component{
             case TABS.DASHBOARD:
                 return (
                     <div>
+                        <UserActivityTotal miles={this.props.totalMiles} calories={this.props.totalCalories} allActivities={this.props.allActivities}/>
+                        <UserStats miles={this.props.totalMiles} calories={this.props.totalCalories} allActivities={this.props.allActivities}/>
                          <ActivityIndexContainer />
                     </div>
                 )
             case TABS.ACTIVITIES: 
             return (
                 <div>
-                    <UserActivityOverview/>
+                    <UserActivityOverview/> 
                     <GoogleMapsComponent />
                 </div>
             )
@@ -55,9 +56,10 @@ class UserForm extends React.Component{
 
     render(){
         const { activeTab } = this.state
-        const { userPhoto, username } = this.props;
+        const { userPhoto, username, totalMiles, totalCalories, allActivities} = this.props;
         return (
             <div className="box">
+                {/* <ActivityIndexContainer miles={totalMiles} calories={totalCalories} allActivities={allActivities}/> */}
 
                 
               
