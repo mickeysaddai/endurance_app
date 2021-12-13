@@ -59,11 +59,11 @@ class ActivityIndexItem extends React.Component{
                 </div>
                 <div className="media-content">
                     <div className="content">
-         {/* <Link to={`/#/activities/show/${activity.id}`}> */}
+         <Link to={`/show/${activity.id}`}>
                         <p>
                             <strong>{activity.user}</strong> completed a {activity.distance} mi. {activity.activity_type} activity
                         </p>
-                                       {/* </Link>                  */}
+                                       </Link>                 
                     </div>
                     <nav className="level is-mobile">
                         <div className="level-left">

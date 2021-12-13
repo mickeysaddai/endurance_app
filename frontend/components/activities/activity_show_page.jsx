@@ -5,6 +5,7 @@ import GoogleMapsComponent2 from "./MapComponent2";
 import UserActivityOverview from '../profile/user_activitiy_overview';
 import  history from '../../util/history';
 import { Link } from "react-router-dom";
+import { deleteActivity } from "../../actions/activity_actions";
 
 
   const mapStyles = {        
@@ -36,13 +37,15 @@ class ActivityShowPage extends React.Component{
         
     }
 
-    //   handleEditActivity = () => {
-    //     console.log("clicking ")
-    //     const id = this.props.activity.id
-    //     history.push(`/#/activities/edit/${id}`);
-    //       window.location.reload()   
+      handleDeleteActivity = () => {
+        console.log("clicking ")
+        deleteActivity(this.state.id)
 
-    // }
+        // const id = this.props.activity.id
+        history.push(`/#/activities/`);
+          window.location.reload()   
+
+    }
 
 
     render(){
@@ -57,6 +60,9 @@ class ActivityShowPage extends React.Component{
                   <Button variant="contained">Edit</Button>
 
                     </Link>
+
+                    <Button variant="contained" onClick={this.handleDeleteActivity}>Delete</Button>
+
 
                 </div>
                 <UserActivityOverview distance={this.state.distance} duration={this.state.duration} calories={this.state.calories}/>
