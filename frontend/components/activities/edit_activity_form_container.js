@@ -18,12 +18,12 @@ const mapStateToProps = (state, ownProps) => {
 }
 
 const mapDispatchToProps = dispatch => {
-    debugger
+  
     return {
     
 
         action: (activity) => {
-            debugger
+         
             return (
                 dispatch(updateActivity(activity))
             )

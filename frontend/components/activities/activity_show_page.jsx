@@ -53,14 +53,14 @@ class ActivityShowPage extends React.Component{
                  <div className="box">
     
                 <div>
-                    <Link to={`/activity/edit/${id}`}>
+                    <Link to={`/activities/edit/${id}`}>
                   <Button variant="contained">Edit</Button>
 
                     </Link>
 
                 </div>
                 <UserActivityOverview distance={this.state.distance} duration={this.state.duration} calories={this.state.calories}/>
-                 <GoogleMapsComponent2/>
+                 {/* <GoogleMapsComponent2/> */}
                 
                 </div>
             </div>
