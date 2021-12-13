@@ -2,10 +2,7 @@
 import React, { Component } from 'react'
 import DatePicker from './DatePicker';
 import ActivityType from "./activity_type";
-import GoogleMapsComponent from "./MapComponent";
 import GoogleMapsComponent2 from "./MapComponent2";
-import Navbar from "../navbar";
-import { GoogleMap, LoadScript } from '@react-google-maps/api';
 import history from "../../util/history";
 import UserActivityOverview from '../profile/user_activitiy_overview';
 
@@ -127,7 +124,7 @@ export default class EditActivityForm extends Component {
         const { activity_type, distance, duration, calories} = this.state;
         return (
             <div className="box">
-                <UserActivityOverview distance={distance} duration={duration} calories={calories}/>
+                <UserActivityOverview distance={distance} duration={duration} calorites={calories}/>
                 
                 
                 <div>

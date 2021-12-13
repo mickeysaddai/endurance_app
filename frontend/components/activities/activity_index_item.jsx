@@ -21,13 +21,6 @@ class ActivityIndexItem extends React.Component{
         this.setState({comment: newComment})    
     }
 
-    handleEditActivity = () => {
-        console.log("clicking ")
-        const id = this.props.activity.id
-        history.push(`/#/activities/edit/${id}`);
-        //   window.location.reload()   
-
-    }
 
     submitComment = () => {
         const commentPayload = {
@@ -54,7 +47,7 @@ class ActivityIndexItem extends React.Component{
     return (
         
         
-    <div className="activityList" onClick={this.handleEditActivity}>
+    <div className="activityList">
 
         <div className="box margined"> 
             <article className="media">
@@ -65,11 +58,11 @@ class ActivityIndexItem extends React.Component{
                 </div>
                 <div className="media-content">
                     <div className="content">
-         <Link to={`/#/activities/edit/${activity.id}`}>
+         {/* <Link to={`/#/activities/show/${activity.id}`}> */}
                         <p>
                             <strong>{activity.user}</strong> completed a {activity.distance} mi. {activity.activity_type} activity
                         </p>
-                                       </Link>                 
+                                       {/* </Link>                  */}
                     </div>
                     <nav className="level is-mobile">
                         <div className="level-left">
@@ -98,7 +91,7 @@ class ActivityIndexItem extends React.Component{
                         </div>
                     </nav>
                 </div>
-                <Link to={`/#/activities/edit/${activity.id}`}>
+                <Link to={`/show/${activity.id}`}>
                             <a className="level-item rightAngle" aria-label="reply">
                                 <i className="fas fa-angle-right"></i>
                             </a>
