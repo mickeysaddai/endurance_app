@@ -26,10 +26,10 @@ class ActivityIndex extends React.Component{
         return (
         <div>                
             <div className="columns">
-                <div className="column">
+                {/* <div className="column"> */}
 
                 </div>
-                    <div className="column is-three-fifths">
+                    <div className="column feedColumn">
                     <div className="box feed">
                         <h1>FitnessFeed</h1>
                     </div>
@@ -45,7 +45,7 @@ class ActivityIndex extends React.Component{
                  
 
             </div>
-        </div>
+        // </div>
         )
     }
 }

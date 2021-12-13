@@ -58,7 +58,7 @@ class UserForm extends React.Component{
         const { activeTab } = this.state
         const { userPhoto, username, totalMiles, totalCalories, allActivities} = this.props;
         return (
-            <div className="box">
+            <div className="column is-three-fifths userProfileColumn">
                 {/* <ActivityIndexContainer miles={totalMiles} calories={totalCalories} allActivities={allActivities}/> */}
 
                 

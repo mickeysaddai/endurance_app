@@ -9,6 +9,8 @@ const Navbar = ({showNav, logoutAndReroute}) => {
         return null
     }
     return (
+        // <div className="navbar">
+
          <div className="navButtons">
                 <div className='enduranceNav'>
                 <Link to='/'><i class="fas fa-heartbeat"></i>Endurance</Link>
@@ -57,6 +59,7 @@ const Navbar = ({showNav, logoutAndReroute}) => {
                     </div>
               
             </div>
+        // </div>
     )
 }
 
