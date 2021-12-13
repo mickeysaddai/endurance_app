@@ -16,19 +16,40 @@
     padding-top: 4px;
     font-size: 20px; 
     cursor: pointer;
+    font-weight: bold;
+    
+}
+.fa-receipt{
+     color:#18e0ee;
+     font-size: 25px; 
+    //  background-color: rgb(206, 204, 204);
 }
 
 .meNav{
      padding-top: 4px;
    font-size: 20px; 
     cursor: pointer;
-
-
+    font-weight: bold;
+    
 }
 
+.fa-address-card{
+    color:#ecc968;
+     font-size: 25px; 
+}
 .logNav{
     padding-top: 4px;
      font-size: 20px; 
+     font-weight: bold;
+}
+
+
+
+
+.fa-plus-circle{
+     color:#20f131;
+     font-size: 25px; 
+
 }
 
 .enduranceNav{
@@ -37,6 +58,9 @@
      margin-left: 390px;
      font-family: cursive !important;
     font-weight: bold !important;
+}
+.fa-heartbeat{
+    color: rgb(180, 224, 245);
 }
 
 

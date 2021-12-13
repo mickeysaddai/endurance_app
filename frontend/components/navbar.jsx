@@ -11,20 +11,20 @@ const Navbar = ({showNav, logoutAndReroute}) => {
     return (
          <div className="navButtons">
                 <div className='enduranceNav'>
-                <Link to='/'>Endurance</Link>
+                <Link to='/'><i class="fas fa-heartbeat"></i>Endurance</Link>
                 </div>
                     
                 <div className='feedNav'>
-                <Link to={'/'}>FEED</Link>
+                <Link to={'/'}><i class="fas fa-receipt"></i> FEED</Link>
                 </div>
 
 
                 <div className='meNav'>
-                <Link to={'/activities/profile'}>ME</Link>
+                <Link to={'/activities/profile'}><i class="fas fa-address-card"></i> ME</Link>
                 </div>
                 
                 <div className='logNav'>
-                    <Link to='/activities/new'>LOG</Link>
+                    <Link to='/activities/new'><i class="fas fa-plus-circle"></i> LOG</Link>
                 </div>
 
 

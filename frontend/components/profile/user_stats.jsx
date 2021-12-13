@@ -15,6 +15,8 @@ class UserStats extends React.Component{
                 <h2>TOTAL CALORIES</h2>
                 {this.props.calories}
 
+                
+
 
             </div>
         )
