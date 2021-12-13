@@ -9,12 +9,15 @@ import ActivityShowPageContainer from "./activities/activity_show_page_container
 import { AuthRoute } from "../util/route_util";
 import { Link } from "react-router-dom";
 import { Route, Switch } from "react-router";
-import UserForm from "./profile/user_form";
 import Navbar from '../components/navbar';
-import { render } from "react-dom";
 import { connect } from "react-redux";
+import { fetchActivities } from "../actions/activity_actions";
 
 class App extends React.Component{
+
+    componentDidMount(){
+        this.props.fetchActivities()
+    }
 
     render(){
 
@@ -29,6 +32,7 @@ class App extends React.Component{
             <div className="column is-two-thirds">
                 <Route exact path='/activities/profile' component={UserFormContainer}></Route>
                 <Route exact path='/activities/new' component={CreateActivityFormContainer}></Route>
+                <Route exact path='/activities/edit/:id' component={EditActivityFormContainer}></Route>
                 <Route exact path='/show/:id' component={ActivityShowPageContainer}></Route>
                 <Route exact path='/' component={ActivityIndexContainer}></Route>
             </div>

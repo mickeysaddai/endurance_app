@@ -3,6 +3,8 @@ import Button from '@mui/material/Button';
 import GoogleMapsComponent from "./MapComponent";
 import GoogleMapsComponent2 from "./MapComponent2";
 import UserActivityOverview from '../profile/user_activitiy_overview';
+import  history from '../../util/history';
+import { Link } from "react-router-dom";
 
 
   const mapStyles = {        
@@ -16,6 +18,7 @@ import UserActivityOverview from '../profile/user_activitiy_overview';
 class ActivityShowPage extends React.Component{
     constructor(props) {
         super(props)
+      
         const { activity} = props;
         this.state = {
             id: activity.id,
@@ -33,16 +36,28 @@ class ActivityShowPage extends React.Component{
         
     }
 
+    //   handleEditActivity = () => {
+    //     console.log("clicking ")
+    //     const id = this.props.activity.id
+    //     history.push(`/#/activities/edit/${id}`);
+    //       window.location.reload()   
+
+    // }
+
 
     render(){
+        const {id} = this.state;
         return (
             <div>
               
                  <div className="box">
     
                 <div>
-
+                    <Link to={`/activity/edit/${id}`}>
                   <Button variant="contained">Edit</Button>
+
+                    </Link>
+
                 </div>
                 <UserActivityOverview distance={this.state.distance} duration={this.state.duration} calories={this.state.calories}/>
                  <GoogleMapsComponent2/>

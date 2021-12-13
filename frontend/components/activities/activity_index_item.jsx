@@ -21,6 +21,7 @@ class ActivityIndexItem extends React.Component{
         this.setState({comment: newComment})    
     }
 
+  
 
     submitComment = () => {
         const commentPayload = {

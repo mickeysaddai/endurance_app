@@ -42,6 +42,7 @@ const ACTIVITIES = [
 export default class EditActivityForm extends Component {
     constructor(props) {
         super(props)
+          console.log(props)
         const { activity} = props;
         this.state = {
             id: activity.id,
