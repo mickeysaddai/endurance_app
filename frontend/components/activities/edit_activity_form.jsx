@@ -127,7 +127,7 @@ export default class EditActivityForm extends Component {
         const { activity_type, distance, duration, calories} = this.state;
         return (
             <div className="box">
-                <UserActivityOverview distance={distance} duration={duration} calorites={calories}/>
+                <UserActivityOverview distance={distance} duration={duration} calories={calories}/>
                 
                 
                 <div>
