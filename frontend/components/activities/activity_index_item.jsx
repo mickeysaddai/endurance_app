@@ -68,7 +68,7 @@ class ActivityIndexItem extends React.Component{
                     <nav className="level is-mobile">
                         <div className="level-left">
                             <a className="level-item" aria-label="like">
-                                <button className="likeButton">Like</button>
+                                <button className="likeButton"><i class="fas fa-heart"></i> Like</button>
                             </a>
                             <a className="level-item" aria-label="reply">
                                     <button onClick={this.changeToCommenting} className="commentButton">Comment</button>  
@@ -103,7 +103,7 @@ class ActivityIndexItem extends React.Component{
                      return (
                      <div className="renderComment" key={index}> 
                      <img className="renderCommentPic" src={userPhoto} alt="profilepic" width="50" height="60" />
-                     <p className="renderCommentText"> {commentObj.body}</p>
+                    <strong classname>  {activity.user} </strong><p className="renderCommentText"> {commentObj.body}</p>
 
 
                     </div>

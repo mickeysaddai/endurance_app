@@ -157,14 +157,19 @@ right: 0px;
   
 }
 
-renderCommentPic{
+.renderCommentPic{
      margin-bottom: 10px;
-     margin-left: 100px !important;
+     padding-right: 7px !important;
+    //  margin-left: 100px !important;
 
 }
 
-renderCommentText{
- margin-left: 5px;
+.renderCommentText{
+//  margin-left: 5px;
+ font-size: 12px !important;
+ padding-top: 3.5px;
+ padding-left: 4px;
+ color: rgb(75, 75, 75);
 }
 .is-three-fifths{
   
