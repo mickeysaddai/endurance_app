@@ -118,7 +118,7 @@ class ActivityForm extends React.Component {
 
     onDistanceUpdate = (distance) => {
         this.setState({
-            distance
+            distance: distance
         })
     }
 
@@ -159,7 +159,7 @@ class ActivityForm extends React.Component {
             case 2:
             return(
                 <div className="activityContainer">
-                   <h2 class="plotMap"><i class="fas fa-map-marker-alt"></i> Plot Map</h2> 
+                   <h2 className="plotMap"><i className="fas fa-map-marker-alt"></i> Plot Map</h2> 
                      <MapboxView onDistanceUpdate={this.onDistanceUpdate} />
                 {/* </div> */}
              {/* <div className="" style={{ width: "max-content"}}> */}

@@ -122,14 +122,10 @@ onNavigatorError = (err) => {
     layers: ['measure-points']
     });
 
-    // Remove the linestring from the group
-    // so we can redraw it based on the points collection.
     if (geojson.features.length > 1) geojson.features.pop();
 
-    // Clear the distance container to populate it with a new value.
             distanceContainer.innerHTML = '';
 
-    // If a feature was clicked, remove it from the map.
     if (features.length) {
         const id = features[0].properties.id;
         geojson.features = geojson.features.filter(
@@ -156,11 +152,10 @@ onNavigatorError = (err) => {
 
     geojson.features.push(linestring);
 
-    // Populate the distanceContainer with total distance
     const value = document.createElement('pre');
     const distance = turf.length(linestring);
     value.textContent = `Total distance: ${(distance.toLocaleString() * 0.62).toFixed(2)}miles`;
-    this.handleDistanceChange(distance.toLocaleString())
+    this.onDistanceUpdate(distance.toLocaleString())
     distanceContainer.appendChild(value);
     }
 
@@ -172,8 +167,7 @@ onNavigatorError = (err) => {
     const features = this.map.queryRenderedFeatures(e.point, {
     layers: ['measure-points']
     });
-    // Change the cursor to a pointer when hovering over a point on the this.map.
-    // Otherwise cursor is a crosshair.
+
     this.map.getCanvas().style.cursor = features.length
     ? 'pointer'
     : 'crosshair';
@@ -194,7 +188,7 @@ onNavigatorError = (err) => {
         return (
             <div>
                 <div id="map" ref={this.mapContainer} className="map-container"></div>
-                <div id="distance" class="distance-container"></div> 
+                <div id="distance" className="distance-container"></div> 
             </div>
         );
     }

@@ -13,32 +13,23 @@ const Navbar = ({showNav, logoutAndReroute}) => {
 
          <div className="navButtons">
                 <div className='enduranceNav'>
-                <Link to='/'><i class="fas fa-heartbeat"></i>Endurance</Link>
+                <Link to='/'><i className="fas fa-heartbeat"></i>Endurance</Link>
                 </div>
                     
                 <div className='feedNav'>
-                <Link to={'/'}><i class="fas fa-receipt"></i> FEED</Link>
+                <Link to={'/'}><i className="fas fa-receipt"></i> FEED</Link>
                 </div>
 
 
                 <div className='meNav'>
-                <Link to={'/activities/profile'}><i class="fas fa-address-card"></i> ME</Link>
+                <Link to={'/activities/profile'}><i className="fas fa-address-card"></i> ME</Link>
                 </div>
                 
                 <div className='logNav'>
-                    <Link to='/activities/new'><i class="fas fa-plus-circle"></i> LOG</Link>
+                    <Link to='/activities/new'><i className="fas fa-plus-circle"></i> LOG</Link>
                 </div>
 
 
-                {/* <div className="settings">
-                    <i class="fas fa-cog settingButton"></i> */}
-                    {/* <div class="dropdown-content">
-                        <a href="#">Link 1</a>
-                        <a href="#">Link 2</a>
-                        <a href="#">Link 3</a>
-                    </div> */}
-            
-                {/* </div> */}
 
                     <div className="buttons">
                         {/* <button className="button is-success next"onClick={logoutAndReroute}>Log Out</button> */}

@@ -83,7 +83,7 @@ class UserForm extends React.Component{
                 <a>
                     <div>
                         <div>
-                            <span className={`icon is-small ${activeTab === TABS.DASHBOARD ? "iconActive": ""}`}><i class="fas fa-home" aria-hidden="true"></i></span>
+                            <span className={`icon is-small ${activeTab === TABS.DASHBOARD ? "iconActive": ""}`}><i className="fas fa-home" aria-hidden="true"></i></span>
                         </div>
                         <span>Dashboard</span>
                     
@@ -107,7 +107,7 @@ class UserForm extends React.Component{
                 <a>
                 <div>
                         <div>
-                            <span className={`icon is-small ${activeTab === TABS.FRIENDS ? "iconActive": ""}`}><i class="fas fa-user-friends" aria-hidden="true"></i></span>
+                            <span className={`icon is-small ${activeTab === TABS.FRIENDS ? "iconActive": ""}`}><i className="fas fa-user-friends" aria-hidden="true"></i></span>
                         </div>
                         <span>Friends</span>
                     

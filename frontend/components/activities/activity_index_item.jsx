@@ -68,7 +68,7 @@ class ActivityIndexItem extends React.Component{
                     <nav className="level is-mobile">
                         <div className="level-left">
                             <a className="level-item" aria-label="like">
-                                <button className="likeButton"><i class="fas fa-heart"></i> Like</button>
+                                <button className="likeButton"><i className="fas fa-heart"></i> Like</button>
                             </a>
                             <a className="level-item" aria-label="reply">
                                     <button onClick={this.changeToCommenting} className="commentButton">Comment</button>  
@@ -94,7 +94,7 @@ class ActivityIndexItem extends React.Component{
                 </div>
                 <Link to={`activities/edit/${activity.id}`}>
                             <a className="level-item rightAngle" aria-label="reply">
-                                <i class="fas fa-chevron-right"></i>
+                                <i className="fas fa-chevron-right"></i>
                                 {/* <i className="fas fa-angle-right"></i> */}
                             </a>
                 </Link>
