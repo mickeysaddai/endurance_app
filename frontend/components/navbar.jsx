@@ -29,9 +29,7 @@ const Navbar = ({showNav, logoutAndReroute}) => {
                     <Link to='/activities/new'><i className="fas fa-plus-circle"></i> LOG</Link>
                 </div>
 
-
-
-                    <div className="buttons">
+                    <div className="buttons logoutButton">
                         {/* <button className="button is-success next"onClick={logoutAndReroute}>Log Out</button> */}
                         <div className="dropdown is-hoverable is-right logoutMenu">
                         <div className="dropdown-trigger logoutMenu">
@@ -48,6 +46,8 @@ const Navbar = ({showNav, logoutAndReroute}) => {
                         </div>
                         </div>
                     </div>
+
+
               
             </div>
         // </div>
