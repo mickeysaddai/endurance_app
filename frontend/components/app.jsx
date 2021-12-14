@@ -29,7 +29,7 @@ class App extends React.Component{
                 <AuthRoute exact path='/signup' component={SignUpFormContainer} />
             <div className="columns"> 
                 <div className="column" />
-            <div className="column is-two-thirds appColumn">
+            <div className="column is-two-thirds">
                 <Route exact path='/activities/profile' component={UserFormContainer}></Route>
                 <Route exact path='/activities/new' component={CreateActivityFormContainer}></Route>
                 <Route exact path='/activities/edit/:id' component={EditActivityFormContainer}></Route>

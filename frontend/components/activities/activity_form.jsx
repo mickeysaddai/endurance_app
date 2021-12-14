@@ -1,22 +1,10 @@
 import React from "react";
 import DatePicker from './DatePicker';
 import ActivityType from "./activity_type";
-// import MapContainer from "../map/map_container";
-import GoogleMapsComponent from "./MapComponent";
-import GoogleMapsComponent2 from "./MapComponent2";
-import Navbar from "../navbar";
-import { GoogleMap, LoadScript } from '@react-google-maps/api';
 import MapboxView from "../map/mapbox_api_view";
 import history from "../../util/history";;
 
-  const mapStyles = {        
-    height: "50vh",
-    width: "100%"};
-  
-  const defaultCenter = {
-    lat: 42.26815277259402, lng: -71.75836401479359
-  }
-  
+
 const ACTIVITIES = [
     {
         activityType: 'Running', 
@@ -303,7 +291,7 @@ class ActivityForm extends React.Component {
         const { step } = this.state;
         return (
             <div>
-                  <MapboxView />
+                  {/* <MapboxView /> */}
             <div className="">
             <div className="columns activityDetails">              
                 <div className="column is-two-thirds">
