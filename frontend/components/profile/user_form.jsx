@@ -5,6 +5,7 @@ import GoogleMapsComponent from "../activities/MapComponent";
 import UserActivityOverview from "./user_activitiy_overview";
 import UserActivityTotal from "./user_activity_total";
 import UserStats from "./user_stats";
+import MapboxView from "../map/mapbox_api_view";
 
 const TABS = {
     DASHBOARD: 'DASHBOARD',
@@ -46,7 +47,8 @@ class UserForm extends React.Component{
             return (
                 <div>
                     <UserActivityOverview/> 
-                    <GoogleMapsComponent />
+                    {/* <GoogleMapsComponent /> */}
+                    <MapboxView/>
                 </div>
             )
             default: 

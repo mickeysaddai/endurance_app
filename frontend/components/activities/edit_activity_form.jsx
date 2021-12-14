@@ -5,7 +5,7 @@ import ActivityType from "./activity_type";
 import GoogleMapsComponent2 from "./MapComponent2";
 import history from "../../util/history";
 import UserActivityOverview from '../profile/user_activitiy_overview';
-
+import MapboxView from '../map/mapbox_api_view';
   const mapStyles = {        
     height: "50vh",
     width: "100%"};

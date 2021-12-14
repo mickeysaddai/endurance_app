@@ -4,6 +4,7 @@ import ActivityType from "./activity_type";
 // import MapContainer from "../map/map_container";
 import GoogleMapsComponent from "./MapComponent";
 import GoogleMapsComponent2 from "./MapComponent2";
+import MapboxView from "../map/mapbox_api_view";
 import Navbar from "../navbar";
 import { GoogleMap, LoadScript } from '@react-google-maps/api';
 import history from "../../util/history";;
@@ -172,7 +173,8 @@ class ActivityForm extends React.Component {
             <div>
                 <div className="box">
                 {/* <GoogleMapsComponent /> */}
-                <GoogleMapsComponent2 onDistanceUpdate={this.onDistanceUpdate}/>
+                {/* <GoogleMapsComponent2 onDistanceUpdate={this.onDistanceUpdate}/> */}
+                <MapboxView/>
                     </div >
                     <div className="backNextButtons">
                         <button className="button is-success back" onClick={this.previousStep}>Back</button>

@@ -94,7 +94,8 @@ class ActivityIndexItem extends React.Component{
                 </div>
                 <Link to={`/show/${activity.id}`}>
                             <a className="level-item rightAngle" aria-label="reply">
-                                <i className="fas fa-angle-right"></i>
+                                <i class="fas fa-chevron-right"></i>
+                                {/* <i className="fas fa-angle-right"></i> */}
                             </a>
                 </Link>
             </article>
