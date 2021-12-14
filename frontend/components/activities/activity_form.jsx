@@ -116,7 +116,7 @@ class ActivityForm extends React.Component {
        
     }
 
-    onDistanceUpdate= (distance) => {
+    onDistanceUpdate = (distance) => {
         this.setState({
             distance
         })
@@ -158,27 +158,26 @@ class ActivityForm extends React.Component {
 
             case 2:
             return(
-                <div>
-                     <MapboxView />
-                </div>
-            // <div 
-            // className="" style={{ width: "max-content"}}>
+                <div className="activityContainer">
+                   <h2 class="plotMap"><i class="fas fa-map-marker-alt"></i> Plot Map</h2> 
+                     <MapboxView onDistanceUpdate={this.onDistanceUpdate} />
+                {/* </div> */}
+             {/* <div className="" style={{ width: "max-content"}}> */}
                
-            //     {/* <GoogleMapsComponent /> */}
-               
-            //     {/* <GoogleMapsComponent2 onDistanceUpdate={this.onDistanceUpdate}/> */}
+            
+           
                    
-            //         <div className="backNextButtons">
-            //             <button className="button is-success back" onClick={this.previousStep}>Back</button>
-            //             <button className="button is-success next"onClick={this.nextStep}>Next</button>
-            //         </div>
-            // </div>
+                    <div className="backNextButtons">
+                        <button className="button is-success back" onClick={this.previousStep}>Back</button>
+                        <button className="button is-success next"onClick={this.nextStep}>Next</button>
+                    </div>
+            </div>
                     )
             case 3:
                 return (
                 <div>
                 
-                    {/* <div className="box createActivity">
+                    <div className="box createActivity">
                         <form className="logForm">
                             <div className="columns">
                                 <div className="column">
@@ -265,12 +264,12 @@ class ActivityForm extends React.Component {
 
                            
 
-                        </form> */}
+                        </form> 
 
-                             {/* <button className="backOnLast" onClick={this.previousStep}>Back</button> */}
+                              {/* <button className="backOnLast" onClick={this.previousStep}>Back</button> */}
 
 
-                    {/* </div>
+                     </div> 
 
                     <div navigationButtons>
                     
@@ -278,7 +277,7 @@ class ActivityForm extends React.Component {
                             <button className="button is-success back" onClick={this.previousStep}>Back</button>
                             <button className={`button is-success save ${this.state.isCreatingActivity? 'is-loading': ''}`} onClick={this.handleSubmit}>Save</button>
                         </div> 
-                    </div> */}
+                    </div>
 
 
                     </div>
@@ -295,7 +294,7 @@ class ActivityForm extends React.Component {
         const { step } = this.state;
         return (
             <div>
-                  {/* <MapboxView /> */}
+                 
             <div className="">
             <div className="columns activityDetails">              
                 <div className="column is-two-thirds buttonColumn">

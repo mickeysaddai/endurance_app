@@ -180,7 +180,7 @@ onNavigatorError = (err) => {
     });
     }
 
-    handleDistanceChange = (distance) => {
+   onDistanceUpdate = (distance) => {
         console.log("Logging Distnace", distance)
         // this.props.onDistnace(distance)
     }

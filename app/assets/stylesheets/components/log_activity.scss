@@ -1,14 +1,17 @@
 .createActivity{
     display: flex !important;
-    width: 800px;
-    background-color: rgba(213, 213, 213, 0.897) !important;
+    width: 115%;
+    background-color: #dadada !important;
+        padding: 1.25rem !important;
+        
 
 }
 .logForm{
-    margin-bottom: 100px;
+    margin-bottom: 10px;
     font-family: Helvetica;
     font-size: 15px;
     font-weight: bold;
+    // margin-bottom: -10%;
    
 
 }
@@ -152,6 +155,7 @@
     // margin-top: 50px;
     background-color: #8bd554 !important;
     color: white !important;
+    
     // height: 15px;
 }
 
@@ -310,6 +314,7 @@ padding-top: 3%;
 
 .buttonColumn{
     width: 74.6666% !important;
+    // line-height: 20% !important;
 
 }
 
@@ -317,3 +322,8 @@ padding-top: 3%;
     margin-bottom: -1.5rem !important;
 }
 
+.plotMap{
+    margin-left: 40%;
+    font-weight: bold;
+
+}
