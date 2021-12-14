@@ -155,7 +155,7 @@ onNavigatorError = (err) => {
     const value = document.createElement('pre');
     const distance = turf.length(linestring);
     value.textContent = `Total distance: ${(distance.toLocaleString() * 0.62).toFixed(2)}miles`;
-    this.onDistanceUpdate(distance.toLocaleString())
+    this.onDistanceUpdate(distance.toLocaleString() * 0.62)
     distanceContainer.appendChild(value);
     }
 
@@ -176,7 +176,8 @@ onNavigatorError = (err) => {
 
    onDistanceUpdate = (distance) => {
         console.log("Logging Distnace", distance)
-        // this.props.onDistnace(distance)
+       
+        this.props.onDistanceUpdate(distance)
     }
     renderMap(){
         this.setState({lng: -73.906021})
