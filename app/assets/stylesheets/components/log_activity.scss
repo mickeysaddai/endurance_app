@@ -295,22 +295,18 @@
 
 
 .map-container {
-// margin: 2%;
-// margin-top: 8%;
-min-height: 80vh;
-
-// min-width: 80vw;
-// max-width: 96vw;
-// margin-top: 6%;
-        background-color: rgba(0, 0, 0, 0.5);
-        color: #fff;
-        font-size: 11px;
-       
-        display: block;
-        margin: 0;
-        padding: 5px 10px;
-        border-radius: 3px;
+min-height: 50vh;
+padding-top: 3%;
+// // margin-top: 6%;
+// background-color:#1aa5e6;
+// // color: rgb(43, 31, 219);
+// font-size: 11px;
+// display: block;
+// margin: 0;
+// // padding: 1px 1px 1px 1px;
+// border-radius: 1%;
 }
+
 
 .buttonColumn{
     width: 74.6666% !important;
@@ -320,3 +316,4 @@ min-height: 80vh;
 .buttons:last-child {
     margin-bottom: -1.5rem !important;
 }
+
