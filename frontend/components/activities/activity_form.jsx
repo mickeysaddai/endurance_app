@@ -309,14 +309,16 @@ class ActivityForm extends React.Component {
                  </div>
 
 
-                <div className="column addActivityRight">
-                    <div className="activityDetailsTitle">
+                {/* <div className="column addActivityRight"> */}
+                    {/* <div className="activityDetailsTitle">
                         <h1>Add An Activity</h1>
-                    </div>
+                    </div> */}
 
 
-                <div className="box activityDetailsType">
-                     <div className="activityDetails">
+                <div className="activityDetailsType">
+                    
+                     <div className="column activityDetails">
+                         <h1>Add An Activity</h1>
                             <span className="activityType">Activity Type: {this.state.activity_type}</span>
                             <br />
                             <span className="equipementType">Equipment Type:</span>
@@ -342,7 +344,7 @@ class ActivityForm extends React.Component {
                 </div>
             </div>
          </div>
-         </div>
+        //  </div>
         )
     }
 

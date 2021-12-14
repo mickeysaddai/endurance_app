@@ -35,7 +35,7 @@ h1{
     font-size: 14px;
     color: black;
     width: max-content;
-    margin-left: 10% !important;
+    margin-left: 15% !important;
 
 }
 
@@ -46,11 +46,11 @@ h1{
 }
 
 
-.activityDetailsType{
-    margin-bottom: 0px !important;
-    border-radius: 0px !important;
-    color: grey !important;
-}
+// .activityDetailsType{
+//     margin-bottom: 0px !important;
+//     border-radius: 0px !important;
+//     color: grey !important;
+// }
 
 .commentButton{
     direction: flex;
@@ -183,8 +183,9 @@ right: 0px;
 
 .feedColumn{
   
-    width: 95% !important;
-    margin-left: -1% !important;
+    width: 68% !important;
+    margin-left: 13% !important;
+    margin-top: -1.5%;
 }
 
 html{
