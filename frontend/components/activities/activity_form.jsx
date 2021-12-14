@@ -132,7 +132,7 @@ class ActivityForm extends React.Component {
                        
 
 
-                       <div className="box activityContainer">
+                       <div className="activityContainer">
 
                       <div className="activities">
                       {
