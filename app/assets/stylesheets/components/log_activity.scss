@@ -261,7 +261,7 @@
 
 .logNext{
     padding-top: 30px;
-    margin-left: 7%;
+    margin-left:1%;
 }
 
 .activityTitles{
@@ -310,4 +310,9 @@ min-height: 80vh;
         margin: 0;
         padding: 5px 10px;
         border-radius: 3px;
+}
+
+.buttonColumn{
+    width: 74.6666% !important;
+
 }

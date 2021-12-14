@@ -298,7 +298,7 @@ class ActivityForm extends React.Component {
                   {/* <MapboxView /> */}
             <div className="">
             <div className="columns activityDetails">              
-                <div className="column is-two-thirds">
+                <div className="column is-two-thirds buttonColumn">
                      <div className="buttons logNext">
                             <button className={`button is-success is-rounded ${step === 1 ? "" : 'nonActiveStep' } `} onClick={() => this.setStep(1)}>Step 1: Activity/Equpment Type</button>
                             <button className={`button is-success is-rounded ${step === 2 ? "" : 'nonActiveStep' } `} onClick={()=> this.setStep(2)}>Step 2: Add a Map</button>
