@@ -65,7 +65,7 @@ export default class MapboxView extends React.PureComponent{
      this.setState({ lat: latitude, lng: longitude}, () => {
         this.map.flyTo({
             center: [longitude,latitude], 
-            zoom: 9,
+            zoom: 15,
             bearing: (Math.random() < 0.5 ? -1 : 1)*Math.floor(Math.random() * 20),
             speed: 2,
             curve: 0.75,

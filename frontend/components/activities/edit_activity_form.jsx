@@ -2,17 +2,10 @@
 import React, { Component } from 'react'
 import DatePicker from './DatePicker';
 import ActivityType from "./activity_type";
-import GoogleMapsComponent2 from "./MapComponent2";
 import history from "../../util/history";
 import UserActivityOverview from '../profile/user_activitiy_overview';
 import MapboxView from '../map/mapbox_api_view';
-  const mapStyles = {        
-    height: "50vh",
-    width: "100%"};
-  
-  const defaultCenter = {
-    lat: 42.26815277259402, lng: -71.75836401479359
-  }
+
   
 const ACTIVITIES = [
     {
@@ -130,6 +123,7 @@ export default class EditActivityForm extends Component {
                 
                 <div>
                 <div className="box">
+                    <MapboxView/>
                     {/* <GoogleMapsComponent2 onDistanceUpdate={this.onDistanceUpdate}/> */}
                     </div >
                 
