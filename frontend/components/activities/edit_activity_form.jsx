@@ -123,8 +123,7 @@ export default class EditActivityForm extends Component {
                 
                 <div>
                 <div className="box">
-                    <MapboxView/>
-                    {/* <GoogleMapsComponent2 onDistanceUpdate={this.onDistanceUpdate}/> */}
+                    {/* <MapboxView/> */}
                     </div >
                 
                     </div>
