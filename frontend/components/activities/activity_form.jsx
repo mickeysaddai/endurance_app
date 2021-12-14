@@ -4,9 +4,9 @@ import ActivityType from "./activity_type";
 // import MapContainer from "../map/map_container";
 import GoogleMapsComponent from "./MapComponent";
 import GoogleMapsComponent2 from "./MapComponent2";
-import MapboxView from "../map/mapbox_api_view";
 import Navbar from "../navbar";
 import { GoogleMap, LoadScript } from '@react-google-maps/api';
+import MapboxView from "../map/mapbox_api_view";
 import history from "../../util/history";;
 
   const mapStyles = {        
@@ -170,12 +170,12 @@ class ActivityForm extends React.Component {
 
             case 2:
             return(
-            <div>
-                <div className="box">
+            <div className="" style={{ width: "max-content"}}>
+               
                 {/* <GoogleMapsComponent /> */}
+                <MapboxView />
                 {/* <GoogleMapsComponent2 onDistanceUpdate={this.onDistanceUpdate}/> */}
-                <MapboxView/>
-                    </div >
+                   
                     <div className="backNextButtons">
                         <button className="button is-success back" onClick={this.previousStep}>Back</button>
                         <button className="button is-success next"onClick={this.nextStep}>Next</button>
@@ -303,9 +303,10 @@ class ActivityForm extends React.Component {
         const { step } = this.state;
         return (
             <div>
-            <div className="box">
+                  <MapboxView />
+            <div className="">
             <div className="columns activityDetails">              
-                <div className="column is-two-thirds activityFormColumn">
+                <div className="column is-two-thirds">
                      <div className="buttons logNext">
                             <button className={`button is-success is-rounded ${step === 1 ? "" : 'nonActiveStep' } `} onClick={() => this.setStep(1)}>Step 1: Activity/Equpment Type</button>
                             <button className={`button is-success is-rounded ${step === 2 ? "" : 'nonActiveStep' } `} onClick={()=> this.setStep(2)}>Step 2: Add a Map</button>
