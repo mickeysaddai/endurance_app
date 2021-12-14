@@ -1,7 +1,6 @@
 import React from "react";
 import Button from '@mui/material/Button';
-import GoogleMapsComponent from "./MapComponent";
-import GoogleMapsComponent2 from "./MapComponent2";
+import MapboxView from "../map/mapbox_api_view";
 import UserActivityOverview from '../profile/user_activitiy_overview';
 import  history from '../../util/history';
 import { Link } from "react-router-dom";
@@ -64,7 +63,7 @@ class ActivityShowPage extends React.Component{
 
                 </div>
                 <UserActivityOverview distance={this.props.activity.distance} duration={this.props.activity.duration} calories={this.props.activity.calories}/>
-                 {/* <GoogleMapsComponent2/> */}
+                 <MapboxView/>
                 
                 </div>
             </div>
