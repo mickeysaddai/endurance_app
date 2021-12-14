@@ -158,23 +158,27 @@ class ActivityForm extends React.Component {
 
             case 2:
             return(
-            <div className="" style={{ width: "max-content"}}>
+                <div>
+                     <MapboxView />
+                </div>
+            // <div 
+            // className="" style={{ width: "max-content"}}>
                
-                {/* <GoogleMapsComponent /> */}
-                <MapboxView />
-                {/* <GoogleMapsComponent2 onDistanceUpdate={this.onDistanceUpdate}/> */}
+            //     {/* <GoogleMapsComponent /> */}
+               
+            //     {/* <GoogleMapsComponent2 onDistanceUpdate={this.onDistanceUpdate}/> */}
                    
-                    <div className="backNextButtons">
-                        <button className="button is-success back" onClick={this.previousStep}>Back</button>
-                        <button className="button is-success next"onClick={this.nextStep}>Next</button>
-                    </div>
-            </div>
+            //         <div className="backNextButtons">
+            //             <button className="button is-success back" onClick={this.previousStep}>Back</button>
+            //             <button className="button is-success next"onClick={this.nextStep}>Next</button>
+            //         </div>
+            // </div>
                     )
             case 3:
                 return (
                 <div>
                 
-                    <div className="box createActivity">
+                    {/* <div className="box createActivity">
                         <form className="logForm">
                             <div className="columns">
                                 <div className="column">
@@ -261,12 +265,12 @@ class ActivityForm extends React.Component {
 
                            
 
-                        </form>
+                        </form> */}
 
                              {/* <button className="backOnLast" onClick={this.previousStep}>Back</button> */}
 
 
-                    </div>
+                    {/* </div>
 
                     <div navigationButtons>
                     
@@ -274,7 +278,7 @@ class ActivityForm extends React.Component {
                             <button className="button is-success back" onClick={this.previousStep}>Back</button>
                             <button className={`button is-success save ${this.state.isCreatingActivity? 'is-loading': ''}`} onClick={this.handleSubmit}>Save</button>
                         </div> 
-                    </div>
+                    </div> */}
 
 
                     </div>
@@ -306,7 +310,7 @@ class ActivityForm extends React.Component {
 
 
                 <div className="column addActivityRight">
-                    <div className="box activityDetailsTitle">
+                    <div className="activityDetailsTitle">
                         <h1>Add An Activity</h1>
                     </div>
 
