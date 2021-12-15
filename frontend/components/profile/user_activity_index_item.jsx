@@ -25,7 +25,7 @@ class ProfileActivityIndexItem extends React.Component{
     incrementtMe = (e) => {
         let newCount = this.state.count + 1
         console.log("clicked like", newCount, "hey")
-        // this.setState({count: newCount})
+        this.setState({count: newCount})
 
     }
   
@@ -73,7 +73,7 @@ class ProfileActivityIndexItem extends React.Component{
                     <nav className="level is-mobile">
                         <div className="level-left">
                             <a className="level-item" aria-label="like">
-                                <button onClick={this.incrementtMe} className="likeButton"><i className="fas fa-heart"></i> Like</button>
+                                <button onClick={this.incrementtMe} className="likeButton"><i className="fas fa-heart"></i> Like: {this.state.count}</button>
                             </a>
                             <a className="level-item" aria-label="reply">
                                     <button onClick={this.changeToCommenting} className="commentButton">Comment</button>  
