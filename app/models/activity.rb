@@ -10,7 +10,7 @@ class Activity < ApplicationRecord
     foreign_key: :activity_id,
     class_name: :Comment
 
-    # has_many :likes,
+    has_many :likes,
     # as: :reference,
-    # dependent: :destroy
+    dependent: :destroy
 end

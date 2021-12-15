@@ -22,11 +22,19 @@ class ActivityIndexItem extends React.Component{
         this.setState({comment: newComment})    
     }
 
-       incrementtMe = (e) => {
-             let newCount = this.state.count + 1
-        console.log("clicked like", e.target.value)
+    incrementtMe = (e) => {
+        let newCount = 1
         this.setState({count: newCount})
 
+        if (this.state.count === newCount){
+            this.setState({count: 0})
+        }
+
+    }
+
+    handleUnlike = (e) => {
+        let count = 0
+        this.setState({count: count})
     }
   
 
@@ -75,7 +83,7 @@ class ActivityIndexItem extends React.Component{
                     <nav className="level is-mobile">
                         <div className="level-left">
                             <a className="level-item" aria-label="like">
-                                <button onClick={this.incrementtMe} className="likeButton"><i className="fas fa-heart"></i> Like {this.state.count}</button>
+                                <button onClick={this.incrementtMe} onDoubleClick={this.handleUnlike} className="likeButton"><i className="fas fa-heart"></i> Like {this.state.count}</button>
                             </a>
                             <a className="level-item" aria-label="reply">
                                     <button onClick={this.changeToCommenting} className="commentButton">Comment</button>  
@@ -88,7 +96,7 @@ class ActivityIndexItem extends React.Component{
 
                                         </textarea>
                                       
-                                             <Button onClick={this.submitComment} className="postComment"variant="contained">Post Comment</Button>
+                                             <Button onClick={this.submitComment}    className="postComment"variant="contained">Post Comment</Button>
                                            
                                   
                                     </div>
