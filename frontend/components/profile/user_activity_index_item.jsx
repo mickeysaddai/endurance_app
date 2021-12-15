@@ -7,7 +7,8 @@ class ProfileActivityIndexItem extends React.Component{
         super(props);
         this.state = {
             commenting: false,
-            comment: ''
+            comment: '',
+            count: 0
         }
     }
 
@@ -21,6 +22,12 @@ class ProfileActivityIndexItem extends React.Component{
         this.setState({comment: newComment})    
     }
 
+    incrementtMe = (e) => {
+        let newCount = this.state.count + 1
+        console.log("clicked like", newCount, "hey")
+        // this.setState({count: newCount})
+
+    }
   
 
     submitComment = () => {
@@ -50,7 +57,7 @@ class ProfileActivityIndexItem extends React.Component{
         <div className="column margined"> 
             <article className="media">
                 <div className="media-left">
-                   {/* <i class="fas fa-heartbeat profileHeart"></i> */}
+                   <i className="fas fa-heartbeat profileHeart"></i>
                     {/* <figure className="image is-64x64">
                         <img src={userPhoto }alt="Image"></img>
                     </figure> */}
@@ -66,7 +73,7 @@ class ProfileActivityIndexItem extends React.Component{
                     <nav className="level is-mobile">
                         <div className="level-left">
                             <a className="level-item" aria-label="like">
-                                <button className="likeButton"><i className="fas fa-heart"></i> Like</button>
+                                <button onClick={this.incrementtMe} className="likeButton"><i className="fas fa-heart"></i> Like</button>
                             </a>
                             <a className="level-item" aria-label="reply">
                                     <button onClick={this.changeToCommenting} className="commentButton">Comment</button>  

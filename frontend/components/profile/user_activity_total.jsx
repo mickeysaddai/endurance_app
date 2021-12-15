@@ -15,7 +15,7 @@ class UserActivityTotal extends React.Component {
                 <div>
                       <i className="fas fa-road road"></i>
                 </div>
-                <p className="heading">Miles</p>
+                <p className="heading">Total Miles</p>
                 <p className="title">{miles}</p>
               
                 </div>

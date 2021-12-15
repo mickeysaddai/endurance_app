@@ -12,36 +12,36 @@ class UserStats extends React.Component{
 
             <div>
                 <div id="bodyMeasurementsContainer">
-   <ul class="clearfix navList">
-       <span class="navListLabel"><strong>Stats</strong></span>
+   <ul className="clearfix navList">
+       <span className="navListLabel Stats"><strong>Stats</strong></span>
       
          <li>
-            <span class="navListLabel">Total Activities:</span>
-            <span class="navListValue"> {this.props.allActivities}</span>
+            <span className="navListLabel">Total Activities:</span>
+            <span className="navListValue"> {this.props.allActivities}</span>
          </li>
       
       
          <li>
-            <span class="navListLabel">Total Distance:</span>
-            <span class="navListValue">{this.props.miles}</span>
+            <span className="navListLabel">Total Distance:</span>
+            <span className="navListValue">{this.props.miles}</span>
          </li>
       
       
          <li>
-            <span class="navListLabel">Total Calories:</span>
-            <span class="navListValue"> {this.props.calories}</span>
+            <span className="navListLabel">Total Calories:</span>
+            <span className="navListValue"> {this.props.calories}</span>
          </li>
       
       
          
          
             <li>
-                  <span class="navListLabel">Weight:</span>
-                  <span class="navListValue"><a href="#bodyMeasurementsLightbox" class="bodyMeasurementsUpdate bodyMeasurementsLink" id="weightUpdateLink" title="Body Measurements">116.6 lbs</a></span>
+                  <span className="navListLabel">Weight:</span>
+                  <span className="navListValue"><a href="#bodyMeasurementsLightbox" className="bodyMeasurementsUpdate bodyMeasurementsLink" id="weightUpdateLink" title="Body Measurements">116.6 lbs</a></span>
             </li>
-          <div class="divider"></div>       
+          <div className="divider"></div>       
           </ul>
-</div>
+                </div>
             </div>
                 
 

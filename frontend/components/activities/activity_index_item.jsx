@@ -21,6 +21,11 @@ class ActivityIndexItem extends React.Component{
         this.setState({comment: newComment})    
     }
 
+       incrementtMe = (e) => {
+        console.log("clicked like", e.target.value)
+        this.setState({count: e.target.value})
+
+    }
   
 
     submitComment = () => {
@@ -68,7 +73,7 @@ class ActivityIndexItem extends React.Component{
                     <nav className="level is-mobile">
                         <div className="level-left">
                             <a className="level-item" aria-label="like">
-                                <button className="likeButton"><i className="fas fa-heart"></i> Like</button>
+                                <button onClick={this.incrementtMe} className="likeButton"><i className="fas fa-heart"></i> Like</button>
                             </a>
                             <a className="level-item" aria-label="reply">
                                     <button onClick={this.changeToCommenting} className="commentButton">Comment</button>  
