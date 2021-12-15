@@ -50,7 +50,7 @@ class SessionForm extends React.Component {
 
        demoUser = (e) => {
         e.preventDefault();
-        this.props.login(this.props.demoUser)
+        this.props.processForm(this.props.demoUser)
         // this.props.login({username: "mickey",password: "mickey123"})
             
     }
@@ -109,7 +109,7 @@ class SessionForm extends React.Component {
              <FormControl fullWidth sx={{ m: 1 }} variant="filled">            
                 <button className="button is-success is-rounded"  onClick={this.handleSubmit}>{this.props.formType === 'login' ? 'Log In' : 'Sign Up' }</button>
               </FormControl>
-               <button className="form-item demo-button translatey-med" onClick={this.demoUser}>Demo User</button>
+               <button className="button is-success is-rounded" onClick={this.demoUser}>Demo User</button>
 
             </form>   
          </div>
