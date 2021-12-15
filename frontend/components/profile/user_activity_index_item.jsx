@@ -50,7 +50,7 @@ class ProfileActivityIndexItem extends React.Component{
         <div className="column margined"> 
             <article className="media">
                 <div className="media-left">
-                   <i class="fas fa-heartbeat profileHeart"></i>
+                   {/* <i class="fas fa-heartbeat profileHeart"></i> */}
                     {/* <figure className="image is-64x64">
                         <img src={userPhoto }alt="Image"></img>
                     </figure> */}
