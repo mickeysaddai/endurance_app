@@ -78,11 +78,12 @@ class UserForm extends React.Component{
                         {/* <Stack direction="row" spacing={2}>
                             <Avatar sx={{ bgcolor: deepOrange[500], width: 56, height: 56 }}>M</Avatar>
                         </Stack> */}
-                <img src={this.props.userPhoto} className="image is-128x128" />
+                <img src={userPhoto} className="image is-128x128" />
             </div>  
             <div style={{ marginTop: "30px", marginRight: "20px"}}>
                 <p>{username}</p>
-                <p style={{ fontSize: "small"}}> Active member since November 2021</p>
+                {/* <div style={{ fontSize: "small"}}> Active member since November 2021</div> */}
+             
 
                 
             </div>  
