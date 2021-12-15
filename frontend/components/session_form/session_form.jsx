@@ -109,7 +109,9 @@ class SessionForm extends React.Component {
              <FormControl fullWidth sx={{ m: 1 }} variant="filled">            
                 <button className="button is-success is-rounded"  onClick={this.handleSubmit}>{this.props.formType === 'login' ? 'Log In' : 'Sign Up' }</button>
               </FormControl>
-               <button className="button is-success is-rounded demoUser" onClick={this.demoUser}>Demo User</button>
+
+              
+               <button className="button is-success is-rounded demoUser" onClick={this.demoUser}>{this.props.formType === 'login' ? 'Demo User' : '' }</button>
 
             </form>   
          </div>
