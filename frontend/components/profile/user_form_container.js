@@ -32,6 +32,7 @@ const mapStateToProps = (state) => {
 }
 const mapDispatchToProps = (dispatch) => ({
      fetchActivities: () => dispatch(fetchActivities()),
+      createComment: (comment) => dispatch(createAComment(comment))
 })
 
 

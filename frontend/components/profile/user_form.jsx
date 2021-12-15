@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import ActivityIndexContainer from "../activities/activity_index_container";
+import UserActivityIndexContainer from "./user_activity_index_container";
 import GoogleMapsComponent from "../activities/MapComponent";
 import UserActivityOverview from "./user_activitiy_overview";
 import UserActivityTotal from "./user_activity_total";
@@ -38,9 +38,17 @@ class UserForm extends React.Component{
             case TABS.DASHBOARD:
                 return (
                     <div>
-                        <UserActivityTotal miles={this.props.totalMiles} calories={this.props.totalCalories} allActivities={this.props.allActivities}/>
+                        <div className="profileDashboard">
+                            <div className="leftContainer">
                         <UserStats miles={this.props.totalMiles} calories={this.props.totalCalories} allActivities={this.props.allActivities}/>
-                         <ActivityIndexContainer />
+                        </div>
+                        <div style={{ marginLeft: '10px'}}>
+                            <div className="dashboardActivityTotal">
+                          <UserActivityTotal miles={this.props.totalMiles} calories={this.props.totalCalories} allActivities={this.props.allActivities}/>
+                          </div>
+                         <UserActivityIndexContainer />
+                        </div>
+                        </div>  
                     </div>
                 )
             case TABS.ACTIVITIES: 

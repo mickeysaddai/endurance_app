@@ -3,6 +3,7 @@ import ActivityIndexItem from "./activity_index_item";
 import history from "../../util/history";
 import CircularProgress from '@mui/material/CircularProgress';
 import Box from '@mui/material/Box';
+import ProfileActivityIndexItem from "../profile/user_activity_index_item";
 class ActivityIndex extends React.Component{
     
     componentDidMount(){
@@ -35,6 +36,8 @@ class ActivityIndex extends React.Component{
                     </div>
                     {
                         activities.reverse().map((activity, i)=> {
+                            
+
                             return (activity !== undefined && <ActivityIndexItem key={i} activity={activity} userPhoto={userPhoto} createComment={createComment} userId={userId}/>)
                         })
                     }

@@ -35,3 +35,35 @@ span {
     width: 50% !important;
 
 }
+
+.profileDashboard {
+    display: flex !important;
+    flex-direction: row !important;
+}
+
+.leftContainer {
+    min-height: 700px;
+    float: left;
+    border-right: 1px solid #e9e9e9;
+    margin-right: auto;
+}
+
+.dashboardActivityTotal {
+    border-bottom: 1px solid #e9e9e9;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+.navList li .navListLabel {
+    display: block;
+    color: #888;
+    font-size: 13px;
+    line-height: 18px;
+    text-transform: uppercase;
+
+}
+
+.profileHeart{
+    font-size: 25px;
+
+}
