@@ -53,3 +53,13 @@ export const createComment = (comment) => {
         })
     )
 }
+export const createLike = (like) => {
+    return (
+        $.ajax({
+            method: 'POST',
+            url: `/api/activities/${like.activity_id}/likes`,
+            data: {comment}
+            
+        })
+    )
+}
