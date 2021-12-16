@@ -7,7 +7,7 @@ class Api::LikesController < ApplicationController
         
         begin
             saved_liked = @like.save
-            # debugger
+         
             if saved_liked
             render :show
             else

@@ -1,5 +1,6 @@
 import { connect } from "react-redux";
 import { updateActivity } from "../../actions/activity_actions";
+import { deleteActivity } from "../../actions/activity_actions";
 import EditActivityForm from "./edit_activity_form";
 
 
@@ -27,7 +28,9 @@ const mapDispatchToProps = dispatch => {
             return (
                 dispatch(updateActivity(activity))
             )
-        }
+        },
+
+        delete: (activity) => dispatch(deleteActivity(activity))
     }
 
 }

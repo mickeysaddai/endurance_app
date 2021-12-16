@@ -1,16 +1,10 @@
 class Api::ActivitiesController < ApplicationController
   
   def index
-    # if params.has_key?(:user_id) 
-    #   debugger
-    #   # @activities = Activity.find_by(user_id: params[:user_id])
-    #   @activities = Activity.where(user_id: params[:user_id])
-    #         render :index
-            
-        # else
+  
             @activities = Activity.all
             render :index;
-        # end
+      
   end
 
   def show

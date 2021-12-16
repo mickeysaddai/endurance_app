@@ -52,7 +52,6 @@ export const createActivity = (activity) => dispatch => {
 }
 
 export const updateActivity = (activity) => dispatch => {
-    debugger
     return  APIUtil.updateActivity(activity).then(activity => {
     
             return (
@@ -88,9 +87,10 @@ export const createALike = (like) => dispatch => {
     const newLike = {
         user_id: like.userId,
         activity_id: like.activityId,
+        countlwe: like.count
 
     }
-    return APIUtil.createLike(newLike).then(newLike =>  console.log(newLike)
+    return APIUtil.createLike(newLike).then(newLike =>  console.log("LIKE", newLike)
     )
 }
 

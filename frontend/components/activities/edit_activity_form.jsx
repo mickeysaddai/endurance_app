@@ -113,6 +113,14 @@ export default class EditActivityForm extends Component {
         })
     }
 
+    handleDelete = () => {
+        console.log("clicking ")
+        this.props.delete(this.props.activity.id)
+        history.push(`/#/`);
+          window.location.reload()   
+
+    }
+
 
     render() {
         const { activity_type, distance, duration, calories} = this.state;
@@ -165,7 +173,6 @@ export default class EditActivityForm extends Component {
                                 <input className="inputBPM" type="text" 
                                 name="BPM"
                                 value={this.state.heartrate} 
-                                id="" 
                                 onChange={this.update('heartrate')}
                                 />
                                 </label>
@@ -245,6 +252,7 @@ export default class EditActivityForm extends Component {
 
                     <div navigationButtons>
                         <button className={`button is-success save ${this.state.isCreatingActivity? 'is-loading': ''}`} onClick={this.handleSubmit}>Save</button>
+                        <button className="button is-success save" onClick={this.handleDelete}>Delete</button>
                     
                     </div>
 
