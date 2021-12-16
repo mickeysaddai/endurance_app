@@ -1,19 +1,23 @@
 class Api::LikesController < ApplicationController
-      # before_action :find_activity
-    # def index
-    #   @likes = Like.all
-    #   render :index
-    # end
       
     def create
-        # @activity.likes.create(user_id: current_user.id)
-        @like = current_user.likes.new(like_params)
-
-        if @like.save
-        render :show
-        else
-          render json: @like.errors.full_messages.to_sentence
+          @activity = Activity.find(params[:activity_id])
+     
+          @like = Like.new(like_params)
+        
+        begin
+            saved_liked = @like.save
+            # debugger
+            if saved_liked
+            render :show
+            else
+              render json: @like.errors.full_messages.to_sentence
+            end
+        rescue => exception
+           p exception
+            
         end
+
     end
 
 
@@ -27,12 +31,10 @@ class Api::LikesController < ApplicationController
       private
 
     def like_params
-      params.require(:like).permit(:activity_id)
+      params.require(:like).permit(:activity_id, :user_id)
     end
       
-  # def find_activity
-  #   @activity= Activity.find(params[:activity_id])
-  # end
+
 
 
 end

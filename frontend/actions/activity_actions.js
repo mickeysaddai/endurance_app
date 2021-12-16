@@ -25,9 +25,10 @@ export const receiveComment = comment => ({
     type: RECEIVE_COMMENT, 
     comment
 })
-export const receiveLike = comment => ({
+export const receiveLike = like => ({
     type: RECEIVE_LIKE, 
-    comment
+    like
+
 })
 
 
@@ -84,12 +85,12 @@ export const createAComment = (comment) => dispatch => {
 
 export const createALike = (like) => dispatch => {
     dispatch(receiveLike(like))
-    // const newComment = {
-    //     person_id: comment.userId,
-    //     activity_id: comment.activityId,
-    //     body: comment.body
-    // }
-    return APIUtil.createLike(like).then(like =>  console.log(like)
+    const newLike = {
+        user_id: like.userId,
+        activity_id: like.activityId,
+
+    }
+    return APIUtil.createLike(newLike).then(newLike =>  console.log(newLike)
     )
 }
 

@@ -23,18 +23,21 @@ class ActivityIndexItem extends React.Component{
     }
 
     incrementtMe = (e) => {
+
         let newCount = 1
         this.setState({count: newCount})
 
         if (this.state.count === newCount){
             this.setState({count: 0})
         }
+        const likePayload = {
+            count:  this.state.count,
+            activityId: this.props.activity.id,
+            userId: this.props.userId
+        }
 
-    }
+        this.props.createLike(likePayload)
 
-    handleUnlike = (e) => {
-        let count = 0
-        this.setState({count: count})
     }
   
 
@@ -83,7 +86,7 @@ class ActivityIndexItem extends React.Component{
                     <nav className="level is-mobile">
                         <div className="level-left">
                             <a className="level-item" aria-label="like">
-                                <button onClick={this.incrementtMe} onDoubleClick={this.handleUnlike} className="likeButton"><i className="fas fa-heart"></i> Like {this.state.count}</button>
+                                <button onClick={this.incrementtMe} className="likeButton"><i className="fas fa-heart"></i> Like {this.state.count}</button>
                             </a>
                             <a className="level-item" aria-label="reply">
                                     <button onClick={this.changeToCommenting} className="commentButton">Comment</button>  
