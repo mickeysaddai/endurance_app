@@ -4,6 +4,7 @@ export const RECEIVE_ACTIVITIES = 'RECEIVE_ACTIVITIES';
 export const RECEIVE_ACTIVITY = 'RECEIVE_ACTIVITY';
 export const REMOVE_ACTIVITY = 'REMOVE_WORKOUT';
 export const RECEIVE_COMMENT = 'RECEIVE_COMMENT';
+export const RECEIVE_LIKE = 'RECEIVE_LIKE';
 
 
 export const receiveActivities = activities => ({
@@ -22,6 +23,10 @@ export const removeActivity = activityId => ({
 
 export const receiveComment = comment => ({
     type: RECEIVE_COMMENT, 
+    comment
+})
+export const receiveLike = comment => ({
+    type: RECEIVE_LIKE, 
     comment
 })
 
@@ -74,6 +79,17 @@ export const createAComment = (comment) => dispatch => {
         body: comment.body
     }
     return APIUtil.createComment(newComment).then(comment =>  console.log(comment)
+    )
+}
+
+export const createALike = (like) => dispatch => {
+    dispatch(receiveLike(like))
+    // const newComment = {
+    //     person_id: comment.userId,
+    //     activity_id: comment.activityId,
+    //     body: comment.body
+    // }
+    return APIUtil.createLike(like).then(like =>  console.log(like)
     )
 }
 

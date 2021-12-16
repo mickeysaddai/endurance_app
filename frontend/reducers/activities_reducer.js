@@ -1,4 +1,4 @@
-import { RECEIVE_ACTIVITIES, RECEIVE_ACTIVITY, REMOVE_ACTIVITY, RECEIVE_COMMENT } from "../actions/activity_actions";
+import { RECEIVE_ACTIVITIES, RECEIVE_ACTIVITY, REMOVE_ACTIVITY, RECEIVE_COMMENT, RECEIVE_LIKE } from "../actions/activity_actions";
 
 const initialState = {
     "1": {
@@ -76,6 +76,11 @@ const ActivitiesReducer = (oldState = initialState, action) => {
             const currentActivity = nextState[action.comment.activityId];
             currentActivity.comments.push(action.comment)
             nextState[action.comment.activityId] = currentActivity
+            return nextState;
+        case RECEIVE_LIKE:
+            const currActivity = nextState[action.like.activityId]
+            currActivity.likes.push(action.like)
+            nextState[action.like.activityId] = currActivity;
             return nextState;
         
         default:

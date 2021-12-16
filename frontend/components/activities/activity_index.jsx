@@ -48,7 +48,7 @@ class ActivityIndex extends React.Component{
                  
 
             </div>
-        // </div>as we jknow all of us has a name. In the Bible od's name is Jehovah as Ps 83:18
+        // </div>
         )
     }
 }
