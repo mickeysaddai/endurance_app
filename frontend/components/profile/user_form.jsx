@@ -54,9 +54,10 @@ class UserForm extends React.Component{
             case TABS.ACTIVITIES: 
             return (
                 <div>
-                    <UserActivityOverview/> 
+                    
+                   <h1>Coming Soon!</h1>
                     {/* <GoogleMapsComponent /> */}
-                    <MapboxView/>
+                
                 </div>
             )
             default: 

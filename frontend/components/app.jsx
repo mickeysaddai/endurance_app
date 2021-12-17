@@ -44,6 +44,10 @@ const App = ({ fetchActivities}) =>  {
            
         </div>
           </Switch>
+
+
+
+ 
         </div>
         )
     }
