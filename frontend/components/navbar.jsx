@@ -13,11 +13,11 @@ const Navbar = ({showNav, logoutAndReroute}) => {
 
          <div className="navButtons">
                 <div className='enduranceNav'>
-                <Link to='/'><i className="fas fa-heartbeat"></i>Endurance</Link>
+                <Link to='/activities'><i className="fas fa-heartbeat"></i>Endurance</Link>
                 </div>
                     
                 <div className='feedNav'>
-                <Link to={'/'}><i className="fas fa-receipt"></i> FEED</Link>
+                <Link to={'/activities'}><i className="fas fa-receipt"></i> FEED</Link>
                 </div>
 
 

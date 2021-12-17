@@ -5,6 +5,7 @@ export const RECEIVE_ACTIVITY = 'RECEIVE_ACTIVITY';
 export const REMOVE_ACTIVITY = 'REMOVE_WORKOUT';
 export const RECEIVE_COMMENT = 'RECEIVE_COMMENT';
 export const RECEIVE_LIKE = 'RECEIVE_LIKE';
+export const FETCHING_ACTIVITIES = 'FETCHING_ACTIVITIES'
 
 
 export const receiveActivities = activities => ({
@@ -33,12 +34,15 @@ export const receiveLike = like => ({
 
 
 
-export const fetchActivities = () => dispatch => (
-    
-    APIUtil.fetchActivities().then(activities => (
+export const fetchActivities = () => dispatch => {
+   // TODO : "update reudcer"
+    dispatch({
+        type: FETCHING_ACTIVITIES,
+    })
+    return APIUtil.fetchActivities().then(activities => (
         dispatch(receiveActivities(activities))
     ))
-);
+};
 
 export const fetchActivity = (id) => dispatch => (
     APIUtil.fetchActivity(id).then(activity => (

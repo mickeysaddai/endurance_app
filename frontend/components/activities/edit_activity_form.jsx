@@ -54,6 +54,10 @@ export default class EditActivityForm extends Component {
         
     }
 
+    componentDidMount() {
+        this.props.fetchAllActivities()
+    }
+
      handleSubmit(e){
       
         console.log(this.state)
