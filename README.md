@@ -31,8 +31,8 @@ Endurance is a clone of RunKeeper a smartphone application that watches and trac
 # Features
 * Frontend to backend user authentication with hashed passwords using BCrypt
 * Logged in users can Create, Read, Update, and Delete an activity.
-* Users can utilize the Map functionality in creating a route.
+* Users can utilize the Map functionality in mapping a distance.
 * Users can update their profile information
-* Users can like and comment on logged activities both on theirs and thier friends.
-* Users can search for friends
+* Users can like and comment on logged activities.
+
 (** - to be completed)
