@@ -34,7 +34,7 @@ h1{
     background-color: white;
     font-size: 14px;
     color: black;
-    width: max-content;
+    width: 100%;
     margin-left: 15% !important;
 
 }
@@ -46,11 +46,12 @@ h1{
 }
 
 
-// .activityDetailsType{
-//     margin-bottom: 0px !important;
-//     border-radius: 0px !important;
-//     color: grey !important;
-// }
+.activityDetailsType{
+    // margin-bottom: 0px !important;
+    border-radius: 0px !important;
+    color: grey !important;
+    width: max-content;
+}
 
 .commentButton{
     direction: flex;
