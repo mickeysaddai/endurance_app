@@ -4,27 +4,30 @@ import history from "../../util/history";
 import CircularProgress from '@mui/material/CircularProgress';
 import Box from '@mui/material/Box';
 import ProfileActivityIndexItem from "../profile/user_activity_index_item";
+import SplashPage from "../session_form/splash_page";
 class ActivityIndex extends React.Component{
     
     componentDidMount(){
-        if (!this.props.loggedIn) {
-            history.push('/#/login')
-             window.location.reload() 
-        }
+        // if (!this.props.loggedIn) {
+        //     history.push('/#/login')
+        //      window.location.reload() 
+        // }
         this.props.fetchActivities();
         // this.props.createComment();
 
     }
     render(){
         const {activities, userPhoto, loggedIn, createComment, userId, createLike} = this.props;
-        if (!loggedIn) {
-             return (
-                <Box style={{ margin: "150px"}}>
-                <CircularProgress />
-                </Box>
-            );
-        }
+        // if (!loggedIn) {
+        //      return (
+        //         <Box style={{ margin: "150px"}}>
+        //         <CircularProgress />
+        //         </Box>
+        //     );
+        // }
         return (
+    
+            <>{(this.props.loggedIn) ?
         <div>                
             <div className="columns">
                 {/* <div className="column"> */}
@@ -48,6 +51,9 @@ class ActivityIndex extends React.Component{
                  
 
             </div>
+           
+            :
+         <SplashPage/>}</>
         // </div>
         )
     }

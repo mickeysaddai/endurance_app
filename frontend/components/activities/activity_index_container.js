@@ -4,6 +4,7 @@ import { fetchActivities, createAComment, createALike } from "../../actions/acti
 
 
 const mapStateToProps = state => {
+    
 
     return {
 
