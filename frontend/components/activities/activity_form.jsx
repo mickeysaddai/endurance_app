@@ -180,7 +180,7 @@ class ActivityForm extends React.Component {
                     <div className="box createActivity">
                         <form className="logForm">
                             <div className="columns">
-                                <div className="column">
+                                <div className="">
                                 <div>
                                 <label className="logDate">Date of Activity
                                 <div>

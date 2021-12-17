@@ -256,7 +256,7 @@ export default class EditActivityForm extends Component {
 
                     <div navigationButtons>
                         <button className={`button is-success save ${this.state.isCreatingActivity? 'is-loading': ''}`} onClick={this.handleSubmit}>Save</button>
-                        <button className="button is-success save" onClick={this.handleDelete}>Delete</button>
+                        <button className="button is-success save deleteAct" onClick={this.handleDelete}>Delete</button>
                     
                     </div>
 
