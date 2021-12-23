@@ -23,9 +23,19 @@ class ProfileActivityIndexItem extends React.Component{
     }
 
     incrementtMe = (e) => {
-        let newCount = this.state.count + 1
-        console.log("clicked like", newCount, "hey")
+         let newCount = 1
         this.setState({count: newCount})
+
+        if (this.state.count === newCount){
+            this.setState({count: 0})
+        }
+        const likePayload = {
+            count:  this.state.count,
+            activityId: this.props.activity.id,
+            userId: this.props.userId
+        }
+
+        this.props.createLike(likePayload)
 
     }
   

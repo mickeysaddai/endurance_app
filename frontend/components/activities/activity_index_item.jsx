@@ -37,10 +37,8 @@ class ActivityIndexItem extends React.Component{
         }
 
         this.props.createLike(likePayload)
-
     }
   
-
     submitComment = () => {
         const commentPayload = {
             body: this.state.comment,
@@ -55,7 +53,6 @@ class ActivityIndexItem extends React.Component{
 
            
     }
-
 
 
  render(){
