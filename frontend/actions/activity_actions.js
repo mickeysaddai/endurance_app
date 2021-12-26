@@ -35,7 +35,6 @@ export const receiveLike = like => ({
 
 
 export const fetchActivities = () => dispatch => {
-   // TODO : "update reudcer"
     dispatch({
         type: FETCHING_ACTIVITIES,
     })

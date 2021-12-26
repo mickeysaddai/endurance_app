@@ -5,6 +5,7 @@ import ActivityType from "./activity_type";
 import history from "../../util/history";
 import UserActivityOverview from '../profile/user_activitiy_overview';
 import MapboxView from '../map/mapbox_api_view';
+import moment from 'moment';
 
   
 const ACTIVITIES = [
@@ -46,14 +47,30 @@ export default class EditActivityForm extends Component {
             time: activity.time,
             calories: activity.calories,
             heartrate: activity.heartrate,
-            date: new Date(),
+            date: moment(new Date(activity.date)),
             description: activity.description,
             isCreatingActivity: false 
     },
         this.handleSubmit = this.handleSubmit.bind(this)
         
     }
-
+    componentWillReceiveProps(nextProps) {
+        if (nextProps.activity) {
+            const { id, user_id, activity_type, duration, time, calories, heartrate, description, distance, date} = nextProps.activity;
+            this.setState({
+                id,
+                user_id,
+                activity_type,
+                duration,
+                time,
+                calories,
+                heartrate,
+                description,
+                distance,
+               date: moment(new Date(date))
+            })
+        }
+    }
     componentDidMount() {
         this.props.fetchAllActivities()
     }
@@ -83,11 +100,10 @@ export default class EditActivityForm extends Component {
             time,
             calories,
             heartrate,
-            date,
+            date: date.toDate(),
             description
     }
         e.preventDefault();
-   
         this.props.action(activity).then(()=> {
             setTimeout(() => {
                 this.setState({ isEditingActivity: false})

@@ -13,15 +13,10 @@ import { Route, Switch } from "react-router-dom";
 import Navbar from '../components/navbar';
 import { connect } from "react-redux";
 import { fetchActivities } from "../actions/activity_actions";
+import LoadActivityContainer from "./activities/loading_activity_container";
 
 const App = ({ fetchActivities}) =>  {
-    console.log("logging effect", fetchActivities)
     
-    useEffect(() => {
-        console.log("LOGGING EFFECT")
-    })
-
-   
         return (
          <div>  
              <Navbar /> 
@@ -35,7 +30,7 @@ const App = ({ fetchActivities}) =>  {
             <div className="column is-two-thirds">
                 <Route exact path='/activities/profile' component={UserFormContainer}></Route>
                 <Route exact path='/activities/new' component={CreateActivityFormContainer}></Route>
-                <Route exact path='/activities/edit/:id' component={EditActivityFormContainer}></Route>
+                <Route exact path='/activities/edit/:id' component={LoadActivityContainer}></Route>
                 <Route exact path='/show/:id' component={ActivityShowPageContainer}></Route>
                 
                 
