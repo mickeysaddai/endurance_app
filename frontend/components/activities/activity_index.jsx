@@ -8,29 +8,18 @@ import SplashPage from "../session_form/splash_page";
 class ActivityIndex extends React.Component{
     
     componentDidMount(){
-        // if (!this.props.loggedIn) {
-        //     history.push('/#/login')
-        //      window.location.reload() 
-        // }
+  
         this.props.fetchActivities();
-        // this.props.createComment();
 
     }
     render(){
         const {activities, userPhoto, loggedIn, createComment, userId, createLike} = this.props;
-        // if (!loggedIn) {
-        //      return (
-        //         <Box style={{ margin: "150px"}}>
-        //         <CircularProgress />
-        //         </Box>
-        //     );
-        // }
+   
         return (
     
             <>{(this.props.loggedIn) ?
         <div>                
             <div className="columns">
-                {/* <div className="column"> */}
 
                 </div>
                     <div className="column feedColumn">
@@ -54,7 +43,7 @@ class ActivityIndex extends React.Component{
            
             :
          <SplashPage/>}</>
-        // </div>
+       
         )
     }
 }

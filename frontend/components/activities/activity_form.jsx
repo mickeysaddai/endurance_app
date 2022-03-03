@@ -78,7 +78,9 @@ class ActivityForm extends React.Component {
     }
         e.preventDefault();
    
-        this.props.action(activity).then(()=> {
+        const activityRequest = this.props.action(activity);
+        console.log("my aitvity", activityRequest)
+        activityRequest.then(()=> {
             setTimeout(() => {
                 this.setState({ isCreatingActivity: false})
                 history.push('#/')
@@ -86,6 +88,12 @@ class ActivityForm extends React.Component {
             },2000)
         
         })
+        activityRequest.catch(()=> {
+            console.log("this is the error", error)
+            this.setState({ isCreatingActivity: false})
+
+        })
+        
     }
     update(field) {
         return e => this.setState({ [field]: e.target.value })
